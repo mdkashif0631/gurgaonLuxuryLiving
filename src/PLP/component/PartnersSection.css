@@ -1,0 +1,59 @@
+.partners-section {
+  text-align: center;
+  padding: 3rem 1rem;
+  background-color: #fff;
+}
+
+.partners-subtitle {
+  font-size: 0.9rem;
+  color: #7d7e7c;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.partners-title {
+  font-size: 2.5rem;
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  line-height: 1.4;
+  margin-bottom: 2rem;
+  color: #111;
+}
+
+.partners-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.partner-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 1.2rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 140px;
+  height: 80px;
+  transition: all 0.3s ease;
+}
+
+.partner-card img {
+  max-height: 50px;
+  max-width: 100%;
+}
+
+.partner-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+  border-color: #bfa180;
+}
+@media screen and (max-width: 700px) {
+  .partners-section {
+  text-align: center;
+  padding: 4rem 1rem;
+  background-color: #fff;
+}
+}

@@ -1,0 +1,71 @@
+.penthouse-section {
+  display: grid;
+  grid-template-columns: 2.5fr 1fr;
+  gap: 2rem;
+  align-items: start;
+  padding: 4rem 8%;
+  height: 190vh;
+  width: 100%;
+}
+
+.penthouse-image-container {
+  width: 100%;
+  height: 95%;
+}
+
+.penthouse-image {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.penthouse-text-container {
+  max-width: 400px;
+}
+
+.penthouse-title {
+  font-size: 1.4rem;
+  letter-spacing: 2px;
+  font-weight: 500;
+  margin-top: 20px;
+  color: #7d7e7c;
+}
+
+.penthouse-divider {
+  width: 60px;
+  height: 2px;
+  background-color: #c2a48a;
+  margin: 1rem 0;
+}
+
+.penthouse-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  color: #7d7e7c;
+  font-family: "Mulish", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.penthouse-small-image {
+  width: 100%;
+  height: 300px;
+  display: block;
+}
+@media screen and (max-width: 980px) {
+  .penthouse-section {
+  /* grid-template-columns: none; */
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+    height: 100vh;
+
+  
+}
+.penthouse-small-image{
+    display: none;
+}
+
+}

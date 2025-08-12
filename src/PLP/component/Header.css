@@ -1,0 +1,153 @@
+/* ==================== elan Header ======================= */
+
+.elan_header {
+  display: grid;
+  grid-template-rows: auto;
+  width: 100%;
+  box-shadow: 0 2px 8px rgba(10, 10, 10, 0.04);
+  background-color: #44393d92;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.elan_header.sticky {
+  background-color: #7777779a;
+  backdrop-filter: blur(5px) saturate(1);
+}
+
+.elan_web_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 40px;
+  position: relative;
+
+}
+
+.elan_menu_icon {
+  display: none;
+}
+
+.elan_logo {
+  height: 50px;
+  width: 280px;
+}
+
+.elan_logo img {
+  height: 100%;
+}
+
+.elan_gll_logo {
+  text-align: right;
+  width: 280px;
+  height: 60px;
+}
+
+.elan_gll_logo img {
+  height: 100%;
+}
+
+.elan_nav {
+  text-align: center;
+}
+
+.elan_nav a {
+  padding-left: 18px;
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  margin: auto;
+
+  &:hover {
+    color: #000000;
+    text-decoration: underline;
+  }
+
+}
+
+.elan_state.active {
+
+  color: #000000;
+
+}
+
+.elan_gll_logo .elan_gll_phone {
+  text-decoration: none;
+  color: #605037;
+  font-size: 18px;
+  font-family: "Mulish", sans-serif;
+  border: 1px solid #605037;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  padding: 5px 6px;
+  background-color: transparent;
+  border-radius: 4px;
+  
+  &:hover {
+    background-color: #84848466;
+    color: white;
+    border: 1px solid #ececec;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .elan_header {
+    display: grid;
+    grid-template-rows: auto 50px;
+  }
+
+  .elan_logo {
+    width: 115px;
+  }
+
+  .elan_gll_logo {
+    width: 115px;
+  }
+
+  .elan_nav {
+    display: none;
+  }
+
+  .elan_gll_phone {
+    display: none;
+  }
+
+  .elan_menu_icon {
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: #E8C182;
+    border-top: 1px solid #e8c1827d;
+    border-bottom: 1px solid #e8c1827d;
+  }
+
+  .elan_close_bar {
+    font-size: 30px;
+    margin: auto;
+    height: 100%;
+
+  }
+
+  .elan_memu {
+    font-size: 24px;
+    margin: auto;
+    height: 100%;
+  }
+
+  .elan_nav.open {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    position: absolute;
+    top: 120px;
+    left: 0px;
+    padding: 1rem;
+    background-color: #0000006c;
+    backdrop-filter: blur(5px) saturate(1);
+
+  }
+}

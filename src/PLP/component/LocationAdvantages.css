@@ -1,0 +1,106 @@
+.location-section {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    align-items: center;
+
+    padding: 60px 10%;
+    background-color: #fefaf1;
+    flex-wrap: wrap;
+    height: 100vh;
+}
+
+.location_image {
+    flex: 1;
+    /* min-width: 200px; */
+    display: flex;
+    justify-content: center;
+    margin-right: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.location_image::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    border-radius: 50px;
+    box-shadow: inset 0px 0px 40px 80px #fefaf1,
+        0px 0px 60px 60px #fefaf1;
+    /* z-index: 1; */
+}
+
+.location_image img {
+    /* display: block; */
+    width: 80%;
+    /* height: auto; */
+    border-radius: 50px;
+
+    /* filter: blur(1px); */
+}
+
+.location_location-content {
+    flex: 1;
+    min-width: 120px;
+}
+
+.location_subtitle {
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #7d7e7c;
+    margin-bottom: 10px;
+    font-family: "Mulish", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.location_main-title {
+    font-size: 35px;
+    font-weight: 400;
+    font-family: "Playfair Display", serif;
+    margin-bottom: 25px;
+    line-height: 1.4;
+    color: #222;
+}
+
+.location-points {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.location-points li {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: #7d7e7c;
+    margin-bottom: 15px;
+    font-family: "Mulish", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.location-points .icon {
+    color: #b08968;
+    margin-right: 12px;
+    font-size: 18px;
+    width: 25px;
+}
+
+@media (max-width: 908px) {
+    .location-section {
+        grid-template-columns: none;
+        grid-template-rows: 1fr auto;
+        height: auto;
+
+    }
+
+    .location_image {
+        padding-right: 0;
+        margin-bottom: 30px;
+        height: 50vh;
+    }
+}

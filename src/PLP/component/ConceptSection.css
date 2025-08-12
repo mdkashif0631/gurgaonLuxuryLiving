@@ -1,0 +1,95 @@
+.concept-section {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 80px 10%;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(30px);
+  background-color: #f7f7f7;
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.concept-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.subtitle {
+  font-size: 16px;
+  letter-spacing: 2px;
+  color: #b08968;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  font-family: "Mulish", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.main-title {
+  font-size: 38px;
+  font-weight: 200;
+  color: #222;
+  line-height: 1.4;
+  margin-bottom: 50px;
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.feature-card {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.concept-section.visible .feature-card {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.feature-icon {
+  font-size: 48px;
+  color: #2e5c50;
+  margin-bottom: 16px;
+  transition: transform 0.4s ease;
+}
+
+.feature-card:hover .feature-icon {
+  transform: scale(1.15);
+}
+
+.feature-card h3 {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  font-family: "Playfair Display", serif;
+}
+
+.feature-card p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #555;
+  font-family: "Mulish", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@media (max-width: 768px) {
+  .main-title {
+    font-size: 22px;
+  }
+  .features-grid {
+  /* display: grid; */
+  grid-template-columns: repeat(1, 1fr);
+}
+
+}

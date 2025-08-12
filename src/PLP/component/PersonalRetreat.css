@@ -1,0 +1,91 @@
+.personal-retreat {
+  max-width:1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* Text Animation */
+.retreat_text-content {
+  flex: 1;
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 1s ease, transform 1s ease;
+  margin-left: 30px;
+}
+
+.personal-retreat.visible .retreat_text-content {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Title Styling */
+.retreat_title {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+  color: #7d7e7c;
+}
+
+.retreat_description {
+  font-family: 'Lora', serif;
+  font-size: 16px;
+  color: #7d7e7c;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.underline {
+  width: 100px;
+  height: 4px;
+  background-color: #000;
+}
+
+/* Image Animation */
+.retreat_image-container {
+  flex: 1;
+  opacity: 0;
+  transform: translateX(50px) scale(1.05);
+  transition: opacity 1.2s ease 0.3s, transform 1.2s ease 0.3s;
+}
+
+.personal-retreat.visible .retreat_image-container {
+  opacity: 1;
+  transform: translateX(0) scale(1);
+}
+
+.retreat_image-container video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .personal-retreat {
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .retreat_text-content {
+    transform: translateY(30px);
+    margin-left: 20px;
+  }
+
+  .personal-retreat.visible .retreat_text-content {
+    transform: translateY(0);
+  }
+
+  .retreat_image-container {
+    transform: translateY(30px) scale(1.05);
+  }
+
+  .personal-retreat.visible .retreat_image-container {
+    transform: translateY(0) scale(1);
+  }
+}

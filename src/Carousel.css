@@ -1,0 +1,124 @@
+.carousel-container {
+  background: linear-gradient(180deg, #100b28, #323744 36.46%, #535c70 67.19%, #100b28);
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-title {
+  font-size: 34px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  margin: 20px 0px;
+}
+
+.carousel-title .handle {
+  font-style: italic;
+  text-decoration: underline;
+  margin-left: 10px;
+}
+
+.carousel-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-slider {
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+}
+
+.carousel-slide {
+  flex: 0 0 100%;
+  box-sizing: border-box;
+  padding: 0 20px;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.card {
+  color: black;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  text-align: left;
+  position: relative;
+  height: 400px;
+  background-color: transparent;
+}
+
+.card img {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -10;
+}
+
+.card p {
+  padding: 10px;
+  font-weight: 500;
+}
+
+.nav-btn {
+  position: absolute;
+  top: 37px;
+  background: white;
+  color: black;
+  border: none;
+  font-size: 18px;
+  padding: 12px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-btn.left {
+  left: 30px;
+}
+
+.nav-btn.right {
+  right: 30px;
+}
+
+.nav-btn:hover {
+  background-color: #100b28;
+  color: white;
+  border: 1px solid white;
+}
+
+@media screen and (max-width: 1100px) {
+  .carousel-title {
+    font-size: 20px;
+  }
+  .nav-btn {
+    top: 10px;
+  
+}
+}
+@media screen and (max-width: 980px) {
+  .card-grid {
+    grid-template-columns: none;
+    grid-template-rows: repeat(3, 1fr);
+  }
+  .nav-btn {
+    padding: 6px;
+  
+  }
+}
