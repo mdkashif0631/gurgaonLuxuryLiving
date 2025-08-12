@@ -1,5 +1,4 @@
 import React from "react";
-import R_map from "../img/right_map.png";
 import { FaExternalLinkAlt } from "react-icons/fa";
 
 export default function ProjectDescription() {
@@ -29,7 +28,7 @@ export default function ProjectDescription() {
       </div>
 
       <div className="project-description-map" id="location">
-        <img src={R_map} alt="Map" />
+        <img src="https://res.cloudinary.com/dif213nbi/image/upload/v1754999993/right_map.e2c9d682e1dc677f2786_tj7s1w.png" alt="Map" />
       </div>
     </section>
   );
