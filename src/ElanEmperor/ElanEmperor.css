@@ -1,0 +1,857 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+.enqurie_popup{
+  position: fixed;
+  bottom: 40px;
+  right: 50px;
+  z-index: 10000;
+  background-color: #E8C182;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 24px;
+  &:hover{
+    width: 55px;
+    height: 55px;
+    box-shadow: 0 0 12px #e8c182c3;
+    font-size: 26px;
+    bottom: 37.5px;
+  right: 47.5px;
+
+  }
+}
+/* ==================== elan Header ======================= */
+
+.elan_header {
+  display: grid;
+  grid-template-rows: auto;
+  width: 100%;
+  box-shadow: 0 2px 8px rgba(10, 10, 10, 0.04);
+  background-color: #44393d92;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.elan_header.sticky {
+  background-color: #7777779a;
+  /* backdrop-filter: blur(5px) saturate(1); */
+}
+
+.elan_web_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 40px;
+  position: relative;
+
+}
+
+.elan_menu_icon {
+  display: none;
+}
+
+.elan_logo {
+  height: 50px;
+  width: 280px;
+}
+
+.elan_logo img {
+  height: 100%;
+}
+
+.elan_gll_logo {
+  text-align: right;
+  width: 280px;
+  height: 60px;
+}
+
+.elan_gll_logo img {
+  height: 100%;
+}
+
+.elan_nav {
+  text-align: center;
+}
+
+.elan_nav a {
+  padding-left: 18px;
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  margin: auto;
+
+  &:hover {
+    color: #000000;
+    text-decoration: underline;
+  }
+
+}
+
+.elan_state.active {
+
+  color: #000000;
+
+}
+.elan_gll_logo{
+  display: flex;
+  /* border: 2px solid #333; */
+  /* align-items: center; */
+}
+.elan_gll_phone {
+  margin: auto;
+  height: 35px;
+  text-decoration: none;
+  color: #f7f7f7;
+  font-size: 18px;
+  font-family: "Mulish", sans-serif;
+  border: 1px solid #ebe9e6;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  padding: 5px 6px;
+  background-color: transparent;
+  border-radius: 4px;
+  
+  &:hover {
+    background-color: #84848466;
+    color: white;
+    border: 1px solid #ececec;
+  }
+} 
+
+@media screen and (max-width: 1200px) {
+  .elan_header {
+    display: grid;
+    grid-template-rows: auto 50px;
+  }
+  .elan_web_header{
+    padding: 5px 10px;
+  }
+
+  .elan_logo {
+    max-width: 115px;
+  }
+
+  .elan_gll_logo {
+    max-width: 115px;
+  }
+
+  .elan_nav {
+    display: none;
+  }
+
+  .elan_gll_phone {
+    display: none;
+  }
+
+  .elan_menu_icon {
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: #ababab;
+    border-top: 1px solid #7373737d;
+    border-bottom: 1px solid #7373737d;
+  }
+
+  .elan_close_bar {
+    font-size: 30px;
+    margin: auto;
+    height: 100%;
+
+  }
+
+  .elan_memu {
+    font-size: 24px;
+    margin: auto;
+    height: 100%;
+  }
+
+  .elan_nav.open {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    position: absolute;
+    top: 120px;
+    left: 0px;
+    padding: 1rem;
+    background-color: #0000006c;
+    /* backdrop-filter: blur(5px) saturate(1); */
+
+  }
+}
+
+
+
+/* Reset unwanted browser defaults */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.elan_hero {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  
+  z-index: -100;
+}
+.elan_hero.sticky{
+  margin-top: -80px;
+}
+.elan_hero_section_video{
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+
+.elan_overlay {
+  text-align: center;
+  color: white;
+  padding: 20px;
+}
+
+.elan_hero_subtitle {
+  font-size: 14px;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+  font-family: "Mulish", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    text-transform: uppercase;
+}
+
+.elan_hero_title {
+  font-size: 80px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+    text-transform: uppercase;
+
+}
+
+.elan_hero_location {
+  font-size: 14px;
+  letter-spacing: 2px;
+  font-family: "Mulish", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+@media screen and (max-width: 700px) {
+  .elan_hero_title {
+  font-size: 30px;
+}
+}
+
+
+
+
+
+
+
+
+
+
+.land_mark-container {
+  width: 100%;
+  height: 180vh;
+  text-align: center;
+  padding: 80px 20px;
+  position: relative;
+  object-fit: cover;
+}
+
+.land_mark_bg_img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -10;
+  object-fit: cover;
+}
+
+.land_mark-title {
+  font-size: 50px;
+  font-weight: 300;
+  letter-spacing: 3px;
+  color: #ffffff;
+  margin-bottom: 30px;
+}
+
+.land_mark-underline {
+  width: 25%;
+  height: 2px;
+  background-color: #ffffff;
+  margin: 30px auto;
+}
+
+.land_mark-description {
+  max-width: 80%;
+  margin: 40px auto;
+  font-size: 20px;
+  line-height: 1.6;
+  color: #ffffff;
+  font-family: "Mulish", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@media screen and (max-width:700px) {
+  .land_mark-title {
+    font-size: 14px;
+    margin-bottom: 10px;
+
+  }
+
+  .land_mark-underline {
+    width: 80%;
+    margin: 10px auto;
+  }
+
+  .land_mark-description {
+    max-width: 95%;
+    margin: 10px auto;
+    font-size: 10px;
+  }
+
+  .land_mark-container {
+    height: 100vh;
+    padding: 20px;
+  }
+}
+
+
+
+.concept-section {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 80px 10%;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(30px);
+  background-color: #050e1d;
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.concept-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.subtitle {
+  font-size: 16px;
+  letter-spacing: 2px;
+  color: #b08968;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  font-family: "Mulish", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.main-title {
+  font-size: 38px;
+  font-weight: 200;
+  color: #ffffff;
+  line-height: 1.4;
+  margin-bottom: 50px;
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.feature-card {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  color:#ffffff;
+}
+
+.concept-section.visible .feature-card {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.feature-icon {
+  font-size: 48px;
+  margin-bottom: 16px;
+  transition: transform 0.4s ease;
+}
+
+.feature-card:hover .feature-icon {
+  transform: scale(1.15);
+}
+
+.feature-card h3 {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  font-family: "Playfair Display", serif;
+}
+
+.feature-card p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #9c9c9c;
+  font-family: "Mulish", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@media (max-width: 768px) {
+  .main-title {
+    font-size: 22px;
+  }
+  .features-grid {
+  /* display: grid; */
+  grid-template-columns: repeat(1, 1fr);
+}
+
+}
+
+.side-popup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: -100%; /* hidden initially */
+  height: 100vh;
+  width: 100%;
+  background: rgba(9, 9, 9, 0.553);
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+  transition: left 0.4s ease;
+  z-index:  10000;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.side-popup.open {
+  left: 0; /* visible */
+}
+
+.popup-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 50px;
+  border: 2px solid white;
+  cursor: pointer;
+}
+
+.form-container {
+  max-width: 500px;
+  height: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  font-family: "Times New Roman", serif;
+  border: 1px solid #a9a8a8;
+}
+
+.form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form-header h2 {
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+input,
+textarea,
+select {
+  border: 1px solid #000;
+  padding: 12px;
+  font-size: 14px;
+  outline: none;
+  width: 100%;
+}
+
+textarea {
+  resize: none;
+  min-height: 100px;
+}
+
+.phone-group {
+  display: flex;
+}
+
+.phone-group select {
+  width: 35%;
+}
+
+.phone-group input {
+  width: 65%;
+  border-left: none;
+}
+
+.submit-btn {
+  background: black;
+  color: white;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.submit-btn span {
+  font-size: 18px;
+}
+
+.submit-btn:hover {
+  background: #333;
+}
+
+
+
+
+
+
+.illustrious_container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  position: relative;
+  background-color: #050e1d;
+}
+.top_right_design,
+.bottom_left_design{
+  position: absolute;
+  height: 70%;
+}
+.top_right_design img,
+.bottom_left_design img{
+  height: 100%;
+}
+.top_right_design{
+  right: 0;
+  top: 0;
+}
+.bottom_left_design{
+  left: 0;
+  bottom: 0;
+}
+.illustrious_detail{
+  width: 60%;
+  margin: auto;
+  font-size: 20px;
+  color: white;
+  /* line-spacing: 4px; */
+  line-height: 2;
+}
+@media screen and (max-width: 800px) {
+  .illustrious_detail{
+    font-size: 16px;
+    width: 80%;
+  }
+}
+
+.resort_container{
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  background-color: #050e1d;
+  color: white;
+}
+
+.elanresortinfo{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  width: 65%;
+  height: 100%;
+  margin: auto;
+  padding-left: 3rem;
+  line-height: 2;
+}
+.elanresortinfo h4{
+font-size: 20px;
+font-weight: 300;
+}
+.elanresortinfo h1{
+  font-size: 50px;
+  font-weight: 200;
+  text-decoration: underline;
+}
+
+.elanresortimg{
+  width: 35%;
+  padding: 2rem 0rem;
+  text-align: right;
+  /* max-height: 500px; */
+}
+.elanresortimg img{
+  height: 100%;
+  width: 100%;
+}
+@media screen and (max-width: 960px) {
+  .resort_container{
+    flex-direction: column;
+  }
+  .elanresortinfo{
+    width: 100%;
+  height: 50%;
+  gap: 10px;
+  margin: auto;
+  padding-left: 1rem;
+}
+  .elanresortinfo h1{
+   font-size: 30px;
+}
+  .elanresortimg{
+    width: 100%;
+    height: 250px;
+    padding: 5px;
+    text-align: center;
+ /* display: none; */
+}
+  .elanresortimg img{
+    width: auto;
+    
+ /* display: none; */
+}
+}
+
+
+
+
+.global-consultants{
+  display: grid;
+  grid-template-rows: repeat(2, auto);
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: #050e1d;
+
+}
+.consultant-heading{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  color: white;
+}
+.consultant-heading h1{
+  font-size: 40px;
+  font-weight: 300;
+}
+.consultant-heading p{
+  font-size: 20px;
+  font-weight: 300;
+  width: 60%;
+  margin: auto;
+}
+
+.consultants-carousel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  margin-top: 3rem;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 1rem;
+  transition: transform 0.5s ease;
+}
+
+.consultant-card {
+  color: white;
+  border-radius: 8px;
+  text-align: center;
+}
+.consultant-card h3 {
+line-height: 2;
+}
+.designation{
+  line-height: 2;
+}
+.consultant_img-container {
+  position: relative;
+}
+
+.consultant_img-container img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.tag {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 4px 8px;
+  border-radius: 4px;
+  color: gold;
+  font-weight: bold;
+}
+
+.nav-btn {
+  background: rgba(180, 140, 80, 0.9);
+  color: white;
+  border: none;
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+  font-size: 1.5rem;
+  border-radius: 4px;
+  z-index: 2;
+}
+
+.nav-btn.left {
+  position: absolute;
+  left: 0;
+}
+
+.nav-btn.right {
+  position: absolute;
+  right: 0;
+}
+
+@media screen and (max-width:700px) {
+  .global-consultants{
+    padding: 40px 4px;
+  }
+  .consultant-heading h1{
+  font-size: 20px;
+  font-weight: 300;
+}
+.consultant-heading p{
+  font-size: 10px;
+  font-weight: 100;
+  width: 100%;
+  margin: auto;
+}
+.consultants-carousel{
+  margin-top: 1rem;
+}
+.nav-btn {
+  background: transparent;
+  color: rgba(180, 140, 80, 0);
+  font-size: 1.5rem;
+  border-radius: 4px;
+  z-index: 2;
+  height: 100%;
+}
+}
+
+
+
+
+
+
+
+
+.life_style {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  /* height: 100vh; */
+  background-color: #050e1d;
+}
+
+.life_style-inner {
+  display: flex;
+  transition: transform 0.8s ease-in-out;
+  height: 100%;
+}
+
+.life_style-item {
+  min-width: 100%;
+  height: 100%;
+  position: relative;
+  /* object-fit: cover; */
+}
+
+.life_style_bg{
+  height: 100%;
+  width: 100%;
+}
+
+.life_style-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #c29b5b;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  color: white;
+  font-size: 2rem;
+  z-index: 2;
+  opacity: 0.8;
+  transition: 0.3s;
+}
+
+.life_style-btn:hover {
+  opacity: 1;
+}
+
+.life_style-btn.left {
+  left: 10px;
+}
+
+.life_style-btn.right {
+  right: 10px;
+}
+@media screen and (max-width: 700px) {
+  .life_style-btn {
+  background: transparent;
+  }
+}

@@ -54,6 +54,7 @@ const Header = () => {
               <ul className="dropdown_menu" style={{backgroundColor:'100b28c1'}}>
                 <li><Link to="/elanpresidential" onClick={closeMenu}>Elan Presidential</Link></li>
                 <li><Link to="/trumptower" onClick={closeMenu}>Trump Tower</Link></li>
+                <li><Link to="/elanemperor" onClick={closeMenu}>Elan Emperor</Link></li>
               </ul>
             </li>
             {/* <li>
@@ -92,6 +93,7 @@ const Header = () => {
           <a href="/sell" onClick={(e) => handleNav(e, "/sell")}>SELL</a>
           <a href="/agents" onClick={(e) => handleNav(e, "/agents")}>AGENTS</a>
           <a href="/elanpresidential" onClick={(e) => handleNav(e, "/elanpresidential")}>Elan</a>
+          <a href="/elanemperor" onClick={(e) => handleNav(e, "/elanemperor")}>Elan Emperor</a>
           <a href="/about" onClick={(e) => handleNav(e, "/about")}>ABOUT</a>
           <a style={{ paddingBottom: '16px' }} href="/contact" onClick={(e) => handleNav(e, "/contact")}>CONTACT</a>
         </div>
