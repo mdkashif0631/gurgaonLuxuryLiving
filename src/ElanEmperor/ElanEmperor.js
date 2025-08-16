@@ -22,7 +22,7 @@ import EmperorRetreat from './elanEmpire/components/EmperorRetreat';
 import EmperorPartner from './elanEmpire/components/EmperorPartner';
 // import Life_style from './elanEmpire/components/LifeStyle';
 
-function App() {
+function ElanEmperor() {
     const [showForm, setShowForm] = useState(false);
 
   return (
@@ -62,4 +62,4 @@ function App() {
   );
 }
 
-export default App;
+export default ElanEmperor;

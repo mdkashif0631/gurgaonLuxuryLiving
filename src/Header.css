@@ -43,6 +43,7 @@
     display: flex;
     align-items: center;
     gap: 1.5rem;
+    height: 100%;
 }
 
 
@@ -56,6 +57,14 @@
     font-weight: 400;
     font-size: 16px;
     margin-bottom: 0%;
+    height: 100%;
+}
+.header-links li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
 }
 
 .menu-toggle {
@@ -82,19 +91,19 @@
 .nav_list {
     color: white;
     text-decoration: none;
-    /* border: 1px solid white; */
-    padding: 1rem 0rem;
+    /* padding: 1rem 0rem; */
+    /* height: 70px; */
 }
 .account, .fav{
     padding: 0%;
 }
 .phone_number{
-  box-shadow: 0 0 2px #ffffff;
+
   padding: 0.5rem 1rem;
   margin-left: 2rem;
   border-radius: 12px;
   &:hover{
-    box-shadow: 0 0 2px #EFD7A1;
+
     text-decoration: none;
   }
 }
@@ -114,7 +123,8 @@
     text-align: center;
     display: none;
     position: absolute;
-    top: -100px;
+    /* bottom: 30px; */
+    top: -130px;
     left: 50%;
     transform: translate(-50%);
     background-color: #100b28c1;
@@ -124,10 +134,12 @@
     padding: 0;
     margin: 0;
     z-index: 999;
+    max-height: 150px;
+    overflow-y: auto;
 }
 
 .gll_header.sticky .dropdown_menu {
-    top: 47px;
+    top: 70px;
 }
 
 .dropdown:hover .dropdown_menu {

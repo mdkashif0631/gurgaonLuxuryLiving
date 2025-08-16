@@ -362,7 +362,7 @@
   text-align: center;
   opacity: 0;
   transform: translateY(30px);
-  background-color: #050e1d;
+
   transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
@@ -386,7 +386,7 @@
 .main-title {
   font-size: 38px;
   font-weight: 200;
-  color: #ffffff;
+  
   line-height: 1.4;
   margin-bottom: 50px;
   font-family: "Playfair Display", serif;
@@ -405,7 +405,7 @@
   opacity: 0;
   transform: translateY(40px);
   transition: opacity 0.8s ease, transform 0.8s ease;
-  color: #ffffff;
+
 }
 
 .concept-section.visible .feature-card {

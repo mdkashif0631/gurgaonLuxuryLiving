@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Header from './component/Header';
 import ExceptionalConcept from './component/ExceptionalConcept';
 import ContentSection from './component/ContentSection';
@@ -14,8 +14,11 @@ import Footer from '../Footer.js';
 import Disclaimer from './component/Disclaimer.js';
 import PartnersSection from './component/PartnersSection.js';
 import HeroSection from './component/HeroSection.js';
+import { SlEnvolopeLetter } from 'react-icons/sl';
+import RegisterInterestForm from '../ElanEmperor/elanEmpire/components/RegisterInterestForm.js';
 
 const Elan = () => {
+      const [showForm, setShowForm] = useState(false);
   return (
     <div>
       <Header />
@@ -36,6 +39,19 @@ const Elan = () => {
       <PartnersSection/>
       <Disclaimer/>
       <Footer/>
+      <div className={`side-popup ${showForm ? "open" : ""}`}>
+        <span className="popup-close" onClick={() => setShowForm(false)}>
+          &times;
+        </span>
+        <RegisterInterestForm />
+      </div>
+      <div
+        className="enqurie_popup"
+        onClick={() => setShowForm(true)}
+        title="Register Your Interest"
+      >
+        <SlEnvolopeLetter />
+      </div>
     </div>
   )
 }
