@@ -1,0 +1,102 @@
+
+.elan-floorplans-container {
+  text-align: center;
+  padding: 60px 20px;
+  font-family: 'Times New Roman', serif;
+  width: 100%;
+}
+
+.elan-floorplans-title {
+  color: #000000;
+  font-size: 2.8rem;
+  margin-bottom: 50px;
+  animation: fadeInDown 1s ease-in-out;
+}
+
+.elan-floorplans-grid {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: auto;
+
+}
+
+.elan-floorplans-card {
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: 30px;
+  text-align: center;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, border 0.4s ease;
+  cursor: pointer;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.elan-floorplans-card:hover {
+  transform: translateY(-10px);
+  border: 1px solid #000000;
+  box-shadow: 0 8px 20px #272727a4;
+}
+
+.elan-floorplans-icon {
+  width: 200px;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+.elan-floorplans-subtitle {
+  color: rgb(0, 0, 0);
+  font-size: 1.4rem;
+  margin-bottom: 8px;
+}
+
+.elan-floorplans-size {
+  color: #000000;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.elan-floorplans-btn {
+  background-color: #000000;
+  color: rgb(255, 255, 255);
+  border: none;
+  padding: 12px 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.elan-floorplans-btn:hover {
+  background-color: #ededed;
+  color: #000;
+  transform: translateX(5px);
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

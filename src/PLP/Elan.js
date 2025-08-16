@@ -16,6 +16,7 @@ import PartnersSection from './component/PartnersSection.js';
 import HeroSection from './component/HeroSection.js';
 import { SlEnvolopeLetter } from 'react-icons/sl';
 import RegisterInterestForm from '../ElanEmperor/elanEmpire/components/RegisterInterestForm.js';
+import FloorPlan from './component/FloorPlan.js';
 
 const Elan = () => {
       const [showForm, setShowForm] = useState(false);
@@ -28,6 +29,7 @@ const Elan = () => {
       <PersonalRetreat/>
       <ConceptSection/>
       <LocationAdvantages/>
+      <FloorPlan/>
       <ProjectVideo/>
       <Residences/>
       <ProjectImage/>

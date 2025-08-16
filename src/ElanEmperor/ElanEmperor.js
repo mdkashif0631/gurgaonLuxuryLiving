@@ -20,6 +20,7 @@ import EmperorLivingRoom from './elanEmpire/components/EmperorLivingRoom';
 import EmperorVideo2 from './elanEmpire/components/EmperorVideo2';
 import EmperorRetreat from './elanEmpire/components/EmperorRetreat';
 import EmperorPartner from './elanEmpire/components/EmperorPartner';
+import FloorPlan from './elanEmpire/components/FloorPlan';
 // import Life_style from './elanEmpire/components/LifeStyle';
 
 function ElanEmperor() {
@@ -34,7 +35,7 @@ function ElanEmperor() {
       <ResortLiving/>
       <GlobalConsultants/>
       <LifeStyle/>
-      
+      <FloorPlan/>
       <ConceptSection/>
       <LocationEmperor/>
       <EmperorVideo/>
