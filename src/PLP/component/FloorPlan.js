@@ -32,7 +32,7 @@ export default function FloorPlan() {
         {plans.map((plan) => (
           <div key={plan.id} className="elan-floorplans-card">
             <img
-              src="https://res.cloudinary.com/dif213nbi/image/upload/v1755377563/house_qhfvsv_sezsmb.jpg"
+              src="https://res.cloudinary.com/dif213nbi/image/upload/v1754908551/house_qhfvsv.png"
               alt={plan.title}
               className="elan-floorplans-icon"
             />
