@@ -17,7 +17,7 @@ const EmperorPartner = () => {
 
   return (
     <section className="partners-section" style={{backgroundColor:'#050e1d'}}>
-      <p className="partners-subtitle" style={{color:'white'}}>PARTNERS & ASSOCIATES</p>
+      <p className="partners-subtitle" style={{color:'#b08968'}}>PARTNERS & ASSOCIATES</p>
       <h2 className="partners-title" style={{color:'white'}}>
         To Deliver the Best We Have <br />
         Onboarded Leading Names in the Industry

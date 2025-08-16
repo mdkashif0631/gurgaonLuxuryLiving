@@ -11,9 +11,9 @@ const EmperorResidence = () => {
         transition={{ duration: 1, ease: "easeOut" }}
         viewport={{ once: true }}
       >
-        <h2 className="residences-title">RESIDENCES</h2>
+        <h2 className="residences-title" style={{color:'#b08968'}}>RESIDENCES</h2>
         <div className="residences-divider"></div>
-        <p className="residences-description">
+        <p className="residences-description" style={{color:'white'}}>
           Each Residence is impeccably designed for magnificent living, tucked
           away from the hustle bustle of city life.
         </p>

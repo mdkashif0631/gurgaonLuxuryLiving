@@ -30,10 +30,11 @@ const EmperorRetreat = () => {
         <section
             className={`personal-retreat ${isVisible ? "visible" : ""}`}
             ref={sectionRef}
+            style={{backgroundColor:'#050e1d'}}
         >
             <div className="retreat_text-content">
-                <h2 className="retreat_title">YOUR PERSONAL RETREAT</h2>
-                <p className="retreat_description">
+                <h2 className="retreat_title" style={{color:'#b08968'}}>YOUR PERSONAL RETREAT</h2>
+                <p className="retreat_description" style={{color:'white'}}>
                     Life at Presidential means a world tucked away in tranquillity,
                     <br/>
                     ensuring that every moment spent here feels like a retreat.

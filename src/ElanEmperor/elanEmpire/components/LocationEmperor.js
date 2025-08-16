@@ -14,8 +14,8 @@ const LocationEmperor = () => {
         <img src="https://res.cloudinary.com/dif213nbi/image/upload/v1755344413/location_emperor_asjkyk.webp" style={{width:'100%'}} alt="Location Map" />
       </div>
       <div className="location-content" >
-        <p className="location_subtitle" style={{color:'white'}}>LOCATION ADVANTAGES</p>
-        <h2 className="location_main-title" style={{color:'white'}}>
+        <p className="location_subtitle" style={{color:'#b08968'}}>LOCATION ADVANTAGES</p>
+        <h2 className="location_main-title" style={{color:'#b08968'}}>
           With Elan the Presidential, luxury living now has a new address.
         </h2>
         <ul className="location-points" >

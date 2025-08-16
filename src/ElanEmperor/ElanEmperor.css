@@ -1,11 +1,11 @@
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   text-decoration: none;
 }
 
-.enqurie_popup{
+.enqurie_popup {
   position: fixed;
   bottom: 40px;
   right: 50px;
@@ -18,16 +18,18 @@
   justify-content: center;
   border-radius: 50%;
   font-size: 24px;
-  &:hover{
+
+  &:hover {
     width: 55px;
     height: 55px;
     box-shadow: 0 0 12px #e8c182c3;
     font-size: 26px;
     bottom: 37.5px;
-  right: 47.5px;
+    right: 47.5px;
 
   }
 }
+
 /* ==================== elan Header ======================= */
 
 .elan_header {
@@ -102,11 +104,13 @@
   color: #000000;
 
 }
-.elan_gll_logo{
+
+.elan_gll_logo {
   display: flex;
   /* border: 2px solid #333; */
   /* align-items: center; */
 }
+
 .elan_gll_phone {
   margin: auto;
   height: 35px;
@@ -121,20 +125,21 @@
   padding: 5px 6px;
   background-color: transparent;
   border-radius: 4px;
-  
+
   &:hover {
     background-color: #84848466;
     color: white;
     border: 1px solid #ececec;
   }
-} 
+}
 
 @media screen and (max-width: 1200px) {
   .elan_header {
     display: grid;
     grid-template-rows: auto 50px;
   }
-  .elan_web_header{
+
+  .elan_web_header {
     padding: 5px 10px;
   }
 
@@ -200,47 +205,49 @@
   box-sizing: border-box;
 }
 
-.elan_hero {
+.emperor_hero {
   width: 100%;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  
-  z-index: -100;
-}
-.elan_hero.sticky{
-  margin-top: -80px;
-}
-.elan_hero_section_video{
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
+
 }
 
-.elan_overlay {
+.emperor_hero.sticky {
+  margin-top: -80px;
+}
+
+.emperor_hero_section_video {
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+
+.emperor_overlay {
   text-align: center;
   color: white;
   padding: 20px;
+  z-index: 1;
 }
 
-.elan_hero_subtitle {
+.emperor_hero_subtitle {
   font-size: 14px;
   letter-spacing: 2px;
   margin-bottom: 15px;
   font-family: "Mulish", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    text-transform: uppercase;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  text-transform: uppercase;
 }
 
-.elan_hero_title {
+.emperor_hero_title {
   font-size: 80px;
   font-weight: 300;
   letter-spacing: 2px;
@@ -248,26 +255,26 @@
   font-family: "Playfair Display", serif;
   font-optical-sizing: auto;
   font-style: normal;
-    text-transform: uppercase;
+  text-transform: uppercase;
 
 }
 
-.elan_hero_location {
+.emperor_hero_location {
   font-size: 14px;
   letter-spacing: 2px;
   font-family: "Mulish", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
+
 @media screen and (max-width: 700px) {
-  .elan_hero_title {
-  font-size: 30px;
+  .emperor_hero_title {
+    font-size: 30px;
+  }
+  
+
 }
-}
-
-
-
 
 
 
@@ -282,6 +289,7 @@
   padding: 80px 20px;
   position: relative;
   object-fit: cover;
+  z-index: 10;
 }
 
 .land_mark_bg_img {
@@ -290,7 +298,7 @@
   left: 0;
   height: 100%;
   width: 100%;
-  z-index: -10;
+  z-index: -1;
   object-fit: cover;
 }
 
@@ -336,11 +344,11 @@
   .land_mark-description {
     max-width: 95%;
     margin: 10px auto;
-    font-size: 10px;
+    font-size: 14px;
   }
 
   .land_mark-container {
-    height: 100vh;
+    height: 80vh;
     padding: 20px;
   }
 }
@@ -397,7 +405,7 @@
   opacity: 0;
   transform: translateY(40px);
   transition: opacity 0.8s ease, transform 0.8s ease;
-  color:#ffffff;
+  color: #ffffff;
 }
 
 .concept-section.visible .feature-card {
@@ -436,10 +444,11 @@
   .main-title {
     font-size: 22px;
   }
+
   .features-grid {
-  /* display: grid; */
-  grid-template-columns: repeat(1, 1fr);
-}
+    /* display: grid; */
+    grid-template-columns: repeat(1, 1fr);
+  }
 
 }
 
@@ -449,19 +458,21 @@
   justify-content: center;
   position: fixed;
   top: 0;
-  left: -100%; /* hidden initially */
+  left: -100%;
+  /* hidden initially */
   height: 100vh;
   width: 100%;
   background: rgba(9, 9, 9, 0.553);
   box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
   transition: left 0.4s ease;
-  z-index:  10000;
+  z-index: 10000;
   padding: 20px;
   overflow-y: auto;
 }
 
 .side-popup.open {
-  left: 0; /* visible */
+  left: 0;
+  /* visible */
 }
 
 .popup-close {
@@ -563,7 +574,7 @@ textarea {
 
 
 
-.illustrious_container{
+.illustrious_container {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -571,24 +582,29 @@ textarea {
   position: relative;
   background-color: #050e1d;
 }
+
 .top_right_design,
-.bottom_left_design{
+.bottom_left_design {
   position: absolute;
   height: 70%;
 }
+
 .top_right_design img,
-.bottom_left_design img{
+.bottom_left_design img {
   height: 100%;
 }
-.top_right_design{
+
+.top_right_design {
   right: 0;
   top: 0;
 }
-.bottom_left_design{
+
+.bottom_left_design {
   left: 0;
   bottom: 0;
 }
-.illustrious_detail{
+
+.illustrious_detail {
   width: 60%;
   margin: auto;
   font-size: 20px;
@@ -596,14 +612,15 @@ textarea {
   /* line-spacing: 4px; */
   line-height: 2;
 }
+
 @media screen and (max-width: 800px) {
-  .illustrious_detail{
+  .illustrious_detail {
     font-size: 16px;
     width: 80%;
   }
 }
 
-.resort_container{
+.resort_container {
   display: flex;
   justify-content: space-between;
   gap: 16px;
@@ -611,7 +628,7 @@ textarea {
   color: white;
 }
 
-.elanresortinfo{
+.elanresortinfo {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -622,58 +639,67 @@ textarea {
   padding-left: 3rem;
   line-height: 2;
 }
-.elanresortinfo h4{
-font-size: 20px;
-font-weight: 300;
+
+.elanresortinfo h4 {
+  font-size: 20px;
+  font-weight: 300;
 }
-.elanresortinfo h1{
+
+.elanresortinfo h1 {
   font-size: 50px;
   font-weight: 200;
   text-decoration: underline;
 }
 
-.elanresortimg{
+.elanresortimg {
   width: 35%;
   padding: 2rem 0rem;
   text-align: right;
   /* max-height: 500px; */
 }
-.elanresortimg img{
+
+.elanresortimg img {
   height: 100%;
   width: 100%;
 }
+
 @media screen and (max-width: 960px) {
-  .resort_container{
+  .resort_container {
     flex-direction: column;
+    margin: 2rem 0rem;
   }
-  .elanresortinfo{
+
+  .elanresortinfo {
     width: 100%;
-  height: 50%;
-  gap: 10px;
-  margin: auto;
-  padding-left: 1rem;
-}
-  .elanresortinfo h1{
-   font-size: 30px;
-}
-  .elanresortimg{
+    height: 50%;
+    gap: 10px;
+    margin: auto;
+    padding-left: 1rem;
+  }
+
+  .elanresortinfo h1 {
+    font-size: 30px;
+  }
+
+  .elanresortimg {
     width: 100%;
     height: 250px;
     padding: 5px;
     text-align: center;
- /* display: none; */
-}
-  .elanresortimg img{
+    /* display: none; */
+  }
+
+  .elanresortimg img {
     width: auto;
-    
- /* display: none; */
+
+    /* display: none; */
+  }
 }
-}
 
 
 
 
-.global-consultants{
+.global-consultants {
   display: grid;
   grid-template-rows: repeat(2, auto);
   text-align: center;
@@ -681,17 +707,20 @@ font-weight: 300;
   background-color: #050e1d;
 
 }
-.consultant-heading{
+
+.consultant-heading {
   display: flex;
   flex-direction: column;
   gap: 16px;
   color: white;
 }
-.consultant-heading h1{
+
+.consultant-heading h1 {
   font-size: 40px;
   font-weight: 300;
 }
-.consultant-heading p{
+
+.consultant-heading p {
   font-size: 20px;
   font-weight: 300;
   width: 60%;
@@ -717,12 +746,15 @@ font-weight: 300;
   border-radius: 8px;
   text-align: center;
 }
+
 .consultant-card h3 {
-line-height: 2;
-}
-.designation{
   line-height: 2;
 }
+
+.designation {
+  line-height: 2;
+}
+
 .consultant_img-container {
   position: relative;
 }
@@ -743,7 +775,7 @@ line-height: 2;
   font-weight: bold;
 }
 
-.nav-btn {
+.consultant-btn {
   background: rgba(180, 140, 80, 0.9);
   color: white;
   border: none;
@@ -754,41 +786,45 @@ line-height: 2;
   z-index: 2;
 }
 
-.nav-btn.left {
+.consultant-btn.left {
   position: absolute;
   left: 0;
 }
 
-.nav-btn.right {
+.consultant-btn.right {
   position: absolute;
   right: 0;
 }
 
 @media screen and (max-width:700px) {
-  .global-consultants{
+  .global-consultants {
     padding: 40px 4px;
   }
-  .consultant-heading h1{
-  font-size: 20px;
-  font-weight: 300;
-}
-.consultant-heading p{
-  font-size: 10px;
-  font-weight: 100;
-  width: 100%;
-  margin: auto;
-}
-.consultants-carousel{
-  margin-top: 1rem;
-}
-.nav-btn {
-  background: transparent;
-  color: rgba(180, 140, 80, 0);
-  font-size: 1.5rem;
-  border-radius: 4px;
-  z-index: 2;
-  height: 100%;
-}
+
+  .consultant-heading h1 {
+    font-size: 20px;
+    font-weight: 300;
+  }
+
+  .consultant-heading p {
+    font-size: 10px;
+    font-weight: 100;
+    width: 100%;
+    margin: auto;
+  }
+
+  .consultants-carousel {
+    margin-top: 1rem;
+  }
+
+  .consultant-btn {
+    background: transparent;
+    color: rgba(180, 140, 80, 0);
+    font-size: 1.5rem;
+    border-radius: 4px;
+    z-index: 2;
+    height: 100%;
+  }
 }
 
 
@@ -819,7 +855,7 @@ line-height: 2;
   /* object-fit: cover; */
 }
 
-.life_style_bg{
+.life_style_bg {
   height: 100%;
   width: 100%;
 }
@@ -850,8 +886,9 @@ line-height: 2;
 .life_style-btn.right {
   right: 10px;
 }
+
 @media screen and (max-width: 700px) {
   .life_style-btn {
-  background: transparent;
+    background: transparent;
   }
 }

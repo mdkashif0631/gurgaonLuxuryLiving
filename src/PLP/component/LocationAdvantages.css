@@ -99,7 +99,7 @@
     }
 
     .location_image {
-        padding-right: 0;
+        margin-right: 0px;
         margin-bottom: 30px;
         height: 50vh;
     }

@@ -67,9 +67,10 @@ const ConceptSection = () => {
       className={`concept-section ${isVisible ? "visible" : ""}`}
       id="description"
       ref={sectionRef}
+      style={{backgroundColor:'#050e1d'}}
     >
       <p className="subtitle">THE CONCEPT BEHIND IT</p>
-      <h2 className="main-title">
+      <h2 className="main-title" style={{color:'white'}}>
         Elan the Presidential will be one of the most ambitious and grandest
         projects in the history of residential concepts.
       </h2>
@@ -83,8 +84,8 @@ const ConceptSection = () => {
           >
             {/* <div className="feature-icon">{item.icon}</div> */}
             <img className="feature-icon" src={item.icon} alt=""/>
-            <h3>{item.title}</h3>
-            <p>{item.description}</p>
+            <h3 style={{color:'#b08968'}}>{item.title}</h3>
+            <p style={{color:'white'}}>{item.description}</p>
           </div>
         ))}
       </div>

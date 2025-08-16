@@ -26,7 +26,7 @@ function App() {
     const [showForm, setShowForm] = useState(false);
 
   return (
-    <div className="App">
+    <div className="App" style={{backgroundColor:'#050e1d'}}>
       <Header/>
       <HeroSection/>
       <Landmark/>
@@ -34,7 +34,7 @@ function App() {
       <ResortLiving/>
       <GlobalConsultants/>
       <LifeStyle/>
-      {/* <Life_style/> */}
+      
       <ConceptSection/>
       <LocationEmperor/>
       <EmperorVideo/>

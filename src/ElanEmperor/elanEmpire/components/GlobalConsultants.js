@@ -42,9 +42,7 @@ export const GlobalConsultants = () => {
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [cardsPerView, setCardsPerView] = useState(4);
-  const intervalRef = useRef(null); // store interval id
-
-  // Function to update cards per view based on screen width
+  const intervalRef = useRef(null); 
   const updateCardsPerView = () => {
     if (window.innerWidth < 600) {
       setCardsPerView(1);
@@ -71,19 +69,19 @@ export const GlobalConsultants = () => {
     setCurrentIndex((prev) => (prev - 1 + consultants.length) % consultants.length);
   }, [consultants.length]);
 
-  // Function to start or restart interval
+
   const startAutoSlide = useCallback(() => {
     if (intervalRef.current) clearInterval(intervalRef.current);
     intervalRef.current = setInterval(nextSlide, 8000);
   }, [nextSlide]);
 
-  // Auto-slide setup
+
   useEffect(() => {
     startAutoSlide();
     return () => clearInterval(intervalRef.current);
   }, [startAutoSlide]);
 
-  // On button click, reset timer
+
   const handleNext = () => {
     nextSlide();
     startAutoSlide();
@@ -94,7 +92,7 @@ export const GlobalConsultants = () => {
     startAutoSlide();
   };
 
-  // Get currently visible cards
+
   const getVisibleCards = () => {
     return Array.from({ length: cardsPerView }, (_, i) => {
       return consultants[(currentIndex + i) % consultants.length];
@@ -104,7 +102,7 @@ export const GlobalConsultants = () => {
   return (
     <section className="global-consultants">
       <div className="consultant-heading">
-        <h1>GLOBAL CONSULTANTS</h1>
+        <h1 style={{color:'#b08968'}}>GLOBAL CONSULTANTS</h1>
         <p>
           For the First Time in Real Estate History, Elan Group Brings Together
           Industry-Leading Global Consultants to Create an Extraordinary
@@ -113,7 +111,7 @@ export const GlobalConsultants = () => {
       </div>
 
       <div className="consultants-carousel">
-        <button className="nav-btn left" onClick={handlePrev}>
+        <button className="consultant-btn left" onClick={handlePrev}>
           &#10094;
         </button>
 
@@ -123,14 +121,14 @@ export const GlobalConsultants = () => {
               <div className="consultant_img-container">
                 <img src={consultant.img} alt={consultant.name} />
               </div>
-              <h3>{consultant.name}</h3>
+              <h3 style={{color:'#b08968'}}>{consultant.name}</h3>
               <p className="designation">{consultant.designation}</p>
               <p className="location">{consultant.location}</p>
             </div>
           ))}
         </div>
 
-        <button className="nav-btn right" onClick={handleNext}>
+        <button className="consultant-btn right" onClick={handleNext}>
           &#10095;
         </button>
       </div>
