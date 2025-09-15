@@ -1,0 +1,213 @@
+.tp_carousel-container {
+  background: linear-gradient(
+    180deg,
+    #100b28,
+    #323744 36.46%,
+    #535c70 67.19%,
+    #100b28
+  );
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+/* ====== Layout ====== */
+
+.tp_carousel-title {
+  text-align: center;
+  font-size: clamp(18px, 2.2vw, 28px);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  margin: 0 0 18px;
+  color: #bfbebe;
+}
+
+.tp_carousel-title .handle {
+  color: #8f8e8e; /* accent */
+}
+
+/* Optional soft fade on the sides */
+.tp_carousel-container::before,
+.tp_carousel-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 48px;
+  pointer-events: none;
+  z-index: 2;
+}
+.tp_carousel-container::before {
+  left: 0;
+  background: linear-gradient(to right, #14102f, rgba(0, 0, 0, 0.003));
+}
+.tp_carousel-container::after {
+  right: 0;
+  background: linear-gradient(to left, #14102f, rgba(0, 0, 0, 0.073));
+}
+
+/* ====== Slider mechanics ====== */
+.tp_carousel-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.tp_carousel-slider {
+  width: 100%;
+}
+
+.type_of_prop_gll {
+  display: flex;              /* slides in a row */
+  transition: transform 500ms ease-in-out;
+  will-change: transform;
+}
+
+/* Each slide occupies full viewport width of the tp_carousel.
+   translateX(-current * 100%) will shift by exact slide widths. */
+.tp_carousel-slide {
+  flex: 0 0 100%;
+  padding: 4px 0; /* breathing room for AOS shadows */
+  box-sizing: border-box;
+}
+
+/* ====== Card grid per slide ====== */
+.tp_card-grid {
+  display: grid;
+  gap: 16px;
+}
+
+/* Desktop: 3 cards per slide (>=1101px) */
+@media (min-width: 1101px) {
+  .tp_card-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Tablet: 2 cards per slide (701px–1100px) */
+@media (min-width: 711px) and (max-width: 1100px) {
+  .tp_card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile: 1 card per slide (<=700px) */
+@media (max-width: 710) {
+  .tp_card-grid {
+    grid-template-columns: 1fr;
+  }
+  .tp_carousel-container::before {
+  background: none;
+}
+.tp_carousel-container::after {
+  background: none;
+}
+}
+
+/* ====== Card ====== */
+.tp_card {
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(17, 24, 39, 0.08);
+  transition: transform 220ms ease, box-shadow 220ms ease;
+
+}
+
+.tp_card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(17, 24, 39, 0.12);
+}
+
+.tp_card img {
+  display: block;
+  width: 100%;
+  min-height: 480px;
+  object-fit: cover;
+}
+
+/* Optional title under image (if you uncomment <p>) */
+.tp_card p {
+  margin: 10px 12px 14px;
+  font-weight: 600;
+  color: #111827;
+}
+
+/* ====== Nav buttons ====== */
+.tp_nav-btn {
+  position: absolute;
+  top: 40px;
+  transform: translateY(-50%);
+  z-index: 3;
+  border: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  background: white;
+  box-shadow: 0 6px 18px rgba(17, 24, 39, 0.14);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease;
+}
+
+.tp_nav-btn svg {
+  width: 18px;
+  height: 18px;
+  color: #111;
+}
+
+.tp_nav-btn:hover {
+  transform: translateY(-50%) scale(1.04);
+  box-shadow: 0 10px 24px rgba(17, 24, 39, 0.18);
+}
+
+.tp_nav-btn.left { right: 110px; }
+.tp_nav-btn.right { right: 42px; }
+
+/* Keep buttons away from edges on small screens */
+@media (max-width: 700px) {
+  .tp_carousel-container {
+  padding: 20px;
+}
+  .tp_nav-btn { width: 40px;
+    top: 250px; 
+    height: 90%; 
+      background: transparent;
+      box-shadow: none;
+  }
+  .tp_nav-btn svg {
+  width: 18px;
+  height: 18px;
+  color: transparent;
+}
+  .tp_nav-btn.left { 
+    left: 4px; 
+    right: 100%;
+  }
+  .tp_nav-btn.right { 
+    right: 4px; }
+  
+.tp_card img {
+  display: block;
+  width: 100%;
+  min-height: 380px;
+  object-fit: cover;
+}
+}
+
+/* ====== Motion preferences ====== */
+@media (prefers-reduced-motion: reduce) {
+  .type_of_prop_gll {
+    transition: none;
+  }
+  .tp_card,
+  .tp_nav-btn {
+    transition: none;
+  }
+}
+
+/* ====== AOS tweak (optional, prevents jitter) ====== */
+[data-aos] {
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}

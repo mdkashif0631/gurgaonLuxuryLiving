@@ -1,0 +1,80 @@
+.bloghero {
+    background: linear-gradient(180deg, #100b28, #323744 36.46%, #535c70 67.19%, #100b28);
+    padding: 2rem 0rem;
+    position: relative;
+
+}
+
+.bloghero_container {
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.bloghero_wrapper {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+}
+
+.bloghero_slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-color: #2828289a;
+    min-width: 100%;
+    min-height: 60vh;
+    padding: 40px;
+    box-sizing: border-box;
+    position: relative;
+    color: white;
+}
+
+.bloghero_img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.bloghero_slide h2 {
+    font-size: 28px;
+    font-weight: bold;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.bloghero_slide p {
+    font-size: 16px;
+    /* color: #444; */
+    margin-bottom: 20px;
+}
+
+.bloghero_slide a {
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.bloghero_dots {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.bloghero_dot {
+    height: 12px;
+    width: 12px;
+    margin: 0 5px;
+    display: inline-block;
+    background: #bbb;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.bloghero_dot.active {
+    background: #000;
+}

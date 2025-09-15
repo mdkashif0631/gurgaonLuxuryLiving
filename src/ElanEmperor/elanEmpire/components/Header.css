@@ -1,0 +1,189 @@
+/* ==================== elan Header ======================= */
+
+.elan_header {
+  display: grid;
+  grid-template-rows: auto;
+  width: 100%;
+  box-shadow: 0 2px 8px rgba(10, 10, 10, 0.04);
+  background-color: #44393d92;
+  /* background-color: rgba(255, 255, 255, 0.3);  */
+  -webkit-backdrop-filter: blur(5px) saturate(1);
+  backdrop-filter: blur(5px) saturate(1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.elan_header.sticky {
+  background-color: #3d3d3d9a;
+  -webkit-backdrop-filter: blur(5px) saturate(1);
+  backdrop-filter: blur(5px) saturate(1);
+}
+
+.elan_web_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 40px;
+  position: relative;
+
+}
+
+.elan_menu_icon {
+  display: none;
+}
+
+.elan_logo {
+  width: 255px;
+}
+
+.elan_logo img {
+  max-height: 55px;
+  margin: 2px 0px;
+
+}
+
+.elan_gll_logo {
+  text-align: right;
+  width: 245px;
+}
+
+.elan_gll_logo img {
+  max-height: 60px;
+}
+
+.elan_nav {
+  text-align: center;
+  min-width: 470px;
+}
+
+.elan_nav a {
+  padding-left: 18px;
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  font-size: clamp(10px, 4vw, 16px);
+  margin: auto;
+
+  &:hover {
+    color: #E8C182;
+    text-decoration: underline;
+  }
+
+}
+
+.elan_state.active {
+
+  color: #E8C182;
+
+}
+
+
+.elan_gll_phone {
+  margin: auto;
+  height: 35px;
+  text-decoration: none;
+  color: #f7f7f7;
+  font-size: 14px;
+  font-family: "Mulish", sans-serif;
+  border: 1px solid #ebe9e6;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  padding: 5px;
+  background-color: transparent;
+  border-radius: 4px;
+
+  &:hover {
+    background-color: #ffffff66;
+    color: #E8C182;
+    border: 1px solid #E8C182;
+  }
+}
+
+ @media screen and (max-width: 1200px) {
+.elan_gll_phone {
+    display: none;
+  }
+  
+  .elan_logo {
+    width: 30%;
+  }
+  
+  .elan_gll_logo {
+    width: 30%;
+  }
+ }
+ @media screen and (max-width: 1000px) {
+  .elan_header {
+    display: grid;
+    grid-template-rows: auto 40px;
+  }
+
+  .elan_web_header {
+  padding: 5px 10px;
+
+}
+.elan_logo img {
+  /* max-height: 50px; */
+  height: auto;
+  width: 100%;
+  max-width: 130px;
+}
+.elan_gll_logo img {
+  /* max-height: 50px; */
+  height: auto;
+  width: 100%;
+  max-width: 130px;
+}
+
+  
+
+  .elan_nav {
+    display: none;
+  }
+.elan_nav {
+  text-align: center;
+  min-width: 10px;
+}
+  
+
+  .elan_menu_icon {
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: #E8C182;
+    border-top: 1px solid #e8c1827d;
+    border-bottom: 1px solid #e8c1827d;
+  }
+
+  .elan_close_bar {
+    font-size: 30px;
+    margin: auto;
+    height: 100%;
+
+  }
+
+  .elan_memu {
+    font-size: clamp(12px, 2vw, 30px);
+    margin: auto;
+    height: 100%;
+  }
+
+  .elan_nav.open {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    margin-top: 40px;
+    left: 0px;
+    padding: 1rem;
+    background-color: #0000006c;
+    -webkit-backdrop-filter: blur(5px) saturate(1);
+    backdrop-filter: blur(5px) saturate(1);
+
+  }
+} 

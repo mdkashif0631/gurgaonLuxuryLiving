@@ -1,0 +1,19 @@
+.blogs{
+    background-color: #100b28;
+}
+.blogs_heading{
+    color: white;
+    padding: 6rem 0rem 0rem;
+    margin: auto;
+    width: fit-content;
+    font-size: clamp(12px, 4vw, 30px);
+}
+.blog_card_display{
+    width: 80%;
+    margin: auto;
+}
+@media screen and (max-width:960px) {
+    .blog_card_display{
+    width: 98%;
+}
+}

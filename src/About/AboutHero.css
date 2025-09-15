@@ -1,0 +1,111 @@
+/* Background */
+.about_hero_section {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  padding: 0 20px;
+  background-color: #00000086;
+}
+
+.about_hero_video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    z-index: -100;
+}
+
+/* Content */
+.about_hero_content {
+    width: 80%;
+  z-index: 2;
+  color: white;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease-out;
+  
+  
+}
+
+.about_hero_content.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Subtitle */
+.about_hero_subtitle {
+  font-size: clamp(8px, 2vw, 16px);
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  
+}
+
+/* Title */
+.about_hero_title {
+  font-size: clamp(14px, 6vw, 40px);
+  line-height: 1.2;
+  font-weight: 400;
+  margin: 20px 0 0;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+/* Scroll Indicator (animated arrow) */
+.about_scroll-indicator {
+  margin: 0rem auto 1rem;
+  position: relative;
+  width: 6px;
+  height: auto;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.about_scroll-indicator span {
+  width: 2px;
+  min-height: 70px;
+  max-height: 150px;
+  background: #fff;
+  /* border-radius: 50%; */
+  display: block;
+  animation: scroll-down 1.5s infinite;
+  margin-top: 6px;
+  z-index: 10;
+}
+.about_direct{
+    font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: clamp(8px, 2vw, 16px);
+
+}
+
+@keyframes scroll-down {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(12px);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+}
+

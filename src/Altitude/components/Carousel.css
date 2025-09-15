@@ -1,0 +1,86 @@
+.altitude_mp {
+  position: relative;
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+  background-color: #d7d7d7;
+  padding: 2rem 3rem;
+  /* height: 90vh; */
+}
+
+.altitude_mp-track {
+  display: flex;
+  transition: transform 0.7s ease-in-out;
+}
+
+/* Desktop: 2 slides */
+.altitude_mp-item {
+  min-width: 70%;
+  box-sizing: border-box;
+  position: relative;
+  padding: 10px;
+}
+
+.altitude_mp-item img {
+  width: 100%;
+  border-radius: 12px;
+  display: block;
+}
+
+/* Caption */
+.altitude_mp-caption {
+  position: absolute;
+  bottom: 15px;
+  left: 20px;
+  color: #fff;
+  text-shadow: 0px 2px 8px rgba(0,0,0,0.6);
+}
+
+.altitude_mp-caption h3 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.altitude_mp-caption p {
+  font-size: 0.9rem;
+}
+
+/* Buttons */
+.altitude_mp-btn {
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  bottom: 1rem;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  /* padding: 6px 12px; */
+  border-radius: 50%;
+  z-index: 5;
+}
+
+.altitude_mp-btn.left {
+  left: 20px;
+}
+
+.altitude_mp-btn.right {
+  left: 80px;
+}
+
+/* Mobile: 1 slide only */
+@media (max-width: 768px) {
+  .altitude_mp-item {
+    min-width: 100%;
+  }
+
+  .altitude_mp-caption h3 {
+    font-size: 1rem;
+  }
+
+  .altitude_mp-caption p {
+    font-size: 0.8rem;
+  }
+}

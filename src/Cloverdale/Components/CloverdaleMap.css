@@ -1,0 +1,106 @@
+.cloverdale-map-container {
+  display: flex;
+  position: relative;
+  width: 80%;
+  margin: 2rem auto;
+  height: 90vh;
+  overflow: hidden;
+  background: #fff;
+}
+
+/* Sidebar */
+.cloverdale-sidebar {
+  position: absolute;
+  top: 0;
+  left: -320px;
+  width: 320px;
+  height: 100%;
+  background: #a87b2d;
+  color: #fff;
+  padding: 20px;
+  transition: left 0.5s ease;
+  z-index: 10;
+  overflow-y: auto;
+}
+
+.cloverdale-sidebar.open {
+  left: 0;
+}
+
+.cloverdale-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.cloverdale-tabs button {
+  flex: 1;
+  background: #d9b96a;
+  border: none;
+  padding: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #333;
+  border-radius: 5px;
+}
+
+.cloverdale-tabs button.active {
+  background: #fff;
+  color: #000;
+}
+
+.cloverdale-sidebar-content h3 {
+  margin-top: 15px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.cloverdale-sidebar-content p {
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+/* Map */
+.cloverdale-map {
+  flex: 1;
+  position: relative;
+  transition: margin-left 0.5s ease;
+}
+
+.cloverdale-map.shrink {
+  margin-left: 320px; /* push when sidebar open */
+}
+
+.cloverdale-map img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Toggle Button */
+.cloverdale-toggle-btn {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0%, -50%);
+  background: #a87b2d;
+  color: #fff;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 20;
+  font-size: 1.2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cloverdale-sidebar {
+    width: 80%;
+  }
+
+  .cloverdale-map.shrink {
+    margin-left: 80%;
+  }
+}

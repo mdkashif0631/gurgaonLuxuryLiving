@@ -1,0 +1,100 @@
+.about_contact-section {
+  background: linear-gradient(to bottom, #2e3b4e, #3f4c63);
+  color: #fff;
+  padding: 3rem 1.5rem;
+  text-align: center;
+  transition: all 0.5s ease;
+}
+
+.about_form-title {
+  font-size: 2rem;
+  letter-spacing: 2px;
+  margin-bottom: 0.rem;
+}
+
+.about_form-subtitle {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.about_form-subtitle a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.about_form {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.about_form-row {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.about_form-row input {
+  flex: 1;
+  padding: 0.75rem;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #bbb;
+  color: #fff;
+  font-size: 1rem;
+}
+
+textarea {
+  width: 100%;
+  padding: 0.75rem;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #bbb;
+  color: #fff;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.about_submit-btn {
+  background: transparent;
+  border: 2px solid #fff;
+  border-radius: 25px;
+  padding: 0.75rem 2rem;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.about_submit-btn:hover {
+  background: #fff;
+  color: #2e3b4e;
+}
+
+/* Animation */
+.about_animate {
+  animation: fadeInUp 1s ease-in-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about_form-row {
+    flex-direction: column;
+  }
+
+  .about_form-title {
+    font-size: 1.5rem;
+  }
+}

@@ -1,0 +1,212 @@
+.city-section {
+  background: linear-gradient(180deg, #100b28, #323744 36.46%, #535c70 67.19%, #100b28);
+  color: white;
+  padding: 60px 10px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  position: relative;
+}
+.control_city_card_left,
+.control_city_card_right{
+  position: absolute;
+  bottom: 60px;
+  height: 50px;
+  width: 20px;
+}
+.control_city_card_left button,
+.control_city_card_right button{
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  border: none;
+  background-color: #ffffff;
+  color: #100b28;
+}
+.control_city_card_left button:hover,
+.control_city_card_right button:hover{
+  background-color: #ccc;
+  color: #100b28;
+}
+.control_city_card_left{
+  right: 260px;
+  font-size: 18px;
+  font-weight: 900
+}
+.control_city_card_right{
+  right: 200px;
+  font-size: 18px;
+  font-weight: 900
+}
+.navbar {
+  display: flex;
+  flex-wrap: nowrap;        /* prevent wrapping */
+  justify-content: flex-start; /* allow scroll */
+  overflow-x: auto;
+  gap: 30px;
+  font-size: clamp(6px, 3vw, 14px);
+  font-weight: 600;
+  color: #ccc;
+  text-transform: uppercase;
+  scrollbar-width: none;   
+  width: fit-content;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.navbar::-webkit-scrollbar {
+  display: none;                /* Chrome/Safari hide scrollbar */
+}
+
+.navbar span {
+  flex: 0 0 auto;               /* prevent shrinking */
+  cursor: pointer;
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.navbar span:hover {
+  color: #EFD7A1;
+  border-bottom-color: #EFD7A1;
+}
+
+.navbar .active {
+  color: #EFD7A1;
+  border-color: #EFD7A1;
+}
+
+.listings {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.listing-card {
+  position: relative;
+  width: 23%;
+  overflow: hidden;
+}
+.listing-card a{
+  color: white;
+  text-decoration: none;
+}
+
+.listing-card .main_image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+.listing-card .dev_logo{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 70px;
+  height: 70px;
+  background-color: #ffffff;
+  /* padding: ; */
+  border-radius: 50%;
+  border: 3px solid #333;
+
+}
+
+.listing-info {
+  text-align: left;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  text-shadow: 1px 1px 3px black;
+  background-color: #3237448a;
+  padding: 1rem;
+  border-radius: 12px;
+  max-width: 300px;
+}
+
+.listing-info h3 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: #EFD7A1;
+}
+
+.listing-info p {
+  margin: 2px 0;
+  font-size: 14px;
+}
+
+.price {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.view-all-container {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.view-all-button {
+  padding: 10px 30px;
+  border: 1px solid white;
+  background: transparent;
+  color: white;
+  border-radius: 50px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.view-all-button:hover {
+  background-color: white;
+  color: #1e1f31;
+}
+@media screen and (max-width: 1101px) {
+ .listing-card {
+  width: 30%;
+}
+}
+@media screen and (max-width: 801px) {
+ .listing-card {
+  width: 48%;
+}
+}
+@media screen and (max-width: 660px) {
+  .city-section {
+  padding: 20px 0px;
+}
+  .listing-card {
+  width: 100%;
+}
+  .listing-card img{
+  height: 380px;
+}
+  .navbar {
+  width: 90%;
+}
+.control_city_card_left,
+.control_city_card_right{
+  height: 100%;
+  width: 50px;
+  border-radius: 0px;
+}
+.control_city_card_left{
+  right: 100%;
+  left: 0px;
+}
+.control_city_card_right{
+  right: 0px;
+}
+.control_city_card_left button,
+.control_city_card_right button{
+  height: 100%;
+  width: 20px;
+  border: none;
+  background-color: transparent;
+  color: transparent;
+}
+.control_city_card_left button:hover,
+.control_city_card_right button:hover{
+ background-color: transparent;
+  color: transparent;
+}
+}

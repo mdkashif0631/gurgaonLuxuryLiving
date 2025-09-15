@@ -1,0 +1,70 @@
+/* Background */
+.quote-section {
+  background: linear-gradient(180deg, #3a4658, #2e3545);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+  padding: 2%;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+  position: relative;
+}
+.gll_bg_icon{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 60%;
+}
+/* Quote Box */
+.quote-box {
+  max-width: 900px;
+  padding: 1rem;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s ease-in-out;
+}
+
+/* Animate when visible */
+.quote-section.animate .quote-box {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Quote Text */
+.quote-text {
+  font-size: clamp(16px, 4vw, 28px);
+  font-style: italic;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.quote-mark {
+  font-size: clamp(16px, 4vw, 28px);
+  font-weight: bold;
+  vertical-align: top;
+  margin: 0 5px;
+  color: #ffffffcc;
+}
+
+/* Author */
+.author {
+  font-size: clamp(12px, 2vw, 28px);
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+  letter-spacing: 1px;
+}
+
+.designation {
+  font-size: clamp(12px, 2vw, 28px);
+  opacity: 0.8;
+}
+@media screen and (max-width: 960px) {
+  .quote-section {
+  min-height: 44vh;
+}
+}
+

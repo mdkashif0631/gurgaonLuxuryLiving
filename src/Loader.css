@@ -1,0 +1,41 @@
+/* Fullscreen loader */
+.loader-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #0f172a;
+  font-family: Arial, sans-serif;
+}
+
+/* Logo animation */
+.loader-logo {
+  width: 120px;
+  height: auto;
+  animation: pulse 1.8s infinite ease-in-out;
+}
+
+/* Pulse animation */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+}
+
+
+
+/* Fading text */
+@keyframes fade {
+  from { opacity: 0.5; }
+  to { opacity: 1; }
+}

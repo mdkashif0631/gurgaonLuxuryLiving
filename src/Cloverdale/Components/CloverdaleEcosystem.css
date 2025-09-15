@@ -1,0 +1,92 @@
+.cloverdale-eco-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 10%;
+  gap: 50px;
+  flex-wrap: wrap; /* allow stacking on smaller screens */
+  background: #fdfaf6;
+}
+
+.cloverdale-eco-left {
+  flex: 1;
+  min-width: 300px;
+}
+
+.cloverdale-eco-left h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.cloverdale-eco-left p {
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.cloverdale-eco-links {
+  font-size: 14px;
+  font-weight: bold;
+  margin: 15px 0;
+  color: #c48737;
+}
+
+.cloverdale-eco-logos {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.cloverdale-eco-logos img {
+  width: 60px;
+  height: auto;
+}
+
+.cloverdale-eco-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cloverdale-eco-img img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 12px;
+  object-fit: cover;
+  /* box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.1); */
+  transition: transform 0.3s ease;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .cloverdale-eco-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cloverdale-eco-left,
+  .cloverdale-eco-right {
+    width: 100%;
+  }
+
+  .cloverdale-eco-left p {
+    text-align: justify;
+  }
+
+  .cloverdale-eco-logos {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .cloverdale-eco-left h2 {
+    font-size: 24px;
+  }
+
+  .cloverdale-eco-img img {
+    max-width: 100%;
+    border-radius: 8px;
+  }
+}

@@ -1,0 +1,100 @@
+.altitude_glimpses_container {
+  position: relative;
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+  padding-bottom: 5rem;
+}
+
+.altitude_glimpses_slider {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  width: 100%;
+  overflow: hidden;
+}
+
+.altitude_glimpses_slides {
+  display: flex;
+  transition: transform 0.8s ease-in-out;
+  width: calc(200%); /* Since showing 2 images */
+}
+
+.altitude_glimpses_slide {
+  min-width: 50%; /* 2 images at a time */
+  box-sizing: border-box;
+  padding: 10px;
+  position: relative;
+}
+.glimpses_info{
+  position: absolute;
+  bottom: 3rem;
+  left: 3rem;
+  color: white;
+}
+.glimpses_info h6{
+  font-size: 24px;
+}
+.glimpses_info p{
+  font-size: 18px;
+}
+
+.altitude_glimpses_slide img {
+  width: 100%;
+  height: 400px;
+}
+
+.altitude_glimpses_button {
+  position: absolute;
+  bottom: 1rem ;
+  width: 40px;
+  height: 40px;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  /* padding: 12px; */
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.altitude_glimpses_button:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.altitude_glimpses_button_left {
+  left: 10px;
+}
+
+.altitude_glimpses_button_right {
+  left: 60px;
+}
+
+@media screen and (max-width: 900px) {
+  .altitude_glimpses_container {
+  width: 95%;
+  padding-bottom: 5rem;
+}
+  .altitude_glimpses_slider {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 100%;
+  overflow: hidden;
+}
+.glimpses_info{
+  left: 2rem;
+}
+.glimpses_info h6{
+  font-size: 18px;
+  width: 40%;
+}
+.glimpses_info p{
+  font-size: 14px;
+  width: 40%;
+}
+
+.altitude_glimpses_slide img {
+  width: 100%;
+  height: 350px;
+}
+}

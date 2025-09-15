@@ -1,0 +1,185 @@
+.cloverdale_header {
+  display: grid;
+  grid-template-rows: auto;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.525), #00000000);
+  transition: top .3s ease-in-out, background .3s ease-in-out;
+  animation: fadeInDown .7s ease-in-out 0.3s both;
+  
+}
+
+.cloverdale_header.sticky {
+    background: #000000;
+}
+
+.cloverdale_web_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 40px;
+  position: relative;
+
+}
+
+.cloverdale_menu_icon {
+  display: none;
+}
+
+.cloverdale_logo {
+  height: 50px;
+  width: 280px;
+}
+
+.cloverdale_logo img {
+  height: 100%;
+}
+.color_logo{
+display: none;
+}
+.cloverdale_header.sticky .color_logo {
+    display: block;
+}
+.cloverdale_header.sticky .white_logo{
+    display: none;
+}
+
+
+
+.gll_logo {
+  text-align: right;
+  width: 280px;
+  height: 60px;
+}
+
+.gll_logo img {
+  height: 100%;
+  margin: 2px 0px;
+
+}
+
+.cloverdale_nav {
+  text-align: center;
+  display: flex;
+  gap: 16px;
+}
+
+.cloverdale_nav a {
+  /* padding-left: 18px; */
+  text-decoration: none;
+  color: white;
+  font-weight: 400;
+  font-size: 14px;
+  font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+  margin: auto;
+
+  &:hover {
+    color: var(--muted);
+    text-decoration: underline;
+  }
+
+}
+.cloverdale_header.cloverdale_header.sticky a{
+ color: #ffffff;
+}
+.cloverdale_state.active {
+
+  color: var(--muted);
+
+}
+
+.gll_logo .gll_phones {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  border: 1px solid white;
+  font-family: "Mulish", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  padding: 5px 10px;
+  border-radius: 6px;
+  &:hover {
+    background-color: transparent;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+.gll_phones {
+    display: none;
+  }
+   .cloverdale_logo {
+    width: 115px;
+  }
+
+  .gll_logo {
+    width: 115px;
+  }
+
+}
+@media screen and (max-width: 900px) {
+  .cloverdale_header {
+    display: grid;
+    grid-template-rows: auto 50px;
+  }
+
+  
+
+  .cloverdale_nav {
+    display: none;
+  }
+
+  
+
+  .cloverdale_menu_icon {
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: #ffffff;
+    border-top: 1px solid #ffffff7d;
+    border-bottom: 1px solid #ffffff7d;
+}
+.cloverdale_header.sticky  .cloverdale_menu_icon{
+    color: #303030;
+    border-top: 1px solid #3b3b3b7d;
+    border-bottom: 1px solid #3e3e3e7d;
+  }
+
+  .cloverdale_close_bar{
+    font-size: 30px;
+    margin: auto;
+    height: 100%;
+
+  }
+
+  .cloverdale_memu {
+    font-size: 24px;
+    margin: auto;
+    height: 100%;
+  }
+
+  .cloverdale_nav.open {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    position: absolute;
+    top: 120px;
+    left: 0px;
+    padding: 1rem;
+    background-color: #0000006c;
+    backdrop-filter: blur(5px) saturate(1);
+    padding-bottom: 2rem;
+
+  }
+  .cloverdale_header.sticky  .cloverdale_nav.open {
+    background-color: #ffffffc8;
+    color: #000000;
+    background: linear-gradient(to bottom, rgb(255, 255, 255), #ffffff);
+}
+}

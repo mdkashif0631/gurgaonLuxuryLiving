@@ -1,0 +1,94 @@
+.aboutaipl {
+  width: 100%;
+  padding: 2rem 0;
+}
+
+.aboutaipl-project {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 2rem 5%;
+  flex-wrap: wrap;
+}
+
+.aboutaipl-left {
+  flex: 1 1 500px;
+  max-width: 600px;
+}
+
+.aboutaipl-logo img {
+  width: 140px;
+  margin-bottom: 1rem;
+}
+
+.aboutaipl-heading {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.aboutaipl-text {
+  line-height: 1.7;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.aboutaipl-rera {
+  margin-top: 1rem;
+  font-weight: 500;
+  color: #222;
+}
+
+.aboutaipl-btn {
+  background: #00a0df;
+  color: #fff;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: 0.3s ease;
+}
+
+.aboutaipl-btn:hover {
+  background: #007bb5;
+}
+
+.aboutaipl-right {
+  flex: 1 1 500px;
+  display: flex;
+  justify-content: center;
+}
+
+.aboutaipl-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .aboutaipl-project {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .aboutaipl-left {
+    max-width: 100%;
+  }
+
+  .aboutaipl-logo img {
+    margin: 0 auto 1rem;
+  }
+
+  .aboutaipl-right {
+    margin-top: 2rem;
+  }
+
+  .aboutaipl-btn {
+    width: 100%;
+  }
+}

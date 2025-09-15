@@ -1,0 +1,66 @@
+.altitude_hero {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;  
+    justify-content: center;
+    position: relative;
+    overflow: hidden; 
+}
+
+.altitude_hero_section_video {
+    width: 100%;
+    height: auto;  
+    min-height: 50vh;  
+    max-height: 100vh;     
+    object-fit: fill;      
+    position: relative;
+    z-index: 1;
+}
+.altitude_overlay {
+    position: absolute;   
+    bottom: 0;              
+    left: 0;
+    width: 100%;
+    padding: 3rem 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    color: white;
+    z-index: 2;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+    animation: fadeInDown .7s ease-in-out 2s both;
+}
+
+.altitude_overlay img {
+    height: 60px;
+}
+
+.altitude_hero_title {
+    font-size: 25px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    text-transform: uppercase;
+
+}
+
+@media screen and (max-width: 800px) {
+    .altitude_overlay {
+        flex-wrap: wrap;
+        width: 100%;
+        padding: 5rem 4rem;
+    }
+
+    .altitude_hero_title {
+        font-size: 22px;
+
+    }
+    .altitude_overlay img {
+        height: 50px;
+    }
+
+}
