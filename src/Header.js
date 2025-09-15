@@ -252,7 +252,6 @@ const Header = () => {
           </a>
           <a href="/projects" onClick={(e) => handleNav(e, "/projects")}>BUY</a>
           <a href="/sell" onClick={(e) => handleNav(e, "/sell")}>SELL</a>
-          <a href="/agents" onClick={(e) => handleNav(e, "/agents")}>AGENTS</a>
 
           {/* Nested Accordion Menu for Projects */}
           <div className="mobile_dropdown">
