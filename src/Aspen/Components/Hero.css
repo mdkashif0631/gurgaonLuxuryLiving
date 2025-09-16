@@ -1,0 +1,17 @@
+.aspen_hero{
+    width: 100%;
+    height: auto;
+    /* border: 2px solid #333; */
+}
+.aspen_hero_video{
+    object-fit: cover;
+    width: 100%;
+    min-height: 100vh;
+}
+@media screen and (max-width: 1200px) {
+    .aspen_hero_video{
+        max-height: 100vh;
+        min-height: 60vh;
+    }
+    
+}

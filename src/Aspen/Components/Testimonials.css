@@ -1,0 +1,80 @@
+.aspen_testimonial-section {
+  padding: 60px 20px;
+  text-align: center;
+  overflow: hidden;
+  color: #1a2c80;
+  background: #e8e0db;
+
+}
+
+.aspen_testimonial-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  
+}
+
+.aspen_testimonial-slider {
+  overflow: hidden;
+  width: 100%;
+}
+
+.aspen_testimonial-track {
+  display: flex;
+  gap: 20px;
+  animation: scroll 40s linear infinite;
+  width: max-content;
+  padding: 20px 0px;
+}
+
+.aspen_testimonial-slider.paused .aspen_testimonial-track {
+  animation-play-state: paused;
+}
+
+.aspen_testimonial-card {
+    background: transparent;
+  border-radius: 16px;
+  padding: 20px;
+  min-width: 280px;
+  max-width: 280px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.aspen_testimonial-card:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+.aspen_testimonial-img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.aspen_role {
+  font-size: 14px;
+  color: #000000;
+  margin-bottom: 10px;
+}
+
+.aspen_text {
+  font-size: 14px;
+  color: #000000;
+  margin-bottom: 10px;
+}
+
+.aspen_stars {
+  color: #000000;
+  font-size: 18px;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

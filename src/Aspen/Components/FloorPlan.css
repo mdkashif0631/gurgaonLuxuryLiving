@@ -1,0 +1,85 @@
+/* FloorPlan.css */
+
+.aspen_plans-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.aspen_title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.aspen_subtitle {
+  font-size: 1rem;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto 40px auto;
+  line-height: 1.6;
+}
+
+/* Large screen layout */
+.aspen_plans-large {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.aspen_plan-wrapper {
+  flex: 1 1 45%;
+  max-width: 500px;
+  text-align: center;
+}
+
+.aspen_plan-img {
+  width: 100%;
+  height: auto;
+  box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.aspen_plan-img:hover {
+  transform: scale(1.03);
+}
+
+.aspen_plan-text {
+  margin-top: 15px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #222;
+}
+
+.aspen_plan-subtext {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #666;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .aspen_plans-container {
+  padding: 20px;
+  margin: 0rem 0rem;
+
+}
+  .aspen_title {
+    font-size: 2rem;
+  }
+
+  .aspen_plans-large {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .aspen_plan-wrapper {
+    max-width: 100%;
+  }
+}

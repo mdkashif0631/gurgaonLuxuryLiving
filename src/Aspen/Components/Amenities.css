@@ -1,0 +1,130 @@
+.aspen_amenities-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 50px;
+  width: 90%;
+  height: 100%;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+.aspen_amenities-left {
+  flex: 1;
+  min-width: 300px;
+}
+
+.aspen_amenities-title {
+  font-size: 32px;
+  color: #1a2c80;
+  margin-bottom: 10px;
+}
+
+.aspen_amenities-subtitle {
+  font-size: 16px;
+  color: #444;
+  /* margin-bottom: 20px; */
+  /* line-height: 1.5; */
+}
+
+.aspen_amenities-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.aspen_amenities-item {
+  font-size: 18px;
+  font-weight: 600;
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.aspen_amenities-item:hover {
+  color: #1a2c80;
+}
+
+.aspen_amenities-explore-btn {
+  background: #0b2d82;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  padding: 12px 24px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.aspen_amenities-explore-btn:hover {
+  background: #041a4d;
+}
+
+.aspen_amenities-right {
+  margin: auto;
+  width: 50%;
+  text-align: center;
+  position: relative;
+  height: 100%;
+}
+
+.aspen_amenities-image {
+  width: 100%;
+  max-width: 600px;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.4s ease-in-out;
+}
+
+.aspen_amenities-caption {
+  position: absolute;
+  bottom: 10px;
+  right: 15px;
+  font-size: 12px;
+  color: white;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .aspen_amenities-container {
+    flex-direction: column;
+    align-items: center;
+    width: 99%;
+  gap: 20px;
+    padding: 50px 5px;
+  }
+  .aspen_amenities-list {
+  margin: 5px 0;
+}
+
+.aspen_amenities-item {
+  font-size: 14px;
+  font-weight: 600;
+  padding: 8px 0;
+  border-bottom: 1px solid #ccc;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+.aspen_amenities-explore-btn {
+  font-size: 14px;
+  background: #0b2d82;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  padding: 12px 24px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.aspen_amenities-left {
+  padding: 0px 10px;
+}
+  .aspen_amenities-right {
+    width: 100%;
+  }
+}

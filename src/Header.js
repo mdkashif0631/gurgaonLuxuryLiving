@@ -81,12 +81,18 @@ const Header = () => {
       { name: "M3M PROJECT 2", path: "/m3m2" },
     ],
     AIPL: [
-      { name: "Peacefull Home", path: "/aiplpeacefullhome"},
+      { name: "Peacefull Home", path: "/aiplpeacefullhome" },
     ],
     "SIGNATURE GLOBAL": [
       { name: "CLOVERDALE", path: "/cloverdale" },
       { name: "CLOVERDALE 2", path: "/cloverdale2" },
     ],
+    "WHITE LAND": [
+      { name: "ASPEN", path: "/aspen" },
+      { name: "ICONIC", path: "/iconic" },
+      { name: "BLISSVILLE", path: "/blissville" },
+    ],
+
   };
 
   return (
@@ -138,9 +144,8 @@ const Header = () => {
           <ul className="header-links">
             <li>
               <Link
-                className={`nav_list ${
-                  location.pathname === "/projects" ? "active" : ""
-                }`}
+                className={`nav_list ${location.pathname === "/projects" ? "active" : ""
+                  }`}
                 to="/projects"
               >
                 BUY
@@ -148,9 +153,8 @@ const Header = () => {
             </li>
             <li>
               <Link
-                className={`nav_list ${
-                  location.pathname === "/sell" ? "active" : ""
-                }`}
+                className={`nav_list ${location.pathname === "/sell" ? "active" : ""
+                  }`}
                 to="/sell"
               >
                 SELL
@@ -158,28 +162,29 @@ const Header = () => {
             </li>
             <li className="dropdown">
               <span className="nav_list dropdown">PROJECT</span>
-              <ul className="dropdown_menu">
-                {Object.keys(developers).map((dev) => (
-                  <React.Fragment key={dev}>
-                    <span className="nav_list popleft">{dev}</span>
-                    <ul className="popleft_menu">
-                      {developers[dev].map((project, idx) => (
-                        <li key={idx}>
-                          <Link to={project.path} onClick={closeMenu}>
-                            {project.name}
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  </React.Fragment>
-                ))}
-              </ul>
+              <div className="next_menu">
+                <ul className="dropdown_menu">
+                  {Object.keys(developers).map((dev) => (
+                    <React.Fragment key={dev}>
+                      <span className="nav_list popleft">{dev}</span>
+                      <ul className="popleft_menu">
+                        {developers[dev].map((project, idx) => (
+                          <li key={idx}>
+                            <Link to={project.path} onClick={closeMenu}>
+                              {project.name}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </React.Fragment>
+                  ))}
+                </ul>
+              </div>
             </li>
             <li>
               <Link
-                className={`nav_list ${
-                  location.pathname === "/about" ? "active" : ""
-                }`}
+                className={`nav_list ${location.pathname === "/about" ? "active" : ""
+                  }`}
                 to="/about"
                 onClick={(e) => handleNav(e, "/about")}
               >
@@ -193,9 +198,8 @@ const Header = () => {
         <ul className="header-right header-links">
           <li>
             <Link
-              className={`nav_list ${
-                location.pathname === "/blogs" ? "active" : ""
-              }`}
+              className={`nav_list ${location.pathname === "/blogs" ? "active" : ""
+                }`}
               to="/blogs"
               onClick={(e) => handleNav(e, "/blogs")}
             >
@@ -217,7 +221,7 @@ const Header = () => {
           className="menu-toggle"
           onClick={() => setMenuOpen(!menuOpen)}
         >
-          {menuOpen ? <FiX /> : <FiMenu style={{color:'#edcd7b'}}  onClick={handleButtonToggle} />}
+          {menuOpen ? <FiX /> : <FiMenu style={{ color: '#edcd7b' }} onClick={handleButtonToggle} />}
         </button>
       </div>
 
@@ -240,13 +244,13 @@ const Header = () => {
       {/* Mobile Menu */}
       <div ref={menuRef} className={`mobile-menu ${menuOpen ? "open" : ""}`}>
         <div className={`menu_list ${isSticky ? "sticky" : ""}`}>
-        <a href="/" className="mob_logo_gll ">
-        <img
-          className="logo_box"
-          src="/LuxuryAbode_black.png"
-          alt="gll_logo"
-        />
-      </a>
+          <a href="/" className="mob_logo_gll ">
+            <img
+              className="logo_box"
+              src="/LuxuryAbode_black.png"
+              alt="gll_logo"
+            />
+          </a>
           <a style={{ paddingTop: "16px" }} href="/" onClick={(e) => handleNav(e, "/")}>
             HOME
           </a>

@@ -67,7 +67,7 @@ const FeaturedProjectsCarousel = () => {
         </div>
 
         {properties.length > 0 ? (
-          <Carousel interval={null} className='feartureCard'>
+          <Carousel interval={6000} className='feartureCard'>
             {properties.slice().reverse().map((proj, index) => (
               <Carousel.Item key={index} className='featureCarditem'>
                 <div className="featuredProjtDetail">

@@ -16,6 +16,7 @@ const ElanEmperor = lazy(() => import("./ElanEmperor/ElanEmperor"));
 const M3mAltitude = lazy(() => import("./Altitude/M3mAltitude"));
 const Cloverdale = lazy(() => import("./Cloverdale/Cloverdale"));
 const AiplPeacefullHome = lazy(() => import("./aiplPeacefullHome/AiplPeacefullHome"));
+const Aspen = lazy(() => import("./Aspen/Aspen"));
 const About = lazy(() => import("./About/About"));
 const Blogs = lazy(() => import("./Blog/Blogs"));
 const BlogPage = lazy(() => import("./Blog/components/Blogpage"));
@@ -43,6 +44,7 @@ function Layout() {
         <Route path="/m3maltitude" element={<M3mAltitude />} />
         <Route path="/cloverdale" element={<Cloverdale />} />
         <Route path="/aiplpeacefullhome" element={<AiplPeacefullHome />} />
+        <Route path="/aspen" element={<Aspen />} />
         <Route path="/about" element={<About />} />
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/blog/:id" element={<BlogPage />} />
