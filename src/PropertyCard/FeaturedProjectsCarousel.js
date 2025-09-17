@@ -145,7 +145,7 @@ const FeaturedProjectsCarousel = () => {
             ))}
           </Carousel>
         ) : (
-          <p><CatalogMagic row={1} style={{ backgroundColor: "#100b28"}}/></p>
+          <div><CatalogMagic row={1} style={{ backgroundColor: "#100b28"}}/></div>
         )}
       </div>
     </div>

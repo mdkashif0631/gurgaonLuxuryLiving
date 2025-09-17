@@ -41,8 +41,11 @@ po
 }
 
 .footer-column {
-
+  padding: 16px;
   min-width: 170px;
+}
+.blog_footer{
+  padding: 0;
 }
 .footer-column a{
  text-decoration: none;

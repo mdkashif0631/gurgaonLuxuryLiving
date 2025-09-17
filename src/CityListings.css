@@ -83,7 +83,7 @@
 }
 
 .listing-card {
-  position: relative;
+  /* position: relative; */
   width: 23%;
   overflow: hidden;
 }
@@ -100,14 +100,14 @@
 }
 .listing-card .dev_logo{
   position: absolute;
-  top: 10px;
-  left: 10px;
+  top: 0;
+  left: 25%;
+  transform: translate(-50%, -50%);
   width: 70px;
   height: 70px;
   background-color: #ffffff;
-  /* padding: ; */
   border-radius: 50%;
-  border: 3px solid #333;
+  border: 3px solid #2e2d2d72;
 
 }
 
@@ -118,7 +118,7 @@
   left: 20px;
   text-shadow: 1px 1px 3px black;
   background-color: #3237448a;
-  padding: 1rem;
+  padding: 3rem 1rem 1rem;
   border-radius: 12px;
   max-width: 300px;
 }

@@ -7,7 +7,7 @@ import Features from "./Components/Features";
 import Overview from "./Components/Overview";
 import Amenities from "./Components/Amenities";
 import FloorPlans from "./Components/FloorPlan";
-import AspenSlider from "./Components/Slider";
+import ProjectSlider from "./Components/Slider";
 import ConstructionUpdate from "./Components/ConstructionUpdate";
 import Testimonials from "./Components/Testimonials";
 import Faqs from "./Components/Faqs";
@@ -50,13 +50,22 @@ const Aspen = () => {
   return (
     <div>
       <ProjectHeader project={project} />
-      <Hero/>
+      <Hero videoSrc="https://res.cloudinary.com/daa1hgr9j/video/upload/v1757983390/fnvg5kicehthp39z36cz.mp4"/>
       <Features/>
-      <Overview/>
-      <Amenities/>
+      <Overview
+                leftImage="https://res.cloudinary.com/daa1hgr9j/image/upload/v1757984788/foxjilqgkzzjqejsvxlk.jpg"
+                logo="https://res.cloudinary.com/daa1hgr9j/image/upload/v1757984787/wrumsxae9fx1oxervctw.svg"
+                heading="A place where one's aspirations, pleasure, and lifestyle find their perfect home!"
+                text="For the redefined sense of living, The Aspen offers luxury 3/4 BHK residences
+          and duplex penthouses, with state-of-the-art amenities for an exceptional living
+          experience. Nestled in the most promising sector of Gurugram, Sector-76,
+          Whiteland’s residential project offers a lifestyle that is unheard of & truly
+          inspiring."
+            />
+      <Amenities project = "aspen"/>
       <FloorPlans/>
-      <AspenSlider/>
-      <ConstructionUpdate/>
+      <ProjectSlider project = "aspen"/>
+      <ConstructionUpdate project = "https://res.cloudinary.com/daa1hgr9j/video/upload/v1757991479/ljiemtwn3cjnxizdqbdr.mp4" />
       <Testimonials/>
       <Faqs/>
       <ContactSection/>

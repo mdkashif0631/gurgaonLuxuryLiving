@@ -170,9 +170,9 @@ const CityListings = () => {
             {getVisibleCards().map((item, index) => (
               <div className="listing-card" key={index} data-aos="fade-up">
                 <Link to={item.link}>
-                  <img className="dev_logo" src={item.logo} alt={item.city} />
                   <img className="main_image" src={item.image} alt={item.city} />
                   <div className="listing-info">
+                  <img className="dev_logo" src={item.logo} alt={item.city} />
                     <h3>{item.city}</h3>
                     <p>{item.address}</p>
                     <p>

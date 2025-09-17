@@ -71,6 +71,7 @@
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    text-shadow: 1px 1px 3px black;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
   position: relative;
@@ -97,29 +98,50 @@
 }
 .listed_detail{
   margin: 2rem;
-  padding: 5px;
+  padding: 2rem 5px 5px;
   width: 75%;
-  background-color: #dfdfdfb4;
+  background-color: #3237448a;
   border-radius: 12px;
+  position: relative;
+}
+.listed_detail .dev_logo{
+  position: absolute;
+  top: 0;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  width: 70px;
+  height: 70px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #2e2d2d72;
+  z-index: 1;
+
+}
+.dev_logo img{
+  object-fit: cover;
+  max-height: 100%;
 }
 /* Project Info */
 .listed_project-card h3 {
   font-size: 20px;
   margin: 12px 15px 5px;
-  color: #100b28;
+  color: #EFD7A1;
+
 }
 
 .listed_project-card p {
   font-size: 14px;
   margin: 5px 15px;
-  color: #100b28;
+  color: #ffffff;
 }
 
 .listed_project-card .listed_price {
   font-size: 16px;
   font-weight: 600;
   margin: 10px 15px 15px;
-  color: #101820;
+  color: #ffffff;
 }
 
 /* Responsive */

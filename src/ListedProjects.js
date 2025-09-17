@@ -32,6 +32,7 @@ const ListedProjects = () => {
             link: `/${property.Link}`, // dynamic route for details
             address: `${property.City} ${property.Location || ""}`,
           bedrooms: getBedrooms(property),
+          logo: property.Developer_Logo,
             area:
               property.Super_Area_bhk ||
               property.Carpet_Area_bhk ||
@@ -136,6 +137,9 @@ const ListedProjects = () => {
                 <Link to={item.link}>
                   <img src={item.image} alt={item.city} />
                   <div className="listed_detail">
+                    <div className="dev_logo">
+                    <img  src={item.logo} alt={item.city} />
+                    </div>
                     <h3>{item.city}</h3>
                     <p>{item.address}</p>
                     <p>

@@ -45,7 +45,7 @@ const Footer = () => {
           </ul>
         </div>
 
-        <div className="footer-column">
+        <div className="footer-column blog_footer">
           <Blogfooter/>
         </div>
       </div>
