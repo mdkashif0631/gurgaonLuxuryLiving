@@ -170,7 +170,7 @@ export default function ProjectSlider({ project }) {
         return aspenSlides;
       case "iconic":
         return iconicSlides;
-      case "xyz":
+      case "blissville":
         return xyzSlides;
       default:
         return [];
