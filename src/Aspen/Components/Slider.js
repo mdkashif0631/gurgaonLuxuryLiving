@@ -52,7 +52,7 @@ const iconicSlides = [
   {
     image:
       "https://res.cloudinary.com/daa1hgr9j/image/upload/v1758072065/byfipyen3sptaspadpv3.webp",
-    text: "270 degree WRAP AROUND PATIO",
+    text: "270° WRAP AROUND PATIO",
     text1: "Enjoy Panoramic views of the Aravallis range and the city",
   },
   {
@@ -69,27 +69,51 @@ const iconicSlides = [
   },
   {
     image:
-      "https://res.cloudinary.com/daa1hgr9j/image/upload/v1757990394/zc9f4suwnnnoud3yxptd.webp",
-    text: "WORLD-CLASS AMENITIES",
-    text1: "Clubhouse, swimming pool, gym & more",
+      "https://res.cloudinary.com/daa1hgr9j/image/upload/v1758072069/vanqg1gkyenowyjrdbyk.webp",
+    text: "BUSINESS CENTRE",
+    text1: "Endless recreation offerings - all right at home",
   },
   {
     image:
-      "https://res.cloudinary.com/daa1hgr9j/image/upload/v1757990393/gguqh78lmeixcmgjwf7t.jpg",
-    text: "PANORAMIC VIEWS",
-    text1: "Stunning cityscape and skyline views",
+      "https://res.cloudinary.com/daa1hgr9j/image/upload/v1758072070/snxalxzqc4o9emxrmvu5.webp",
+    text: "DINNING AREA",
+    text1: "Most sumptuous place to unwind and socialise",
   },
   {
     image:
-      "https://res.cloudinary.com/daa1hgr9j/image/upload/v1757990393/hxspel5uupm6o0gk1zla.webp",
-    text: "SECURE LIVING",
-    text1: "24x7 security with advanced surveillance",
+      "https://res.cloudinary.com/daa1hgr9j/image/upload/v1758072070/i8embti5grho2msxrwi9.webp",
+    text: "ENTERANCE LOBBY",
+    text1: "Ahome for higher aspiraton, pleasure and lifestyle",
+  },
+  {
+    image:
+      "https://res.cloudinary.com/daa1hgr9j/image/upload/v1758072065/beimkzntodrbnnbyl3is.webp",
+    text: "GYMNASIUM",
+    text1: "For you, health & fitness is a way of life",
   },
   {
     image:
       "https://res.cloudinary.com/daa1hgr9j/image/upload/v1757990394/scb3hsubjfc7dqjhqka3.webp",
-    text: "FAMILY FRIENDLY",
-    text1: "Play zones, parks, and recreational areas",
+    text: "LIVING AREA",
+    text1: "Choose the finer details of your living area",
+  },
+  {
+    image:
+      "https://res.cloudinary.com/daa1hgr9j/image/upload/v1758072074/iftcsopo4cv5uz1uy5hp.webp",
+    text: "PRIVATE JACUZZI",
+    text1: "Make your day feel more rejuvenating",
+  },
+  {
+    image:
+      "https://res.cloudinary.com/daa1hgr9j/image/upload/v1758072075/hn0yl2gnthlbhyfg1qgb.webp",
+    text: "SWIMMING POOL",
+    text1: "Find infinite choices to spend your days bissfully",
+  },
+  {
+    image:
+      "https://res.cloudinary.com/daa1hgr9j/image/upload/v1758072075/ebrx1lulbheeb90b0cre.webp",
+    text: "AURORA CLUBHOUSE",
+    text1: "Varied facilities, unmatched magnifience",
   },
 ];
 
@@ -179,7 +203,7 @@ export default function ProjectSlider({ project }) {
 
   const goToSlide = (index) => {
     setCurrent(index);
-    startAutoSlide(); // reset timer
+    startAutoSlide(); 
   };
 
   if (slides.length === 0) {
@@ -187,7 +211,7 @@ export default function ProjectSlider({ project }) {
   }
 
   return (
-    <div className="aspen-slider-container">
+    <div id="gallery" className="aspen-slider-container">
       {/* Title & Subtitle */}
       <h1 className="aspen-slider-title">Gallery</h1>
       <p className="aspen-slider-subtitle">
@@ -203,7 +227,10 @@ export default function ProjectSlider({ project }) {
           {slides.map((slide, index) => (
             <div className="aspen-slide" key={index}>
               <img src={slide.image} alt={`slide-${index}`} />
-              <div className="aspen-slide-text">{slide.text}</div>
+              <div className="aspen-slide-text">
+                <h3>{slide.text}</h3>
+                <p>{slide.text1}</p>
+              </div>
             </div>
           ))}
         </div>

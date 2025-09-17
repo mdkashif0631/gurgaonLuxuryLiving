@@ -3,7 +3,7 @@ import "./Overview.css";
 
 const Overview = ({ leftImage, logo, heading, text }) => {
   return (
-    <section className="aspen-overview">
+    <section id="overview" className="aspen-overview">
       <div className="aspen-overview-left">
         <img
           src={leftImage}

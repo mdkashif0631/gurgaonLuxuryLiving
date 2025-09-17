@@ -23,10 +23,14 @@ const iconicAmenities = [
 
 // Dataset 3 (XYZ)
 const xyzAmenities = [
-  { name: "ROOFTOP CAFE", img: "https://res.cloudinary.com/daa1hgr9j/image/upload/v1757986101/cafe.webp" },
-  { name: "LIBRARY", img: "https://res.cloudinary.com/daa1hgr9j/image/upload/v1757986101/library.webp" },
-  { name: "MEDITATION ZONE", img: "https://res.cloudinary.com/daa1hgr9j/image/upload/v1757986101/meditation.webp" },
+  { name: "VIP LOUNGE", img: "https://res.cloudinary.com/daa1hgr9j/image/upload/v1758071443/luuysjmsuf7ekmllxw99.webp" },
+  { name: "ZEN GARDEN", img: "https://res.cloudinary.com/daa1hgr9j/image/upload/v1758071444/midpf7kht702waomovyp.webp" },
+  { name: "PRIVATE JACUZZI", img: "https://res.cloudinary.com/daa1hgr9j/image/upload/v1758071443/x38uzbnns5huws7naktn.webp" },
+  { name: "SPA & SAUNA", img: "https://res.cloudinary.com/daa1hgr9j/image/upload/v1758071449/j8iis2tv4qle7qzp8ybl.webp" },
+  { name: "STARGAZING DECK", img: "https://res.cloudinary.com/daa1hgr9j/image/upload/v1758071444/fjhz0ortkltdvqyzx8ev.webp" },
+  { name: "POOL SIDE CAFE", img: "https://res.cloudinary.com/daa1hgr9j/image/upload/v1758071443/l5bdbvjlpbgzlxruoxxv.webp" },
 ];
+
 
 const Amenities = ({ project }) => {
   // Decide which dataset to use
@@ -36,7 +40,7 @@ const Amenities = ({ project }) => {
         return aspenAmenities;
       case "iconic":
         return iconicAmenities;
-      case "xyz":
+      case "bissville":
         return xyzAmenities;
       default:
         return [];
@@ -53,7 +57,7 @@ const Amenities = ({ project }) => {
   }
 
   return (
-    <section className="aspen_amenities-container">
+    <section id="amenities" className="aspen_amenities-container">
       <div className="aspen_amenities-left">
         <h2 className="aspen_amenities-title">AMENITIES</h2>
         <p className="aspen_amenities-subtitle">

@@ -1,9 +1,10 @@
 .aspen-contact-section {
-  width: 100%;
+  width: 90%;
   padding: 40px 20px;
   font-family: Arial, sans-serif;
   color: #001f54;
   text-align: center;
+  margin: auto;
 }
 
 .aspen-contact-title {
@@ -15,13 +16,12 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
 }
 
 /* Map */
 .aspen-map-container {
-  flex: 1 1 500px;
-  min-height: 400px;
+  flex: 1 1 400px;
+  min-height: 300px;
 }
 
 /* Form */
@@ -86,6 +86,7 @@
 @media (max-width: 768px) {
     .aspen-contact-section {
   padding: 10px 20px;
+width: 99%;
 }
   .aspen-contact-container {
     flex-direction: column;

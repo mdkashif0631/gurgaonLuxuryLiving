@@ -18,6 +18,7 @@ const Cloverdale = lazy(() => import("./Cloverdale/Cloverdale"));
 const AiplPeacefullHome = lazy(() => import("./aiplPeacefullHome/AiplPeacefullHome"));
 const Aspen = lazy(() => import("./Aspen/Aspen"));
 const Iconic = lazy(() => import("./Aspen/Iconic"));
+const Blissville = lazy(() => import("./Aspen/Blissville"));
 const About = lazy(() => import("./About/About"));
 const Blogs = lazy(() => import("./Blog/Blogs"));
 const BlogPage = lazy(() => import("./Blog/components/Blogpage"));
@@ -47,6 +48,7 @@ function Layout() {
         <Route path="/aiplpeacefullhome" element={<AiplPeacefullHome />} />
         <Route path="/aspen" element={<Aspen />} />
         <Route path="/iconic" element={<Iconic />} />
+        <Route path="/blissville" element={<Blissville />} />
         <Route path="/about" element={<About />} />
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/blog/:id" element={<BlogPage />} />

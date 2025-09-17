@@ -48,7 +48,7 @@ export default function ProjectHeader({ project }) {
                             selectedState === "Description" ? "active" : ""
                         }`}
                         onClick={() => setSelectedState("Description")}
-                        href="#description"
+                        href="#overview"
                     >
                         Overview
                     </a>
@@ -57,18 +57,9 @@ export default function ProjectHeader({ project }) {
                             selectedState === "Configuration" ? "active" : ""
                         }`}
                         onClick={() => setSelectedState("Configuration")}
-                        href="#floor"
+                        href="#floorplan"
                     >
                         Configuration
-                    </a>
-                    <a
-                        className={`project_state ${
-                            selectedState === "Location" ? "active" : ""
-                        }`}
-                        onClick={() => setSelectedState("Location")}
-                        href="#location"
-                    >
-                        Location
                     </a>
                     <a
                         className={`project_state ${
@@ -87,6 +78,15 @@ export default function ProjectHeader({ project }) {
                         href="#gallery"
                     >
                         Gallery
+                    </a>
+                    <a
+                        className={`project_state ${
+                            selectedState === "Location" ? "active" : ""
+                        }`}
+                        onClick={() => setSelectedState("Location")}
+                        href="#location"
+                    >
+                        Location
                     </a>
                 </nav>
 

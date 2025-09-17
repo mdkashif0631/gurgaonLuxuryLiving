@@ -63,7 +63,7 @@ const Aspen = () => {
           inspiring."
             />
       <Amenities project = "aspen"/>
-      <FloorPlans/>
+      <FloorPlans dataset="aspen"/>
       <ProjectSlider project = "aspen"/>
       <ConstructionUpdate project = "https://res.cloudinary.com/daa1hgr9j/video/upload/v1757991479/ljiemtwn3cjnxizdqbdr.mp4" />
       <Testimonials/>

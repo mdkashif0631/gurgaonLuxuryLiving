@@ -1,19 +1,19 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import ProjectHeader from '../ProjectHeader'
-import ProjectSlider from "./Components/Slider";
-import ConstructionUpdate from "./Components/ConstructionUpdate";
-import Testimonials from "./Components/Testimonials";
-import Faqs from "./Components/Faqs";
-import ContactSection from "./Components/ContactSection";
+import ProjectHeader from "../ProjectHeader";
 import CatalogMagic from "../ContentLoader";
 import Hero from "./Components/Hero";
 import Features from "./Components/Features";
 import Overview from "./Components/Overview";
 import Amenities from "./Components/Amenities";
 import FloorPlans from "./Components/FloorPlan";
+import ProjectSlider from "./Components/Slider";
+import ConstructionUpdate from "./Components/ConstructionUpdate";
+import Testimonials from "./Components/Testimonials";
+import Faqs from "./Components/Faqs";
+import ContactSection from "./Components/ContactSection";
 
-const Iconic = () => {
+const Blissville = () => {
     const [project, setProject] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -49,23 +49,23 @@ const Iconic = () => {
     return (
         <div>
             <ProjectHeader project={project} />
-            <Hero videoSrc="https://res.cloudinary.com/daa1hgr9j/video/upload/v1758068870/lzojhq8nqwadxdobinls.mp4" />
+            <Hero videoSrc="https://res.cloudinary.com/daa1hgr9j/video/upload/v1758120155/mffp8djebo49nv5nkolb.mp4" />
             <Features />
             <Overview
-                leftImage="https://res.cloudinary.com/daa1hgr9j/image/upload/v1758070137/kht0zrmgedwioqpnjomn.webp"
-                logo="https://res.cloudinary.com/daa1hgr9j/image/upload/v1758070137/c42n67ccxvqssalowfds.svg"
-                heading="The Tower of Power!"
-                text="When at The Aspen Iconic, you get to enjoy the uninterrupted high life to the fullest. A breathtaking 42-storeyed building, The Aspen Iconic is Whiteland’s residential project that invites you to taste the lavish lifestyle."
+                leftImage="https://res.cloudinary.com/daa1hgr9j/image/upload/v1758120524/htbawvrjaotrd5oircdo.jpg"
+                logo="https://res.cloudinary.com/daa1hgr9j/image/upload/v1758120523/bolwj9hyetcx5epmydja.svg"
+                heading="Bliss awaits you in your new abode!"
+                text="Whiteland Blissville has set a new standard for low-rise luxury floors. This Whiteland residential project is an ideal one to spend quality time with your family while enjoying the various spaces like the gymnasium, indoor badminton court, library, and more! The luxury low-rise floors at Blissville are homes that you have always aspired to live in."
             />
-            <FloorPlans dataset="iconic"/>
-            <Amenities project = "iconic"/>
-            <ProjectSlider project = "iconic"/>
-            <ConstructionUpdate project = "https://res.cloudinary.com/daa1hgr9j/video/upload/v1757991479/ljiemtwn3cjnxizdqbdr.mp4" />
-            <Testimonials/>
-            <Faqs/>
-            <ContactSection/>
+            <Amenities project="bissville" />
+            <FloorPlans dataset="bissville" />
+            <ProjectSlider project="bissville" />
+            <ConstructionUpdate project="https://res.cloudinary.com/daa1hgr9j/video/upload/v1757991479/ljiemtwn3cjnxizdqbdr.mp4" />
+            <Testimonials />
+            <Faqs />
+            <ContactSection />
         </div>
     )
 }
 
-export default Iconic
+export default Blissville

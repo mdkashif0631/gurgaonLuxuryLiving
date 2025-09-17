@@ -3,7 +3,7 @@ import "./ContactSection.css";
 
 export default function ContactSection() {
   return (
-    <div className="aspen-contact-section">
+    <div id="location" className="aspen-contact-section">
       <h1 className="aspen-contact-title">LET'S TALK</h1>
       <div className="aspen-contact-container">
         {/* Google Map */}

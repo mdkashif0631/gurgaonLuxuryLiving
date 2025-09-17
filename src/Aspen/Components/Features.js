@@ -3,7 +3,7 @@ import "./Features.css";
 
 const features = [
   {
-    icon: "https://res.cloudinary.com/daa1hgr9j/image/upload/v1757984036/zqx2yeioajqiexqiatpq.svg", // replace with your img path
+    icon: "https://res.cloudinary.com/daa1hgr9j/image/upload/v1757984036/zqx2yeioajqiexqiatpq.svg",
     title: "8.4 HECTARES OF",
     subtitle: "SUSTAINABLE LIVING",
   },
@@ -27,13 +27,26 @@ const features = [
 const Features = () => {
   return (
     <section className="aspen-features">
-      {features.map((item, index) => (
-        <div className="aspen-feature-card" key={index}>
-          <img src={item.icon} alt={item.title} className="aspen-feature-icon" />
-          <h3 className="aspen-feature-title">{item.title}</h3>
-          <p className="aspen-feature-subtitle">{item.subtitle}</p>
-        </div>
-      ))}
+      <div className="aspen-features-header">
+        <h2 className="aspen-features-title">FEATURES</h2>
+        <p className="aspen-features-subtitle">
+          Discover the highlights that make Aspen a world-class living experience
+        </p>
+      </div>
+
+      <div className="aspen-features-grid">
+        {features.map((item, index) => (
+          <div className="aspen-feature-card" key={index}>
+            <img
+              src={item.icon}
+              alt={item.title}
+              className="aspen-feature-icon"
+            />
+            <h3 className="aspen-feature-title">{item.title}</h3>
+            <p className="aspen-feature-subtitle">{item.subtitle}</p>
+          </div>
+        ))}
+      </div>
     </section>
   );
 };
