@@ -210,3 +210,28 @@
   color: transparent;
 }
 }
+/* Heart icon container */
+.heart-icon {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 5;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+/* Empty (outline) heart */
+.empty-heart {
+  color: #ffffffcc;  /* subtle white */
+}
+
+/* Filled heart */
+.filled-heart {
+  color: #fbfbff; /* red */
+}
+
+/* Hover effect for both */
+.heart-icon:hover {
+  transform: scale(1.2);
+}

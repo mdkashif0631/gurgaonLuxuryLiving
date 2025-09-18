@@ -10,8 +10,6 @@
     height: auto;
     padding: 3rem 0rem;
     background: linear-gradient(180deg, #100b28, #323744 36.46%, #535c70 67.19%, #100b28);
-    /* border: 5px solid #333; */
-    /* background-color: rgb(91, 91, 91); */
 }
 
 .featureBox {
@@ -21,34 +19,26 @@
     height: auto;
     width: 80%;
     margin: auto;
-    /* border: 5px solid #333; */
-
-
 }
 
 .headingandName {
     text-align: center;
-    /* border: 1px solid #ffffff; */
     margin: 0px auto;
 }
 
 .headingandName h2 {
     font-size: clamp(12px, 6vw, 30px);
     color: rgb(255, 255, 255);
-    /* border: 1px solid #e71515; */
-
 }
 
 .headingandName h2 span {
     color: rgb(255, 255, 255);
-
 }
 
 .headingandName p {
     font-size: clamp(8px, 3vw, 16px);
     color: rgb(255, 255, 255);
     margin-bottom: 0rem;
-
 }
 
 .feartureCard {
@@ -60,7 +50,6 @@
     background-color: #100b28;
     box-shadow: 0 0 2px #7c7053;
 
-    /* border: 1px solid #EFD7A1; */
     &:hover {
         box-shadow: 0 0 8px #7c7053;
     }
@@ -70,11 +59,9 @@
     height: auto;
 }
 
-
 .featureCarditem {
     width: 100%;
     min-height: 420px;
-    /* border: 1px solid #333; */
 }
 
 .featuredProjtDetail {
@@ -83,7 +70,6 @@
     gap: 1.5rem;
     width: 100%;
     height: auto;
-    /* border: 1px solid #333; */
 }
 
 .featureimage {
@@ -91,8 +77,31 @@
     max-height: 624px;
     padding-right: 0px;
     position: relative;
-    /* border: 2px solid #af1212; */
+}
 
+/* ❤️ Heart Icon */
+.heart-icon {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 26px;
+    cursor: pointer;
+    z-index: 20;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.empty-heart {
+    color: #ffffffcc; /* outline white */
+    filter: drop-shadow(0 0 3px #00000090);
+}
+
+.filled-heart {
+    color: #e63946; /* red */
+    filter: drop-shadow(0 0 3px #00000090);
+}
+
+.heart-icon:hover {
+    transform: scale(1.2);
 }
 
 .logoimage {
@@ -132,10 +141,6 @@
     font-weight: 600;
     color: #EFD7A1;
     margin-bottom: 2px;
-    /* text-overflow: ellipsis;
-    overflow: hidden; */
-    /* border-radius: 0px 7px 0px 0px; */
-
 }
 
 .carousel-indicators {
@@ -147,8 +152,6 @@
     align-items: flex-start;
     flex-direction: column;
     gap: 16px;
-
-    /* border: 2px solid #2f06ff; */
 }
 
 .projectNameContainer {
@@ -156,8 +159,6 @@
     align-items: center;
     justify-content: center;
     width: fit-content;
-    /* border: 1px solid white; */
-
 }
 
 .projectName {
@@ -176,8 +177,6 @@
     margin-bottom: 0px;
     font-size: clamp(12px, 6vw, 30px);
     font-family: "Nata Sans", sans-serif;
-
-
 }
 
 .projectName p {
@@ -191,16 +190,15 @@
     text-shadow: 1px 1px 3px black;
     font-family: "Nata Sans", sans-serif;
     font-weight: 300;
+
     &:hover {
         color: #EFD7A1;
-
     }
 }
 
 .featuredDetailcontainer h2 {
     font-family: "Nata Sans", sans-serif;
     font-size: clamp(4px, 6vw, 22px);
-
 }
 
 .text_justify {
@@ -211,7 +209,6 @@
     overflow: hidden;
     font-size: clamp(14px, 2vw, 18px);
     color: #EFD7A1;
-
 }
 
 .moredetail {
@@ -219,7 +216,8 @@
     align-items: center;
     width: 100%;
 }
-.moredetail span{
+
+.moredetail span {
     font-size: clamp(15px, 1vw, 19px);
 }
 
@@ -231,10 +229,8 @@
     font-family: "Nata Sans", sans-serif;
     font-weight: 300;
     font-size: clamp(14px, 2vw, 18px);
-    /* border: 1px solid #fff; */
     color: #efd8a1e6;
     margin-bottom: 3px;
-
 }
 
 .rightDetail {
@@ -247,11 +243,8 @@
     font-family: "Nata Sans", sans-serif;
     font-weight: 300;
     font-size: clamp(14px, 2vw, 18px);
-    /* border: 1px solid #fff; */
     color: #efd8a1e6;
     margin-bottom: 3px;
-
-
 }
 
 .uniticon {
@@ -269,7 +262,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
 
 .readmorebutton Button {
@@ -297,7 +289,6 @@
     &:hover {
         color: white;
     }
-
 }
 
 .carousel-control-next-icon {
@@ -308,6 +299,7 @@
     display: none;
 }
 
+/* 📱 Responsive */
 @media screen and (max-width: 980px) {
     .featureBox {
         grid-template-rows: none;
@@ -323,19 +315,20 @@
     .featureCarditem {
         width: 100%;
     }
+
     .logoimage {
-    width: 75px;
-    height: 45px;
-    background-color: white;
-    border-image: linear-gradient(to right, #100b28, #323744);
-    animation: moving-border 5s infinite;
-    border-image-slice: 1;
-    position: absolute;
-    top: 5px;
-    left: 5px;
-    z-index: 1;
-    border: 2px solid #333;
-}
+        width: 75px;
+        height: 45px;
+        background-color: white;
+        border-image: linear-gradient(to right, #100b28, #323744);
+        animation: moving-border 5s infinite;
+        border-image-slice: 1;
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        z-index: 1;
+        border: 2px solid #333;
+    }
 
     .featuredProjtDetail {
         flex-direction: column;
@@ -344,38 +337,41 @@
         gap: 2px;
     }
 
-    .price_feature{
+    .price_feature {
         margin-bottom: 0px;
     }
+
     .featureimage {
         height: 250px;
         padding-right: 0px;
-
     }
 
     .featuredDetailcontainer {
         width: 100%;
         padding-left: .5rem;
         gap: 2px;
-        /* border: 1px solid #fff; */
-
     }
+
     .moredetail {
-    flex-direction: column;
-    align-items: flex-start;
-    padding-left: 0.5rem;
-    /* border: 1px solid #333; */
-}
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 0.5rem;
+    }
 
-.LeftDetail {
-    width: 100%;
-}
+    .LeftDetail {
+        width: 100%;
+    }
 
+    .rightDetail {
+        padding-left: 0%;
+        width: 100%;
+        border-left: none;
+    }
 
-
-.rightDetail {
-    padding-left: 0%;
-    width: 100%;
-    border-left: none;
-}
+    /* Smaller heart for mobile */
+    .heart-icon {
+        top: 8px;
+        right: 8px;
+        font-size: 22px;
+    }
 }

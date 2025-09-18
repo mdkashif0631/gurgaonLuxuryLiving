@@ -8,6 +8,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './FeaturedProjectsCarousel.css';
 import BHks, { SuperAreaDisplay } from './BHks';
 import CatalogMagic from '../ContentLoader';
+import { CiHeart } from "react-icons/ci";
+import { FaHeart } from "react-icons/fa";
+
 
 // 🔁 Custom hook to detect screen width
 function useWindowWidth() {
@@ -38,6 +41,30 @@ const FeaturedProjectsCarousel = () => {
   const [properties, setProperties] = useState([]);
   const width = useWindowWidth(); // ⬅️ Get screen width
   const descLimit = width < 700 ? 111 : 300;
+
+  const [favorites, setFavorites] = useState([]);
+
+  // Load favorites from localStorage on mount
+  useEffect(() => {
+    const savedFavorites = JSON.parse(localStorage.getItem("favorites")) || [];
+    setFavorites(savedFavorites);
+  }, []);
+
+  // Toggle favorite (with expiry optional)
+  const toggleFavorite = (project) => {
+    const exists = favorites.find((fav) => fav.id === project.Project_Name);
+    if (exists) {
+      const updated = favorites.filter((fav) => fav.id !== project.Project_Name);
+      setFavorites(updated);
+      localStorage.setItem("favorites", JSON.stringify(updated));
+    } else {
+      const newFav = { ...project, id: project.Project_Name };
+      const updated = [...favorites, newFav];
+      setFavorites(updated);
+      localStorage.setItem("favorites", JSON.stringify(updated));
+    }
+  };
+
 
   // Description formatter with word cutoff
   const getShortDescription = (desc) => {
@@ -85,10 +112,27 @@ const FeaturedProjectsCarousel = () => {
                       style={{ objectFit: 'cover' }}
                       onError={(e) => e.target.src = '../img/elaanlogo.png'}
                     />
+
+                    {/* ❤️ Heart Icon */}
+                    <div
+                      className="heart-icon"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        toggleFavorite(proj);
+                      }}
+                    >
+                      {favorites.find((fav) => fav.id === proj.Project_Name) ? (
+                        <FaHeart className="filled-heart" />
+                      ) : (
+                        <CiHeart className="empty-heart" />
+                      )}
+                    </div>
+
                     <p className='reranumber'>
                       RERA No. : {proj.Developer_Rera_No || "N/A"}
                     </p>
                   </div>
+
 
                   <div className='featuredDetailcontainer'>
                     <div className='projectNameContainer'>
@@ -145,7 +189,7 @@ const FeaturedProjectsCarousel = () => {
             ))}
           </Carousel>
         ) : (
-          <div><CatalogMagic row={1} style={{ backgroundColor: "#100b28"}}/></div>
+          <div><CatalogMagic row={1} style={{ backgroundColor: "#100b28" }} /></div>
         )}
       </div>
     </div>

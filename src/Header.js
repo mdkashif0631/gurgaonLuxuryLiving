@@ -103,16 +103,16 @@ const Header = () => {
         <div
           className={`gll_header-container_top ${isSticky ? "sticky" : ""}`}
         >
-          <a
+          <Link
             className="nav_list fav"
-            href="/"
-            onClick={(e) => handleNav(e, "/")}
+            href="/favorite"
+            onClick={(e) => handleNav(e, "/favorite")}
           >
             <CiHeart
               style={{ fontSize: "clamp(20px, 2vw, 24px)", paddingRight: "5px" }}
             />
             <span style={{ fontSize: "clamp(8px, 1vw, 12px)" }}>FAVORITES</span>
-          </a>
+          </Link>
           <a
             className="nav_list account"
             href="/"

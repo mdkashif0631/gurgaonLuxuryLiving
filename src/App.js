@@ -7,6 +7,7 @@ import "./App.css";
 import Home from "./Home";
 import EnquirySection from "./EnquirySection";
 import ListedProjects from "./ListedProjects";
+import FavoritesPage from "./FavoritesPage";
 
 // Lazy load pages
 const Elan = lazy(() => import("./PLP/Elan"));
@@ -56,6 +57,7 @@ function Layout() {
         <Route path="/blog/:id" element={<BlogPage />} />
         <Route path="/projects" element={<ListedProjects />} />
         <Route path="/filter" element={<FilterPopup />} />
+        <Route path="/favorite" element={<FavoritesPage />} />
       </Routes>
     </Suspense>
   );
