@@ -42,29 +42,44 @@ const iconicFloorPlans = [
 const xyzAmenities = [
   {
     image:
-      "https://res.cloudinary.com/daa1hgr9j/image/upload/v1758120788/mhw8gsehwjgzg4vmrsfw.webp",
-    title: "4 BHK - L4 - Unit 1",
-    description: "",
+    "https://res.cloudinary.com/daa1hgr9j/image/upload/v1758120787/othmmogzkyn6my0drvqq.webp",
+    title: "1st to 4th Floor Plan",
+    description: "Type C",
   },
   {
     image:
-      "https://res.cloudinary.com/daa1hgr9j/image/upload/v1758120787/e9k6pp2ccygx4dk5om5w.webp",
-    title: "4 BHK - L3 Unit 2",
-    description: "",
+    "https://res.cloudinary.com/daa1hgr9j/image/upload/v1758120787/e9k6pp2ccygx4dk5om5w.webp",
+    title: "Basement Floor Plan",
+    description: "Type C",
   },
   {
     image:
-      "https://res.cloudinary.com/daa1hgr9j/image/upload/v1758120787/othmmogzkyn6my0drvqq.webp",
-    title: "4 BHK - L4 - Unit 3",
-    description: "",
+    "https://res.cloudinary.com/daa1hgr9j/image/upload/v1758120788/mhw8gsehwjgzg4vmrsfw.webp",
+    title: "Basement Floor Plan",
+    description: "Type D",
   },
 ];
+const westin = [
+  {
+    image:
+    "https://res.cloudinary.com/daa1hgr9j/image/upload/v1758154118/ft2uqvhvvgk5ggoieinc.jpg",
+    title: "3.5 BHK",
+    description: "2773 & 2939 SQFT",
+  },
+  {
+    image:
+    "https://res.cloudinary.com/daa1hgr9j/image/upload/v1758154118/ibvqhx5p2zkc5bp68lun.jpg",
+    title: "4.5BHK",
+    description: "3750, 4328 SQFT",
+  },
+  
+];
 
-// Dataset lookup
 const datasets = {
   aspen: aspenFloorPlans,
   iconic: iconicFloorPlans,
   blissville: xyzAmenities,
+  westin: westin,
 };
 
 export default function FloorPlans({ dataset }) {

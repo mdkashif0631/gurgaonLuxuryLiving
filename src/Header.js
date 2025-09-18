@@ -89,8 +89,9 @@ const Header = () => {
     ],
     "WHITE LAND": [
       { name: "ASPEN", path: "/aspen" },
-      { name: "ICONIC", path: "/iconic" },
       { name: "BLISSVILLE", path: "/blissville" },
+      { name: "ICONIC", path: "/iconic" },
+      { name: "WESTIN", path: "/westin" },
     ],
 
   };

@@ -1,7 +1,8 @@
 .aspen-slider {
   position: relative;
   width: 100%;
-  max-height: 90vh;
+  height: auto;
+  /* max-height: 90vh; */
   overflow: hidden;
 }
 
@@ -37,13 +38,14 @@
 
 .aspen-slide img {
   width: 100%;
-  min-height: 30vh;
+  height: 500px;
+  /* min-height: 30vh; */
   object-fit: cover;
 }
 
 .aspen-slide-text {
   position: absolute;
-  bottom: 40px;
+  bottom: 50px;
   left: 40px;
   background: rgba(255, 255, 255, 0.856);
   color: #000000;
@@ -85,10 +87,12 @@
   background-color: #003399;
 }
 @media screen and (max-width: 960px) {
-.aspen-slider {
-  max-height: 50vh;
-  overflow: hidden;
+  .aspen-slide img {
+  height: 300px;
+  /* min-height: 30vh; */
+  object-fit: cover;
 }
+
 .aspen-slide-text {
   bottom: 50px;
   left: 20px;

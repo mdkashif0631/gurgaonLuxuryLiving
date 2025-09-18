@@ -1,7 +1,7 @@
-import { Route, BrowserRouter as Router, Routes, useLocation } from "react-router-dom";
+import { useState } from "react";
 import { useEffect, lazy, Suspense } from "react";
-import React, { useState } from "react";
-import Loader from "./Loader"; // our grid loader
+import { Route, BrowserRouter as Router, Routes, useLocation } from "react-router-dom";
+import Loader from "./Loader"; 
 import "./App.css";
 
 import Home from "./Home";
@@ -18,6 +18,7 @@ const Cloverdale = lazy(() => import("./Cloverdale/Cloverdale"));
 const AiplPeacefullHome = lazy(() => import("./aiplPeacefullHome/AiplPeacefullHome"));
 const Aspen = lazy(() => import("./Aspen/Aspen"));
 const Iconic = lazy(() => import("./Aspen/Iconic"));
+const Westin = lazy(() => import("./Aspen/Westin"));
 const Blissville = lazy(() => import("./Aspen/Blissville"));
 const About = lazy(() => import("./About/About"));
 const Blogs = lazy(() => import("./Blog/Blogs"));
@@ -49,6 +50,7 @@ function Layout() {
         <Route path="/aspen" element={<Aspen />} />
         <Route path="/iconic" element={<Iconic />} />
         <Route path="/blissville" element={<Blissville />} />
+        <Route path="/westin" element={<Westin />} />
         <Route path="/about" element={<About />} />
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/blog/:id" element={<BlogPage />} />
@@ -64,13 +66,11 @@ function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Fake loading for 3s (replace with real API loading if needed)
     const timer = setTimeout(() => setLoading(false), 3000);
     return () => clearTimeout(timer);
   }, []);
 
   if (loading) {
-    // Show full-page loader before app loads
     return <Loader />;
   }
 

@@ -1,19 +1,18 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import Hero from './Components/Hero'
+import CatalogMagic from '../ContentLoader';
 import ProjectHeader from "../ProjectHeader";
-import CatalogMagic from "../ContentLoader";
-import Hero from "./Components/Hero";
 import Features from "./Components/Features";
 import Overview from "./Components/Overview";
 import Amenities from "./Components/Amenities";
 import FloorPlans from "./Components/FloorPlan";
 import ProjectSlider from "./Components/Slider";
-import ConstructionUpdate from "./Components/ConstructionUpdate";
 import Testimonials from "./Components/Testimonials";
 import Faqs from "./Components/Faqs";
 import ContactSection from "./Components/ContactSection";
 
-const Blissville = () => {
+const Westin = () => {
     const [project, setProject] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -49,18 +48,17 @@ const Blissville = () => {
     return (
         <div>
             <ProjectHeader project={project} />
-            <Hero videoSrc="https://res.cloudinary.com/daa1hgr9j/video/upload/v1758120155/mffp8djebo49nv5nkolb.mp4" />
+            <Hero videoSrc="https://res.cloudinary.com/daa1hgr9j/video/upload/v1758150373/gk1orp7zhmcheopco0ul.mp4" />
             <Features />
             <Overview
-                leftImage="https://res.cloudinary.com/daa1hgr9j/image/upload/v1758120524/htbawvrjaotrd5oircdo.jpg"
-                logo="https://res.cloudinary.com/daa1hgr9j/image/upload/v1758120523/bolwj9hyetcx5epmydja.svg"
-                heading="Bliss awaits you in your new abode!"
-                text="Whiteland Blissville has set a new standard for low-rise luxury floors. This Whiteland residential project is an ideal one to spend quality time with your family while enjoying the various spaces like the gymnasium, indoor badminton court, library, and more! The luxury low-rise floors at Blissville are homes that you have always aspired to live in."
+                leftImage="https://res.cloudinary.com/daa1hgr9j/image/upload/v1758152237/ap1paikujszapdngbtak.webp"
+                logo="https://res.cloudinary.com/daa1hgr9j/image/upload/v1758152236/swxjl9to5iw7ga0wfop0.png"
+                heading="India’s Most Iconic Residences"
+                text="Whiteland Westin Residences Gurgaon is a prestigious residential project in Gurugram, India, developed by Whiteland Corporation in collaboration with Marriott International. It stands out as the largest branded residence and the first standalone residential property in India under the renowned Westin brand. The project offers an exceptional living experience, combining the best of both worlds - the tranquility of a residential space and the opulence of a five-star hotel."
             />
-            <Amenities project="blissville" />
-            <FloorPlans dataset="blissville" />
-            <ProjectSlider project="blissville" />
-            <ConstructionUpdate project="https://res.cloudinary.com/daa1hgr9j/video/upload/v1757991479/ljiemtwn3cjnxizdqbdr.mp4" />
+            <FloorPlans dataset="westin" />
+            <Amenities project="westin" />
+            <ProjectSlider project="westin" />
             <Testimonials />
             <Faqs />
             <ContactSection />
@@ -68,4 +66,4 @@ const Blissville = () => {
     )
 }
 
-export default Blissville
+export default Westin

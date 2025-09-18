@@ -121,31 +121,94 @@ const iconicSlides = [
 const xyzSlides = [
   {
     image:
-      "https://res.cloudinary.com/daa1hgr9j/image/upload/v1757990395/wawfi3ysrbe8lnshknef.webp",
-    text: "8 MAJESTIC TOWERS",
+      "https://res.cloudinary.com/daa1hgr9j/image/upload/v1758133501/h9wndug1gwjzkkozu5nj.webp",
+    text: "STATE OF THE-ART CLUBHOUSE",
+    text1: "Designed to satiate different tastes and meet everyone's needs",
+  },
+  {
+    image:
+      "https://res.cloudinary.com/daa1hgr9j/image/upload/v1758133501/pvdmhk5ylgugrgmx9fmq.webp",
+    text: "MASTER BEDROOM",
+    text1: "Experience the comforts of life in a grand way",
+  },
+  {
+    image:
+      "https://res.cloudinary.com/daa1hgr9j/image/upload/v1758133501/rpqilk7xaaierxk02qyv.webp",
+    text: "MULTI-CUISINE RESTAURANT",
+    text1: "Dining out with friend and family is now easier than ever",
+  },
+  {
+    image:
+      "https://res.cloudinary.com/daa1hgr9j/image/upload/v1758133501/gkueaw7j9huogc4zyx1h.webp",
+    text: "ENTRANCE",
+    text1: "The gateway to Bliss",
+  },
+  {
+    image:
+      "https://res.cloudinary.com/daa1hgr9j/image/upload/v1758133502/gxnqepxi354p7bymdbus.webp",
+    text: "GRAND ENTERANCE LOBBY",
+    text1: "Luxury low-rise floors for happy and wholesome living",
+  },
+  {
+    image:
+      "https://res.cloudinary.com/daa1hgr9j/image/upload/v1758133502/f7gxrkci1ocptkxvadn2.webp",
+    text: "GYMNASIUM",
+    text1: "A gymnasium with top-of-the-line equipment is always ready and waiting for you",
+  },
+  {
+    image:
+      "https://res.cloudinary.com/daa1hgr9j/image/upload/v1758133502/eciap9jccjgzumcx2nto.webp",
+    text: "A FULLY LOADED MODULAR KITCHEN",
+    text1: "Elevate your culinary experience with our state-of-the-art modular kitchens",
+  },
+  {
+    image:
+      "https://res.cloudinary.com/daa1hgr9j/image/upload/v1758133502/ibxlcxccdf5ds8pzhdrl.webp",
+    text: "LUSH GREEN BELTS",
+    text1: "Dwell in the hues of nature and serentiy",
+  },
+  {
+    image:
+      "https://res.cloudinary.com/daa1hgr9j/image/upload/v1758133508/btlfvz4c2wgzkxx4eqsj.webp",
+    text: "SWIMMING POOL",
+    text1: "aAleisurely swim is all you need to rejuvenate your body, mind, and soul after a tiring day",
+  },
+  {
+    image:
+      "https://res.cloudinary.com/daa1hgr9j/image/upload/v1758133508/l91amblyyy2anwx3ruxh.webp",
+    text: "INDOOR BADMINTON COURT",
+    text1: "Unleash your thounder at indoor badminton court which enables years-round active living",
+  },
+];
+
+const westin = [
+  {
+    image:
+      "https://res.cloudinary.com/daa1hgr9j/image/upload/v1758154696/q3bw1n35bvpmx3fchtav.jpg",
+    text: "MAJESTIC TOWERS",
     text1: "8.4 Hectares of sustainable living and 9,290 Sq. M. of world-class clubhouses",
   },
   {
     image:
-      "https://res.cloudinary.com/daa1hgr9j/image/upload/v1757990394/de1taahhiv9liofonvfo.webp",
+      "https://res.cloudinary.com/daa1hgr9j/image/upload/v1758155145/cb5vkygzlcdx1qwninpk.webp",
     text: "LUXURY LIVING",
     text1: "Experience modern architecture and spacious interiors",
   },
   {
     image:
-      "https://res.cloudinary.com/daa1hgr9j/image/upload/v1757990395/segnwn4gqu8h6dslt1b6.webp",
+      "https://res.cloudinary.com/daa1hgr9j/image/upload/v1758155022/mxwa1awzfw1mmshcf5ir.webp",
     text: "GREEN SPACES",
     text1: "Beautiful landscaped gardens and open areas",
   },
   {
     image:
-      "https://res.cloudinary.com/daa1hgr9j/image/upload/v1757990394/zc9f4suwnnnoud3yxptd.webp",
+      "https://res.cloudinary.com/daa1hgr9j/image/upload/v1758155070/ntlzhlqti5ujelvhecea.webp",
     text: "WORLD-CLASS AMENITIES",
     text1: "Clubhouse, swimming pool, gym & more",
   },
   {
     image:
-      "https://res.cloudinary.com/daa1hgr9j/image/upload/v1757990393/gguqh78lmeixcmgjwf7t.jpg",
+      "https://res.cloudinary.com/daa1hgr9j/image/upload/v1758154901/kqb8tykgn5wsuhrufcm7.webp",
     text: "PANORAMIC VIEWS",
     text1: "Stunning cityscape and skyline views",
   },
@@ -157,7 +220,7 @@ const xyzSlides = [
   },
   {
     image:
-      "https://res.cloudinary.com/daa1hgr9j/image/upload/v1757990394/scb3hsubjfc7dqjhqka3.webp",
+      "https://res.cloudinary.com/daa1hgr9j/image/upload/v1758155196/ez5bmcz5ru2upyoqlo9x.webp",
     text: "FAMILY FRIENDLY",
     text1: "Play zones, parks, and recreational areas",
   },
@@ -172,6 +235,8 @@ export default function ProjectSlider({ project }) {
         return iconicSlides;
       case "blissville":
         return xyzSlides;
+      case "westin":
+        return westin;
       default:
         return [];
     }

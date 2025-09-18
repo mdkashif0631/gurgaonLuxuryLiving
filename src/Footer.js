@@ -11,7 +11,7 @@ const Footer = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowForm(true);
-    }, 4000);
+    }, 1000);
 
     return () => clearTimeout(timer); 
   }, []);

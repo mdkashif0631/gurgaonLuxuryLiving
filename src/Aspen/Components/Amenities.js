@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./Amenities.css";
 
 // Dataset 1 (Aspen)
@@ -22,14 +22,23 @@ const iconicAmenities = [
 ];
 
 // Dataset 3 (XYZ)
-const xyzAmenities = [
-  { name: "VIP LOUNGE", img: "https://res.cloudinary.com/daa1hgr9j/image/upload/v1758071443/luuysjmsuf7ekmllxw99.webp" },
-  { name: "ZEN GARDEN", img: "https://res.cloudinary.com/daa1hgr9j/image/upload/v1758071444/midpf7kht702waomovyp.webp" },
-  { name: "PRIVATE JACUZZI", img: "https://res.cloudinary.com/daa1hgr9j/image/upload/v1758071443/x38uzbnns5huws7naktn.webp" },
-  { name: "SPA & SAUNA", img: "https://res.cloudinary.com/daa1hgr9j/image/upload/v1758071449/j8iis2tv4qle7qzp8ybl.webp" },
-  { name: "STARGAZING DECK", img: "https://res.cloudinary.com/daa1hgr9j/image/upload/v1758071444/fjhz0ortkltdvqyzx8ev.webp" },
-  { name: "POOL SIDE CAFE", img: "https://res.cloudinary.com/daa1hgr9j/image/upload/v1758071443/l5bdbvjlpbgzlxruoxxv.webp" },
+const xyzAmenities = [ 
+  { name: "SWIMMING POOL", img: "https://res.cloudinary.com/daa1hgr9j/image/upload/v1758133159/a1fnvmhpn2iirtfyahmz.webp" },
+  { name: "GYMNASIUM", img: "https://res.cloudinary.com/daa1hgr9j/image/upload/v1758133160/vbooj9elzurf37mxmj9k.webp" },
+  { name: "BANQUET HALL", img: "https://res.cloudinary.com/daa1hgr9j/image/upload/v1758133159/js2wnpwhgkvzpwowosvw.webp" },
+  { name: "RESTAURANT", img: "https://res.cloudinary.com/daa1hgr9j/image/upload/v1758133160/ooifqaj410ggqkqgjdrb.webp" },
+  { name: "LIBRARY", img: "https://res.cloudinary.com/daa1hgr9j/image/upload/v1758133160/htuo3vfedd6uzhp7itxf.webp" },
+  { name: "WFH SPACES", img: "https://res.cloudinary.com/daa1hgr9j/image/upload/v1758133160/jps0azxtgzwyvchhbtqr.webp" },
 ];
+const westin = [ 
+  { name: "SWIMMING POOL", img: "https://res.cloudinary.com/daa1hgr9j/image/upload/v1758154742/vvvwgsz4i4zvoscs86hh.webp" },
+  { name: "GYMNASIUM", img: "https://res.cloudinary.com/daa1hgr9j/image/upload/v1758154778/syuq1h9d2q0bypv7n4fs.jpg" },
+  { name: "BANQUET HALL", img: "https://res.cloudinary.com/daa1hgr9j/image/upload/v1758154812/z7priyz4du5cbu25ayvq.webp" },
+  { name: "RESTAURANT", img: "https://res.cloudinary.com/daa1hgr9j/image/upload/v1758133160/ooifqaj410ggqkqgjdrb.webp" },
+  { name: "LIBRARY", img: "https://res.cloudinary.com/daa1hgr9j/image/upload/v1758133160/htuo3vfedd6uzhp7itxf.webp" },
+  { name: "WFH SPACES", img: "https://res.cloudinary.com/daa1hgr9j/image/upload/v1758133160/jps0azxtgzwyvchhbtqr.webp" },
+];
+
 
 
 const Amenities = ({ project }) => {
@@ -40,8 +49,10 @@ const Amenities = ({ project }) => {
         return aspenAmenities;
       case "iconic":
         return iconicAmenities;
-      case "bissville":
+      case "blissville":
         return xyzAmenities;
+      case "westin":
+        return westin;
       default:
         return [];
     }
