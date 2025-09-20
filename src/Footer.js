@@ -77,7 +77,6 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Connect Form appears automatically + can be closed */}
       <ConnectForm show={showForm} onClose={() => setShowForm(false)} />
     </footer>
   );

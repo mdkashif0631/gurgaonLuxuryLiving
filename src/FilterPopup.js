@@ -12,19 +12,16 @@ const FilterPopup = () => {
     return (value / 10000000).toFixed(1) + " Cr";
   };
 
-  // Handle min range
   const handleMinChange = (e) => {
     const value = Math.min(Number(e.target.value), maxPrice - 5000000);
     setMinPrice(value);
   };
 
-  // Handle max range
   const handleMaxChange = (e) => {
     const value = Math.max(Number(e.target.value), minPrice + 5000000);
     setMaxPrice(value);
   };
 
-  // Slider track style (fill between min & max)
   const sliderStyle = {
     background: `linear-gradient(to right, 
       #d3d3d3 ${(minPrice - 10000000) / 190000000 * 100}%, 
@@ -37,7 +34,6 @@ const FilterPopup = () => {
     <div>
       <div className="filter-overlay">
         <div className="filter-container">
-          {/* Header */}
           <div className="filter-header">
             <button className="filter_back-btn" onClick={() => navigate(-1)}>
               ← Back
@@ -45,9 +41,7 @@ const FilterPopup = () => {
             <h2>Filter Properties</h2>
           </div>
 
-          {/* Fields */}
           <div className="filter-grid">
-            {/* Project Type */}
             <div className="filter-field">
               <label>Project Type</label>
               <select>
@@ -58,13 +52,11 @@ const FilterPopup = () => {
               </select>
             </div>
 
-            {/* Location */}
             <div className="filter-field">
               <label>Location</label>
               <input type="text" placeholder="Enter location" />
             </div>
 
-            {/* Developer */}
             <div className="filter-field">
               <label>Developer</label>
               <input type="text" placeholder="Enter developer" />

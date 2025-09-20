@@ -30,8 +30,8 @@ const locationImages = {
 const HeroSection = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [dropdownVisible, setDropdownVisible] = useState(false);
-  const [selectedState, setSelectedState] = useState(Object.keys(locationData)[0]); // default first state
-  const [view, setView] = useState("states"); // "states" or "cities"
+  const [selectedState, setSelectedState] = useState(Object.keys(locationData)[0]); 
+  const [view, setView] = useState("states");
   const [isFixed, setIsFixed] = useState(false);
 
   useEffect(() => {
@@ -117,7 +117,6 @@ const HeroSection = () => {
                     <h2 className="state-heading">{selectedState.length >24 ? selectedState.substring(0, 24) + "..." : selectedState}</h2>
                   </div>
 
-                  {/* State name at the top */}
                   
                   {locationData[selectedState].map((city) => (
                     <div key={city} className="city">

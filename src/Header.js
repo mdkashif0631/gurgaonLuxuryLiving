@@ -65,7 +65,6 @@ const Header = () => {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, [menuOpen]);
 
-  // Data structure for developers and projects
   const developers = {
     ELAN: [
       { name: "ELAN PRESIDENTIAL", path: "/elanpresidential" },
@@ -98,7 +97,6 @@ const Header = () => {
 
   return (
     <header className={`gll_header ${isSticky ? "sticky" : ""}`}>
-      {/* Top bar */}
       {showTopBar && (
         <div
           className={`gll_header-container_top ${isSticky ? "sticky" : ""}`}
@@ -126,10 +124,8 @@ const Header = () => {
         </div>
       )}
 
-      {/* Main header */}
       <div className="header-container">
         <div className="header-left">
-          {/* Search Section */}
           <div className="search-wrapper">
             <FiSearch
               className="search_icon"
@@ -216,7 +212,6 @@ const Header = () => {
           </li>
         </ul>
 
-        {/* Mobile Hamburger */}
         <button
           ref={buttonRef}
           className="menu-toggle"
@@ -226,7 +221,6 @@ const Header = () => {
         </button>
       </div>
 
-      {/* Logos */}
       <a href="/" className="main_logo_gll gll_logo1">
         <img
           className="logo_box"
@@ -242,7 +236,6 @@ const Header = () => {
         />
       </a>
 
-      {/* Mobile Menu */}
       <div ref={menuRef} className={`mobile-menu ${menuOpen ? "open" : ""}`}>
         <div className={`menu_list ${isSticky ? "sticky" : ""}`}>
           <a href="/" className="mob_logo_gll ">
@@ -258,7 +251,6 @@ const Header = () => {
           <a href="/projects" onClick={(e) => handleNav(e, "/projects")}>BUY</a>
           <a href="/sell" onClick={(e) => handleNav(e, "/sell")}>SELL</a>
 
-          {/* Nested Accordion Menu for Projects */}
           <div className="mobile_dropdown">
             <button
               className="mobile_section"
