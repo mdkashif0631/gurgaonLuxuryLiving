@@ -4,15 +4,33 @@ import "aos/dist/aos.css";
 import "./Carousel.css";
 
 const cards = [
-  { img: "https://res.cloudinary.com/daa1hgr9j/image/upload/v1757927534/neddeee9mqnycslnigdg.jpg", title: "Modern Villa" },
-  { img: "https://res.cloudinary.com/daa1hgr9j/image/upload/v1757927534/jeoy8o6y2svqtxgsnrlq.jpg", title: "City Apartment" },
-  { img: "https://res.cloudinary.com/daa1hgr9j/image/upload/v1757927534/g62fxethsjgbay1shszv.jpg", title: "Cozy Cottage" },
-  { img: "https://res.cloudinary.com/daa1hgr9j/image/upload/v1757927534/neddeee9mqnycslnigdg.jpg", title: "Luxury Condo" },
-  { img: "https://res.cloudinary.com/daa1hgr9j/image/upload/v1757927534/jeoy8o6y2svqtxgsnrlq.jpg", title: "Urban Flat" },
-  { img: "https://res.cloudinary.com/daa1hgr9j/image/upload/v1757927534/g62fxethsjgbay1shszv.jpg", title: "Beach House" },
-  { img: "https://res.cloudinary.com/daa1hgr9j/image/upload/v1757927534/neddeee9mqnycslnigdg.jpg", title: "Modern Villa" },
-  { img: "https://res.cloudinary.com/daa1hgr9j/image/upload/v1757927534/jeoy8o6y2svqtxgsnrlq.jpg", title: "Urban Flat" },
-  { img: "https://res.cloudinary.com/daa1hgr9j/image/upload/v1757927534/g62fxethsjgbay1shszv.jpg", title: "City Apartment" },
+  { img: "https://res.cloudinary.com/daa1hgr9j/image/upload/v1757927534/neddeee9mqnycslnigdg.jpg", 
+    title: "Modern Villa" 
+  },
+  { img: "https://res.cloudinary.com/daa1hgr9j/image/upload/v1757927534/jeoy8o6y2svqtxgsnrlq.jpg", 
+    title: "City Apartment" 
+  },
+  { img: "https://res.cloudinary.com/daa1hgr9j/image/upload/v1757927534/g62fxethsjgbay1shszv.jpg", 
+    title: "Cozy Cottage" 
+  },
+  { img: "https://res.cloudinary.com/daa1hgr9j/image/upload/v1757927534/neddeee9mqnycslnigdg.jpg", 
+    title: "Luxury Condo" 
+  },
+  { img: "https://res.cloudinary.com/daa1hgr9j/image/upload/v1757927534/jeoy8o6y2svqtxgsnrlq.jpg", 
+    title: "Urban Flat" 
+  },
+  { img: "https://res.cloudinary.com/daa1hgr9j/image/upload/v1757927534/g62fxethsjgbay1shszv.jpg", 
+    title: "Beach House" 
+  },
+  { img: "https://res.cloudinary.com/daa1hgr9j/image/upload/v1757927534/neddeee9mqnycslnigdg.jpg", 
+    title: "Modern Villa" 
+  },
+  { img: "https://res.cloudinary.com/daa1hgr9j/image/upload/v1757927534/jeoy8o6y2svqtxgsnrlq.jpg", 
+    title: "Urban Flat" 
+  },
+  { img: "https://res.cloudinary.com/daa1hgr9j/image/upload/v1757927534/g62fxethsjgbay1shszv.jpg", 
+    title: "City Apartment" 
+  },
 ];
 
 
@@ -22,7 +40,6 @@ const Carousel = () => {
   const [cardsPerSlide, setCardsPerSlide] = useState(3);
   const timerRef = useRef(null);
 
-  // update cards per slide based on screen size
   useEffect(() => {
     const updateCardsPerSlide = () => {
       if (window.innerWidth <= 710) {
@@ -38,14 +55,12 @@ const Carousel = () => {
     return () => window.removeEventListener("resize", updateCardsPerSlide);
   }, []);
 
-  // regroup cards dynamically
   const chunkedCards = [];
   for (let i = 0; i < cards.length; i += cardsPerSlide) {
     chunkedCards.push(cards.slice(i, i + cardsPerSlide));
   }
   const totalSlides = chunkedCards.length;
 
-  // helper to start/reset interval
   const startAutoSlide = useCallback(() => {
     if (timerRef.current) clearInterval(timerRef.current);
     timerRef.current = setInterval(() => {
@@ -53,21 +68,19 @@ const Carousel = () => {
     }, 10000);
   }, [totalSlides]);
 
-  // start timer on mount + when totalSlides changes
   useEffect(() => {
     startAutoSlide();
     return () => clearInterval(timerRef.current);
   }, [startAutoSlide]);
 
-  // manual controls with reset
   const moveLeft = useCallback(() => {
     setCurrent((prev) => (prev - 1 + totalSlides) % totalSlides);
-    startAutoSlide(); // reset timer
+    startAutoSlide(); 
   }, [totalSlides, startAutoSlide]);
 
   const moveRight = useCallback(() => {
     setCurrent((prev) => (prev + 1) % totalSlides);
-    startAutoSlide(); // reset timer
+    startAutoSlide(); 
   }, [totalSlides, startAutoSlide]);
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
@@ -109,7 +122,6 @@ const Carousel = () => {
                     data-aos-duration="800"
                   >
                     <img src={card.img} alt={card.title} />
-                    {/* <p>{card.title}</p> */}
                   </div>
                 ))}
               </div>

@@ -113,7 +113,6 @@ const FeaturedProjectsCarousel = () => {
                       onError={(e) => e.target.src = '../img/elaanlogo.png'}
                     />
 
-                    {/* ❤️ Heart Icon */}
                     <div
                       className="heart-icon"
                       onClick={(e) => {

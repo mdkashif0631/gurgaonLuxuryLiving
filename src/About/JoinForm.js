@@ -32,7 +32,7 @@ const JoinForm = () => {
     >
       <h2 className="form-title">JOIN OUR TEAM</h2>
       <p className="form-subtitle">
-        <a href="mailto:join@elliman.com">JOIN@luxuryabode.in</a>
+        <a href="mailto:join@elliman.com">JOIN@luxuryabodellp.com</a>
       </p>
 
       <form className="form">

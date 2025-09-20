@@ -15,10 +15,9 @@ const CityListings = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [data, setData] = useState({});
   const [loading, setLoading] = useState(true);
-  const [favorites, setFavorites] = useState([]); // ⭐ store favorite projects
+  const [favorites, setFavorites] = useState([]); 
   const navigate = useNavigate();
 
-  // Load favorites from localStorage & remove expired
   useEffect(() => {
     const savedFavorites = JSON.parse(localStorage.getItem("favorites")) || [];
     const now = Date.now();
@@ -28,7 +27,6 @@ const CityListings = () => {
     setFavorites(validFavorites);
     localStorage.setItem("favorites", JSON.stringify(validFavorites));
 
-    // Optional: auto-remove expired favorites every minute
     const interval = setInterval(() => {
       const updatedFavorites = JSON.parse(localStorage.getItem("favorites")) || [];
       const now = Date.now();
@@ -42,18 +40,15 @@ const CityListings = () => {
     return () => clearInterval(interval);
   }, []);
 
-  // Toggle favorite with 10-minute expiry
   const toggleFavorite = (project) => {
     const exists = favorites.find((fav) => fav.id === project.id);
     if (exists) {
-      // Remove if already favorite
       const updated = favorites.filter((fav) => fav.id !== project.id);
       setFavorites(updated);
       localStorage.setItem("favorites", JSON.stringify(updated));
     } else {
-      // Add with expiry
       const now = Date.now();
-      const expiry = now + 10 * 60 * 1000; // 10 minutes
+      const expiry = now + 10 * 60 * 1000; 
       const newFav = { ...project, expiry };
       const updated = [...favorites, newFav];
       setFavorites(updated);
@@ -61,7 +56,6 @@ const CityListings = () => {
     }
   };
 
-  // Extract bedrooms
   const getBedrooms = (property) => {
     const bhks = [];
     if (property.Beds_bhk) bhks.push(property.Beds_bhk + " BHK");
@@ -72,7 +66,6 @@ const CityListings = () => {
     return bhks.length > 0 ? bhks.join(" | ") : "N/A";
   };
 
-  // Fetch properties
   useEffect(() => {
     setLoading(true);
     fetch(`${BASE_URL}/properties`)
@@ -104,7 +97,6 @@ const CityListings = () => {
           return acc;
         }, {});
 
-        // Add custom filter "UNDER ₹ 3 CR"
         const under3cr = [];
         Object.values(grouped).forEach((list) => {
           list.forEach((item) => {
@@ -123,7 +115,6 @@ const CityListings = () => {
       .finally(() => setLoading(false));
   }, []);
 
-  // Responsive card count
   useEffect(() => {
     const updateVisibleCards = () => {
       if (window.innerWidth <= 660) setVisibleCards(1);
@@ -136,12 +127,10 @@ const CityListings = () => {
     return () => window.removeEventListener("resize", updateVisibleCards);
   }, []);
 
-  // Reset slide index when tab changes
   useEffect(() => {
     setCurrentIndex(0);
   }, [activeTab]);
 
-  // Auto slide
   useEffect(() => {
     if (!activeTab || !data[activeTab]) return;
     const length = data[activeTab].length;
@@ -151,7 +140,6 @@ const CityListings = () => {
     return () => clearInterval(timer);
   }, [currentIndex, activeTab, visibleCards, data]);
 
-  // Slider controls
   const nextSlide = useCallback(() => {
     if (!activeTab || !data[activeTab]) return;
     const length = data[activeTab].length;
@@ -164,7 +152,6 @@ const CityListings = () => {
     setCurrentIndex((prev) => (prev - 1 + length) % length);
   }, [activeTab, data]);
 
-  // Visible cards
   const getVisibleCards = () => {
     if (!activeTab || !data[activeTab]) return [];
     const items = data[activeTab];
@@ -173,7 +160,6 @@ const CityListings = () => {
     return [...items.slice(currentIndex), ...items.slice(0, end - items.length)];
   };
 
-  // Init animations
   useEffect(() => {
     AOS.init({ duration: 800, once: true, easing: "ease-in-out" });
   }, [activeTab]);
@@ -186,7 +172,6 @@ const CityListings = () => {
         <CatalogMagic row={1} style={{ backgroundColor: "#100b28" }} />
       ) : (
         <>
-          {/* Tabs */}
           <nav className="navbar">
             {Object.keys(data).map((tab) => (
               <span
@@ -199,7 +184,6 @@ const CityListings = () => {
             ))}
           </nav>
 
-          {/* Listings */}
           <div className="listings">
             {getVisibleCards().map((item, index) => (
               <div className="listing-card" key={index} data-aos="fade-up">
@@ -213,7 +197,6 @@ const CityListings = () => {
                       {item.bedrooms} | {item.area} sqft
                     </p>
 
-                    {/* Heart toggle */}
                     <div
                       className="heart-icon"
                       onClick={(e) => {

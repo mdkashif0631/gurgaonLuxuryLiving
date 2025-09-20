@@ -5,17 +5,14 @@ import BHks, { SuperAreaDisplay } from "./PropertyCard/BHks";
 export default function FavoritesPage() {
     const [favorites, setFavorites] = useState([]);
 
-    // Helper: get valid favorites (not expired)
     const getValidFavorites = () => {
         const savedFavorites = JSON.parse(localStorage.getItem("favorites")) || [];
         const now = Date.now();
 
-        // Filter out expired favorites
         const validFavorites = savedFavorites.filter(
             (fav) => !fav.expiry || fav.expiry > now
         );
 
-        // Update localStorage to remove expired
         localStorage.setItem("favorites", JSON.stringify(validFavorites));
 
         return validFavorites;
@@ -31,7 +28,6 @@ export default function FavoritesPage() {
         return () => clearInterval(interval);
     }, []);
 
-    // Remove manually
     const removeFavorite = (id) => {
         const updated = favorites.filter((fav) => fav.id !== id);
         setFavorites(updated);

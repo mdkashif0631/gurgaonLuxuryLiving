@@ -51,9 +51,9 @@ const ConnectForm = ({ show, onClose }) => {
         </div>
 
         <div className="connect-info">
-          <h3>Gurgaon Luxury Living</h3>
+          <h3>The Luxury Abode</h3>
           <p>📞 800.Properties</p>
-          <p>✉️ INFO@luxuryabode.in</p>
+          <p>✉️ INFO@luxuryabodellp.com</p>
         </div>
 
         <h3 className="message-title">Send a message</h3>

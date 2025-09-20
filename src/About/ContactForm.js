@@ -18,13 +18,11 @@ const ContactForm = () => {
     message: "",
   });
 
-  // ✅ Handle Input Change
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  // ✅ Handle Submit (send to backend)
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -43,7 +41,6 @@ const ContactForm = () => {
     }
   };
 
-  // ✅ Intersection Observer for animation
   useEffect(() => {
     const currentSection = sectionRef.current;
     const observer = new IntersectionObserver(
@@ -70,7 +67,7 @@ const ContactForm = () => {
       <h2 className="about_form-title">MAKE YOUR NEXT MOVE</h2>
       <p className="about_form-subtitle">
         800.Properties •{" "}
-        <a href="mailto:global@elliman.com">www.luxuryabode.in</a>
+        <a href="mailto:luxuryabodellp@gmail.com">luxuryabodellp@gmail.com</a>
       </p>
 
       <form className="about_form" onSubmit={handleSubmit}>

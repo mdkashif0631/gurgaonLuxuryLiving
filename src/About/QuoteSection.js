@@ -43,7 +43,7 @@ const QuoteSection = () => {
         </p>
         <h4 className="author">MICHAEL S. LIEBOWITZ</h4>
         <p className="designation">
-          President and Chief Executive Officer, Douglas Elliman Inc.
+          President and Chief Executive Officer,The Luxury Abode .
         </p>
       </div>
     </section>

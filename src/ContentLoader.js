@@ -16,14 +16,13 @@ const CatalogMagic = ({
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // Responsive column count
   let column = 5;
-  if (windowWidth < 480) column = 1;       // mobile
-  else if (windowWidth < 768) column = 2;  // small tablet
-  else if (windowWidth < 1024) column = 3; // tablet
-  else if (windowWidth < 1280) column = 4; // small desktop
+  if (windowWidth < 480) column = 1;       
+  else if (windowWidth < 768) column = 2;  
+  else if (windowWidth < 1024) column = 3; 
+  else if (windowWidth < 1280) column = 4; 
 
-  const width = Math.max(windowWidth * 0.95, 320); // flexible but with a min
+  const width = Math.max(windowWidth * 0.95, 320); 
   const list = [];
   let height = heading.height + padding * 3;
 
@@ -32,11 +31,11 @@ const CatalogMagic = ({
       const itemWidth = (width - padding * (column + 1)) / column;
 
       const x = padding + j * (itemWidth + padding);
-      const height1 = itemWidth; // image square
-      const height2 = 20;        // title
-      const height3 = 20;        // subtitle
+      const height1 = itemWidth;
+      const height2 = 20;       
+      const height3 = 20;       
 
-      const y1 = height + padding; // start for this row
+      const y1 = height + padding; 
       const y2 = y1 + padding + height1;
       const y3 = y2 + padding / 2 + height2;
 
@@ -56,7 +55,7 @@ const CatalogMagic = ({
       );
 
       if (j === column - 1) {
-        height = y3 + height3 + padding * 2; // update height row by row
+        height = y3 + height3 + padding * 2; 
       }
     }
   }

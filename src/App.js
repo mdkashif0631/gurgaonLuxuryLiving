@@ -9,7 +9,6 @@ import EnquirySection from "./EnquirySection";
 import ListedProjects from "./ListedProjects";
 import FavoritesPage from "./FavoritesPage";
 
-// Lazy load pages
 const Elan = lazy(() => import("./PLP/Elan"));
 const FilterPopup = lazy(() => import("./FilterPopup"));
 const Trump = lazy(() => import("./Trump_plp/Trump"));
@@ -26,7 +25,6 @@ const Blogs = lazy(() => import("./Blog/Blogs"));
 const BlogPage = lazy(() => import("./Blog/components/Blogpage"));
 const Footer = lazy(() => import("./Footer"));
 
-// Scroll reset on route change
 function ScrollToTop() {
   const { pathname } = useLocation();
 
@@ -63,7 +61,6 @@ function Layout() {
   );
 }
 
-// Route all here
 function App() {
   const [loading, setLoading] = useState(true);
 

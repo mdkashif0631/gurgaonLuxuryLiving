@@ -10,17 +10,15 @@ const EnquirySection = () => {
   const [showForm, setShowForm] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
 
-  // form state
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
     phone_number: "",
   });
 
-  const [consentGiven, setConsentGiven] = useState(true); // Consent checkbox
+  const [consentGiven, setConsentGiven] = useState(true); 
   const [loading, setLoading] = useState(false);
 
-  // handle input change
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -28,7 +26,6 @@ const EnquirySection = () => {
     });
   };
 
-  // backend form submit
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -41,11 +38,11 @@ const EnquirySection = () => {
     try {
       const res = await axios.post(`${BASE_URL}/enquiries`, {
         ...formData,
-        consent: consentGiven, // send to backend
+        consent: consentGiven, 
       });
       alert(res.data.msg || "Message sent successfully!");
       setFormData({ fullName: "", email: "", phone_number: "" });
-      setConsentGiven(false); // reset checkbox
+      setConsentGiven(false); 
     } catch (err) {
       console.error(err);
       alert("Failed to send message.");
@@ -54,7 +51,6 @@ const EnquirySection = () => {
     }
   };
 
-  // WhatsApp click handler
   const handleWhatsAppClick = () => {
     const phoneNumber = "918744966999";
     const message = "Hello, I’d like to enquire about some property.";
@@ -64,13 +60,11 @@ const EnquirySection = () => {
     );
   };
 
-  // Call click handler
   const handleCallClick = () => {
     const phoneNumber = "8744966999";
     window.location.href = `tel:${phoneNumber}`;
   };
 
-  // Scroll detection
   useEffect(() => {
     const handleScroll = () => {
       setIsVisible(window.scrollY > 600);
@@ -85,7 +79,6 @@ const EnquirySection = () => {
     <div
       className={`bottom_enquiry-wrapper ${isVisible ? "visible" : "hidden"}`}
       >
-      {/* Desktop / Tablet Version */}
       <form className="bottom_enquiry-form desktop-only" onSubmit={handleSubmit}>
         <input
           type="text"
@@ -112,7 +105,6 @@ const EnquirySection = () => {
           required
           />
 
-        {/* Consent Checkbox */}
         <label className="consent-checkbox">
           <input
             type="checkbox"
@@ -129,7 +121,6 @@ const EnquirySection = () => {
         </button>
       </form>
 
-      {/* Mobile Version */}
       <div className="bottom_contact-options mobile-only">
         <div className="bottom_contact-item">
           <FaEnvelope className="bottom_contact-icon" />
@@ -148,7 +139,6 @@ const EnquirySection = () => {
         </div>
       </div>
 
-      {/* Popup Form (mobile enquire) */}
     </div>
       <ConnectForm show={showForm} onClose={() => setShowForm(false)} />
             </section>

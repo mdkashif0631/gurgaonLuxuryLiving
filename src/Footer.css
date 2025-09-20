@@ -6,14 +6,9 @@
   font-family: 'Segoe UI', sans-serif;
 
 }
-/* .footer_container{
-po
-} */
+
 .website_policy{
-  /* margin: -20px -30px; */
   margin-top: 3rem;
-  /* padding: 30px; */
-  /* background-color: #0e0c16; */
 }
 .footer h4{
   font-family: "Nata Sans", sans-serif;
@@ -41,7 +36,7 @@ po
 }
 
 .footer-column {
-  padding: 16px;
+  padding: 16px 0px;
   min-width: 170px;
 }
 .blog_footer{

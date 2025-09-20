@@ -5,7 +5,7 @@ import cardsData from "./Blog/Blogs.json";
 
 const Blogfooter = () => {
     const [visibleCards, setVisibleCards] = useState([]);
-    const [selectedCard, setSelectedCard] = useState(cardsData[0]); // default first card
+    const [selectedCard, setSelectedCard] = useState(cardsData[0]); 
     const cardRefs = useRef([]);
 
     useEffect(() => {
@@ -31,7 +31,6 @@ const Blogfooter = () => {
 
     return (
         <div className="blogfooter_container">
-            {/* Left side: titles list (only first 5 blogs) */}
             <div className="blogfooter_list">
                 <h3>LATEST BLOG</h3>
                 {cardsData.slice(0, 5).map((card, index) => (
@@ -52,7 +51,6 @@ const Blogfooter = () => {
                 ))}
             </div>
 
-            {/* Right side: selected card details */}
             <div className="blogfooter_details">
                 <div className="blogfooter_details_thumbnail">
                     <img src={selectedCard.img} alt={selectedCard.title} />
