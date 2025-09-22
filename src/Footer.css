@@ -2,7 +2,7 @@
 .footer {
   background-color: #000000;
   color: #ffffff;
-  padding: 20px 30px 100px;
+  padding: 40px 40px 100px;
   font-family: 'Segoe UI', sans-serif;
 
 }
@@ -30,7 +30,7 @@
   display: grid;
   grid-template-columns: 1fr 1.2fr 2fr;
   gap: 20px;
-  width: 95%;
+  width: 100%;
   margin: auto;
 
 }

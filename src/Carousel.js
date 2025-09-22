@@ -83,7 +83,7 @@ const Carousel = () => {
     startAutoSlide(); 
   }, [totalSlides, startAutoSlide]);
   useEffect(() => {
-    AOS.init({ duration: 1000, once: true });
+    AOS.init({ duration: 100, once: true });
   }, []);
 
 

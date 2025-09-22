@@ -58,13 +58,11 @@
 }
 
 .type_of_prop_gll {
-  display: flex;              /* slides in a row */
+  display: flex;             
   transition: transform 500ms ease-in-out;
   will-change: transform;
 }
 
-/* Each slide occupies full viewport width of the tp_carousel.
-   translateX(-current * 100%) will shift by exact slide widths. */
 .tp_carousel-slide {
   flex: 0 0 100%;
   padding: 4px 0; /* breathing room for AOS shadows */

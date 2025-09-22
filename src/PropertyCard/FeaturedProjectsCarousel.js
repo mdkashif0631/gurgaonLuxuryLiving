@@ -12,7 +12,6 @@ import { CiHeart } from "react-icons/ci";
 import { FaHeart } from "react-icons/fa";
 
 
-// 🔁 Custom hook to detect screen width
 function useWindowWidth() {
   const [width, setWidth] = useState(window.innerWidth);
 
@@ -39,18 +38,16 @@ const BASE_URL = process.env.REACT_APP_API_URL;
 
 const FeaturedProjectsCarousel = () => {
   const [properties, setProperties] = useState([]);
-  const width = useWindowWidth(); // ⬅️ Get screen width
+  const width = useWindowWidth(); 
   const descLimit = width < 700 ? 111 : 300;
 
   const [favorites, setFavorites] = useState([]);
 
-  // Load favorites from localStorage on mount
   useEffect(() => {
     const savedFavorites = JSON.parse(localStorage.getItem("favorites")) || [];
     setFavorites(savedFavorites);
   }, []);
 
-  // Toggle favorite (with expiry optional)
   const toggleFavorite = (project) => {
     const exists = favorites.find((fav) => fav.id === project.Project_Name);
     if (exists) {
@@ -66,7 +63,6 @@ const FeaturedProjectsCarousel = () => {
   };
 
 
-  // Description formatter with word cutoff
   const getShortDescription = (desc) => {
     if (!desc) return 'No description available';
     return desc.length > descLimit

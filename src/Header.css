@@ -45,10 +45,10 @@
 .gll_header.sticky .main_logo_gll {
   display: block;
   position: absolute;
-  bottom: 10px;
+  bottom: 15px;
   left: 50%;
   transform: translate(-50%, 0%);
-  height: 50px;
+  height: 40px;
 }
 
 .gll_header.sticky:hover .gll_logo1 {

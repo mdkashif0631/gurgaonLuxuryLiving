@@ -161,7 +161,7 @@ const CityListings = () => {
   };
 
   useEffect(() => {
-    AOS.init({ duration: 800, once: true, easing: "ease-in-out" });
+    AOS.init({ duration: 1000, once: true, easing: "ease-in-out" });
   }, [activeTab]);
 
   return (
@@ -218,7 +218,6 @@ const CityListings = () => {
             ))}
           </div>
 
-          {/* Controls */}
           <div className="control_city_card_left">
             <button onClick={prevSlide}>&#8592;</button>
           </div>
@@ -226,7 +225,6 @@ const CityListings = () => {
             <button onClick={nextSlide}>&#8594;</button>
           </div>
 
-          {/* View All */}
           <div className="view-all-container">
             <button
               className="view-all-button"

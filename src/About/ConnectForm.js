@@ -53,7 +53,7 @@ const ConnectForm = ({ show, onClose }) => {
         <div className="connect-info">
           <h3>The Luxury Abode</h3>
           <p>📞 800.Properties</p>
-          <p>✉️ INFO@luxuryabodellp.com</p>
+          <p className="mail_info">✉️ INFO@luxuryabodellp.com</p>
         </div>
 
         <h3 className="message-title">Send a message</h3>

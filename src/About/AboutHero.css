@@ -9,7 +9,7 @@
   text-align: center;
   overflow: hidden;
   padding: 0 20px;
-  background-color: #00000086;
+  background-color: rgba(0, 0, 0, 0.525);
 }
 
 .about_hero_video{

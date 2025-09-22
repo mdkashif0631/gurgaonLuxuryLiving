@@ -62,7 +62,6 @@ const FilterPopup = () => {
               <input type="text" placeholder="Enter developer" />
             </div>
 
-            {/* Status */}
             <div className="filter-field">
               <label>Status</label>
               <select>
@@ -73,7 +72,6 @@ const FilterPopup = () => {
               </select>
             </div>
 
-            {/* BHK */}
             <div className="filter-field">
               <label>BHK Configuration</label>
               <select>
@@ -121,7 +119,6 @@ const FilterPopup = () => {
             </div>
           </div>
 
-          {/* Search Button */}
           <div className="filter-footer">
             <button className="filter_search-btn">Search</button>
           </div>

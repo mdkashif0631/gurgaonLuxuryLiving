@@ -1,15 +1,15 @@
 .favorites-container {
   padding: 40px;
-  background: #0f0e2e;
+  background: #ffffff;
   min-height: 100vh;
-  color: #fff;
+  color: #000000;
 }
 
 .favorites-title {
   font-size: 28px;
   font-weight: bold;
   margin-bottom: 20px;
-  color: #e4c19d;
+  color: #3c2003;
 }
 
 .favorites-grid {
@@ -21,7 +21,7 @@
 .project-card.fav {
   display: flex;
   gap: 20px;
-  background: #1a183d;
+  background: #ffffff;
   border-radius: 12px;
   overflow: hidden;
   padding: 20px;
@@ -49,27 +49,27 @@
 .project-title {
   font-size: 22px;
   font-weight: bold;
-  color: #e4c19d;
+  color: #000000;
   margin-bottom: 5px;
 }
 
 .project-location {
   font-size: 14px;
-  color: #ccc;
+  color: #000000;
 }
 
 .project-price {
   font-size: 18px;
   font-weight: bold;
   margin: 10px 0;
-  color: #fff;
+  color: #000000;
 }
 
 .project-desc {
   font-size: 14px;
   line-height: 1.4;
   margin: 10px 0;
-  color: #aaa;
+  color: #0a0a0a;
 }
 
 .project-details {
@@ -78,6 +78,7 @@
   gap: 15px;
   font-size: 14px;
   margin: 15px 0;
+  color: #000000;
 }
 
 .fav-actions {
@@ -87,8 +88,8 @@
 
 .detail-btn {
   background: transparent;
-  border: 1px solid #e4c19d;
-  color: #e4c19d;
+  border: 1px solid #000000;
+  color: #000000;
   padding: 6px 14px;
   border-radius: 6px;
   cursor: pointer;
@@ -96,7 +97,7 @@
 }
 
 .detail-btn:hover {
-  background: #e4c19d;
+  background: #f1f1f1;
   color: #000;
 }
 
@@ -124,4 +125,64 @@
   .project-img {
     height: 180px;
   }
+}
+
+.favorites-table-container {
+  margin-top: 30px;
+  overflow-x: auto;
+}
+
+.favorites-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  background: transparent;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.favorites-table th,
+.favorites-table td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+.favorites-table td {
+  color: #000000;
+
+}
+
+.favorites-table th {
+  background: #2c3e50;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.favorites-table tbody tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+.favorites-table tbody tr:hover {
+  background: #f1f1f1;
+  transition: 0.3s;
+}
+.table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.pdf-btn {
+  padding: 8px 14px;
+  background: #27ae60;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.pdf-btn:hover {
+  background: #219150;
 }
