@@ -4,6 +4,7 @@ import BHks, { SuperAreaDisplay } from "./PropertyCard/BHks";
 import { Link } from "react-router-dom";
 import jsPDF from "jspdf";
 import autoTable from "jspdf-autotable";
+import Header from "./Header";
 
 export default function FavoritesPage() {
     const [favorites, setFavorites] = useState([]);
@@ -98,6 +99,7 @@ export default function FavoritesPage() {
 
     return (
         <div className="favorites-container">
+            <Header/>
             <h2 className="favorites-title">My Favorites</h2>
 
             {/* Grid Card View */}

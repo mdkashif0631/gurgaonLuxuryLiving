@@ -1,5 +1,5 @@
 .favorites-container {
-  padding: 40px;
+  /* padding: 40px; */
   background: #ffffff;
   min-height: 100vh;
   color: #000000;
@@ -8,7 +8,8 @@
 .favorites-title {
   font-size: 28px;
   font-weight: bold;
-  margin-bottom: 20px;
+  margin: 100px 80px 30px ;
+
   color: #3c2003;
 }
 
@@ -16,6 +17,7 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+  margin: 10px 80px;
 }
 
 .project-card.fav {
@@ -128,7 +130,7 @@
 }
 
 .favorites-table-container {
-  margin-top: 30px;
+  margin: 40px 80px;
   overflow-x: auto;
 }
 

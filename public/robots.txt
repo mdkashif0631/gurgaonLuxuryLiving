@@ -1,3 +1,25 @@
-# https://www.robotstxt.org/robotstxt.html
+# robots.txt for Luxury Abode LLP
+
+# Allow all crawlers full access to site content
 User-agent: *
-Disallow:
+Allow: /
+
+# Explicitly allow static assets required for rendering (React build output)
+Allow: /static/
+Allow: /*.js$
+Allow: /*.css$
+Allow: /*.woff2$
+Allow: /*.jpg$
+Allow: /*.png$
+Allow: /*.webp$
+Allow: /*.svg$
+
+# Disallow admin or API routes (not meant for SEO)
+Disallow: /admin/
+Disallow: /api/
+
+# Crawl-delay can be set if server load is an issue (optional, uncomment if needed)
+# Crawl-delay: 10
+
+# Sitemap location
+Sitemap: https://luxuryabodellp.com/sitemap.xml
