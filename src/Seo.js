@@ -21,7 +21,6 @@ const Seo = ({ project, desc, img, link}) => {
       .catch(() => setProj(null));
   }, [project]);
 
-  // fallback object if data not found
   const seoData = proj || {
     Project_Name: project,
     Link: link,
