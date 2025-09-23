@@ -12,3 +12,6 @@ html {
 body.menu-open {
   overflow: hidden;
 }
+.godaddy-support-banner{
+  display: none !important;
+}
