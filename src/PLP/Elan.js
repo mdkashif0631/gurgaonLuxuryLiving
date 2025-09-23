@@ -16,11 +16,14 @@ import HeroSection from './component/HeroSection.js';
 // import { SlEnvolopeLetter } from 'react-icons/sl';
 // import RegisterInterestForm from '../ElanEmperor/elanEmpire/components/RegisterInterestForm.js';
 import FloorPlan from './component/FloorPlan.js';
+import Seo from '../Seo.js';
 
 const Elan = () => {
       // const [showForm, setShowForm] = useState(false);
   return (
     <div>
+      <Seo project = "elanpresidential"
+            />
       <Header />
       <HeroSection/>
       <ExceptionalConcept/>

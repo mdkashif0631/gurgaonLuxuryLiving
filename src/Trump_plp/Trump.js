@@ -11,12 +11,14 @@ import InteriorsCarousel from "./components/InteriorsCarousel";
 import TrumpBookingForm from "./components/TrumpBookingForm";
 import { SlEnvolopeLetter } from "react-icons/sl";
 import RegisterInterestForm from "../ElanEmperor/elanEmpire/components/RegisterInterestForm";
+import Seo from "../Seo";
 
 export default function Trump() {
   const [showForm, setShowForm] = useState(false);
 
   return (
     <div className="site-root">
+      <Seo project = "trumptower"/>
       <Header />
       <Hero />
       <ContactForm />

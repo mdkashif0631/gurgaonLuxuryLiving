@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useEffect, lazy, Suspense } from "react";
 import { Route, BrowserRouter as Router, Routes, useLocation } from "react-router-dom";
+import { HelmetProvider } from '@dr.pogodin/react-helmet';
 import Loader from "./Loader"; 
 import "./App.css";
 
@@ -38,6 +39,7 @@ function ScrollToTop() {
 function Layout() {
   return (
     <Suspense fallback={<Loader />}>
+    <HelmetProvider>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/elanpresidential" element={<Elan />} />
@@ -57,6 +59,7 @@ function Layout() {
         <Route path="/filter" element={<FilterPopup />} />
         <Route path="/favorite" element={<FavoritesPage />} />
       </Routes>
+    </HelmetProvider>
     </Suspense>
   );
 }
