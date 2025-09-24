@@ -25,7 +25,7 @@ const Seo = ({ project, desc, img, link}) => {
     Project_Name: project,
     Link: link,
     Description: desc,
-    image: img,
+    Main_Image: img,
   };
 
   return (
@@ -39,17 +39,16 @@ const Seo = ({ project, desc, img, link}) => {
 
       <meta charSet="utf-8" />
       <meta name="description" content={seoData.Description} />
-
       <meta property="og:title" content={seoData.Project_Name} />
       <meta property="og:description" content={seoData.Description} />
       <meta property="og:url" content={`https://www.luxuryabodellp.com/${seoData.Link}`} />
-      <meta property="og:image" content={seoData.image} />
+      <meta property="og:image" content={seoData.Main_Image} />
       <meta property="og:type" content="website" />
 
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={seoData.Project_Name} />
       <meta name="twitter:description" content={seoData.Description} />
-      <meta name="twitter:image" content={seoData.image} />
+      <meta name="twitter:image" content={seoData.Main_Image} />
     </Helmet>
   );
 };

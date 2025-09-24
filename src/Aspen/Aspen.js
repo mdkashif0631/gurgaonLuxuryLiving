@@ -25,7 +25,7 @@ const Aspen = () => {
       try {
         const res = await axios.get(`${BASE_URL}/properties`);
         const aspenProject = res.data.find(
-          (proj) => proj.Project_Name?.toLowerCase() === "the trump residences"
+          (proj) => proj.Project_Name?.toLowerCase() !== "the trump residences"
         );
 
         if (aspenProject) {
