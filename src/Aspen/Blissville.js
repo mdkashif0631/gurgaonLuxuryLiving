@@ -12,6 +12,7 @@ import ConstructionUpdate from "./Components/ConstructionUpdate";
 import Testimonials from "./Components/Testimonials";
 import Faqs from "./Components/Faqs";
 import ContactSection from "./Components/ContactSection";
+import Seo from "../Seo";
 
 const Blissville = () => {
     const [project, setProject] = useState(null);
@@ -48,6 +49,11 @@ const Blissville = () => {
     if (error) return <div>{error}</div>;
     return (
         <div>
+            <Seo project="aspen"
+                desc="Whiteland Blissville has set a new standard for low-rise luxury floors. This Whiteland residential project is an ideal one to spend quality time with your family while enjoying the various spaces like the gymnasium, indoor badminton court, library, and more! The luxury low-rise floors at Blissville are homes that you have always aspired to live in."
+                img="https://res.cloudinary.com/daa1hgr9j/image/upload/v1758120524/htbawvrjaotrd5oircdo.jpg"
+                link="/blissville"
+            />
             <ProjectHeader project={project} />
             <Hero videoSrc="https://res.cloudinary.com/daa1hgr9j/video/upload/v1758120155/mffp8djebo49nv5nkolb.mp4" />
             <Features />

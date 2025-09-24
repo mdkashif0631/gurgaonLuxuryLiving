@@ -12,6 +12,7 @@ import ConstructionUpdate from "./Components/ConstructionUpdate";
 import Testimonials from "./Components/Testimonials";
 import Faqs from "./Components/Faqs";
 import ContactSection from "./Components/ContactSection";
+import Seo from "../Seo";
 
 const Aspen = () => {
   const [project, setProject] = useState(null);
@@ -49,6 +50,11 @@ const Aspen = () => {
 
   return (
     <div>
+      <Seo project = "aspen"
+      desc = "For the redefined sense of living, The Aspen offers luxury 3/4 BHK residences and duplex penthouses, with state-of-the-art amenities for an exceptional living experience. Nestled in the most promising sector of Gurugram, Sector-76, Whiteland’s residential project offers a lifestyle that is unheard of & truly inspiring."
+            img= "https://res.cloudinary.com/daa1hgr9j/image/upload/v1757927534/g62fxethsjgbay1shszv.jpg"
+            link= "/aspen"
+      />
       <ProjectHeader project={project} />
       <Hero videoSrc="https://res.cloudinary.com/daa1hgr9j/video/upload/v1757983390/fnvg5kicehthp39z36cz.mp4"/>
       <Features/>

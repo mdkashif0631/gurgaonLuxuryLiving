@@ -22,8 +22,7 @@ const Elan = () => {
       // const [showForm, setShowForm] = useState(false);
   return (
     <div>
-      <Seo project = "elanpresidential"
-            />
+      <Seo project = "elanpresidential"/>
       <Header />
       <HeroSection/>
       <ExceptionalConcept/>

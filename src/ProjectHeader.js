@@ -26,7 +26,7 @@ export default function ProjectHeader({ project }) {
                             <>
                                 <img
                                     className="white_logo"
-                                    src="https://res.cloudinary.com/daa1hgr9j/image/upload/v1757999948/dh7lk2qmwe9gdukktgt1.svg"
+                                    src="https://res.cloudinary.com/daa1hgr9j/image/upload/v1758717341/lfakp6sxze0xzcqvj4dm.svg"
                                     alt="project-logo"
                                 />
                                 <img

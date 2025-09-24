@@ -20,6 +20,7 @@ import EmperorVideo2 from './elanEmpire/components/EmperorVideo2';
 import EmperorRetreat from './elanEmpire/components/EmperorRetreat';
 import EmperorPartner from './elanEmpire/components/EmperorPartner';
 import FloorPlan from './elanEmpire/components/FloorPlan';
+import Seo from '../Seo';
 
 
 function ElanEmperor() {
@@ -27,6 +28,7 @@ function ElanEmperor() {
 
   return (
     <div className="App" style={{ backgroundColor: '#050e1d' }}>
+      <Seo project = "elanemperor"/>
       <Header />
       <HeroSection />
       <Landmark />

@@ -12,6 +12,7 @@ import Features from "./Components/Features";
 import Overview from "./Components/Overview";
 import Amenities from "./Components/Amenities";
 import FloorPlans from "./Components/FloorPlan";
+import Seo from "../Seo";
 
 const Iconic = () => {
     const [project, setProject] = useState(null);
@@ -48,6 +49,11 @@ const Iconic = () => {
     if (error) return <div>{error}</div>;
     return (
         <div>
+            <Seo project="iconic"
+                desc="When at The Aspen Iconic, you get to enjoy the uninterrupted high life to the fullest. A breathtaking 42-storeyed building, The Aspen Iconic is Whiteland’s residential project that invites you to taste the lavish lifestyle."
+                img="https://res.cloudinary.com/daa1hgr9j/image/upload/v1758070137/kht0zrmgedwioqpnjomn.webp"
+                link="/iconic"
+            />
             <ProjectHeader project={project} />
             <Hero videoSrc="https://res.cloudinary.com/daa1hgr9j/video/upload/v1758068870/lzojhq8nqwadxdobinls.mp4" />
             <Features />
