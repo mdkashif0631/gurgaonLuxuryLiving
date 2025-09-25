@@ -13,8 +13,8 @@ const Header = () => {
   const [showSearch, setShowSearch] = useState(false);
 
   // track nested dropdown states
-  const [openDropdown, setOpenDropdown] = useState(null);         //=============== for 'Projects'=============
-  const [openDeveloper, setOpenDeveloper] = useState(null);       //============== for 'developer' ============
+  const [openDropdown, setOpenDropdown] = useState(null);
+  const [openDeveloper, setOpenDeveloper] = useState(null); 
 
   const menuRef = useRef(null);
   const buttonRef = useRef(null);
@@ -69,7 +69,7 @@ const Header = () => {
     ELAN: [
       { name: "ELAN PRESIDENTIAL", path: "/elanpresidential" },
       { name: "ELAN EMPEROR", path: "/elanemperor" },
-      { name: "ELAN EMPEROR 3", path: "/elanemperor3" },
+      { name: "ELAN EMPEROR 3", path: "/elanpresidential" },
     ],
     TRUMP: [
       { name: "TRUMP TOWER", path: "/trumptower" },
@@ -77,14 +77,14 @@ const Header = () => {
     ],
     M3M: [
       { name: "M3M ALTITUDE", path: "/m3maltitude" },
-      { name: "M3M PROJECT 2", path: "/m3m2" },
+      { name: "M3M PROJECT 2", path: "/m3maltitude" },
     ],
     AIPL: [
       { name: "Peacefull Home", path: "/aiplpeacefullhome" },
     ],
     "SIGNATURE GLOBAL": [
       { name: "CLOVERDALE", path: "/cloverdale" },
-      { name: "CLOVERDALE 2", path: "/cloverdale2" },
+      { name: "CLOVERDALE 2", path: "/cloverdale" },
     ],
     "WHITE LAND": [
       { name: "ASPEN", path: "/aspen" },
