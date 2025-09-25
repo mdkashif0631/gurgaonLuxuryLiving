@@ -12,7 +12,6 @@ const Header = () => {
   const [showTopBar, setShowTopBar] = useState(false);
   const [showSearch, setShowSearch] = useState(false);
 
-  // track nested dropdown states
   const [openDropdown, setOpenDropdown] = useState(null);
   const [openDeveloper, setOpenDeveloper] = useState(null); 
 
