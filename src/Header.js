@@ -73,7 +73,7 @@ const Header = () => {
     ],
     TRUMP: [
       { name: "TRUMP TOWER", path: "/trumptower" },
-      { name: "TRUMP RESIDENCES", path: "/trumpresidences" },
+      { name: "TRUMP RESIDENCES", path: "/trumptower" },
     ],
     M3M: [
       { name: "M3M ALTITUDE", path: "/m3maltitude" },
