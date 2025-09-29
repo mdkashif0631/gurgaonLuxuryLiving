@@ -11,10 +11,10 @@ import Seo from './Seo';
 const Home = () => {
     return (
         <div style={{position:'relative'}}>
-            <Seo project = "Luxury Abode"
-            desc = "Gurgaon Luxury Living is an independent real estate information and advisory platform. This website is not the official website of any developer. All project-related details."
+            <Seo project = "Buy, Sell & Rent Properties in Gurgaon | The Luxury Abode Real Estate"
+            desc = "Find the best residential, commercial, and plot properties in Gurgaon with The Luxury Abode. Explore verified listings, new projects, and investment opportunities today."
             img= "https://res.cloudinary.com/daa1hgr9j/image/upload/v1757927534/g62fxethsjgbay1shszv.jpg"
-            link= "/"
+            link= ""
             />
             <HeroSection />
             <Header />

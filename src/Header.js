@@ -68,7 +68,6 @@ const Header = () => {
     ELAN: [
       { name: "ELAN PRESIDENTIAL", path: "/elanpresidential" },
       { name: "ELAN EMPEROR", path: "/elanemperor" },
-      { name: "ELAN EMPEROR 3", path: "/elanpresidential" },
     ],
     TRUMP: [
       { name: "TRUMP TOWER", path: "/trumptower" },
@@ -76,14 +75,12 @@ const Header = () => {
     ],
     M3M: [
       { name: "M3M ALTITUDE", path: "/m3maltitude" },
-      { name: "M3M PROJECT 2", path: "/m3maltitude" },
     ],
     AIPL: [
       { name: "Peacefull Home", path: "/aiplpeacefullhome" },
     ],
     "SIGNATURE GLOBAL": [
       { name: "CLOVERDALE", path: "/cloverdale" },
-      { name: "CLOVERDALE 2", path: "/cloverdale" },
     ],
     "WHITE LAND": [
       { name: "ASPEN", path: "/aspen" },

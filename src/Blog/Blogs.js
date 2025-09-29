@@ -9,8 +9,8 @@ import Seo from "../Seo";
 const Blogs = () => {
   return (
     <div className="blogs">
-      <Seo project="Luxury Abode Blogs"
-          desc = "Gurgaon Luxury Living is an independent real estate information and advisory platform. This website is not the official website of any developer. All project-related details."
+      <Seo project="Gurgaon Real Estate Blog | Market Trends & Property Insights – The Luxury Abode"
+          desc = "Stay updated on Gurgaon’s real estate market with The Luxury Abode. Read expert blogs on property trends, investment tips, and upcoming project insights."
             img= "https://res.cloudinary.com/daa1hgr9j/image/upload/v1757927534/neddeee9mqnycslnigdg.jpg"
             link= "/blogs"/>
         <Header/>

@@ -29,7 +29,7 @@ export default function Header() {
         <nav className={`aipl_nav ${menuOpen ? 'open' : ''}`}>
           <a className={`aipl_state ${selectedState === 'Description' ? 'active' : ''}`}
             onClick={() => setSelectedState('Description')}
-            href="#description">Over view</a>
+            href="#description">Overview</a>
           <a className={`aipl_state ${selectedState === 'Configuration' ? 'active' : ''}`}
             onClick={() => setSelectedState('Configuration')}
             href="#floor">Configuration</a>
