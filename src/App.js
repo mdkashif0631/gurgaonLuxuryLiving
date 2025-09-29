@@ -9,6 +9,7 @@ import Home from "./Home";
 import EnquirySection from "./EnquirySection";
 import ListedProjects from "./ListedProjects";
 import FavoritesPage from "./FavoritesPage";
+import Sell from "./Sell";
 
 const Elan = lazy(() => import("./PLP/Elan"));
 const FilterPopup = lazy(() => import("./FilterPopup"));
@@ -56,6 +57,7 @@ function Layout() {
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/blog/:id" element={<BlogPage />} />
         <Route path="/projects" element={<ListedProjects />} />
+        <Route path="/Sell" element={<Sell />} />
         <Route path="/filter" element={<FilterPopup />} />
         <Route path="/favorite" element={<FavoritesPage />} />
       </Routes>

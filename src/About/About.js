@@ -26,10 +26,10 @@ export default function About () {
   }, [location]);
     return (
         <div>
-          <Seo project="Luxury Abode About"
-          desc = "Gurgaon Luxury Living is an independent real estate information and advisory platform. This website is not the official website of any developer. All project-related details."
+          <Seo project="About Us | Trusted Real Estate Consultants in Gurgaon – The Luxury Abode"
+          desc = "The Luxury Abode is a leading real estate company in Gurgaon, dedicated to helping clients buy, sell, and invest in premium properties with trust and transparency."
             img= "https://res.cloudinary.com/daa1hgr9j/image/upload/v1757927534/jeoy8o6y2svqtxgsnrlq.jpg"
-            link= "/about"/>
+            link= "about"/>
             <Header />
             <AboutHero />
             <AboutStats />

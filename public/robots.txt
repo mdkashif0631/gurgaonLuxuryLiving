@@ -1,25 +1,24 @@
-# robots.txt for Luxury Abode LLP
-
-# Allow all crawlers full access to site content
 User-agent: *
+
+# Block everything by default
+Disallow: /
+
+# Allow only specific pages
 Allow: /
+Allow: /elanpresidential
+Allow: /trumptower
+Allow: /elanemperor
+Allow: /m3maltitude
+Allow: /cloverdale
+Allow: /aiplpeacefullhome
+Allow: /aspen
+Allow: /iconic
+Allow: /blissville
+Allow: /westin
+Allow: /about
+Allow: /blogs
+Allow: /blog/
+Allow: /projects
 
-# Explicitly allow static assets required for rendering (React build output)
-Allow: /static/
-Allow: /*.js$
-Allow: /*.css$
-Allow: /*.woff2$
-Allow: /*.jpg$
-Allow: /*.png$
-Allow: /*.webp$
-Allow: /*.svg$
-
-# Disallow admin or API routes (not meant for SEO)
-Disallow: /admin/
-Disallow: /api/
-
-# Crawl-delay can be set if server load is an issue (optional, uncomment if needed)
-# Crawl-delay: 10
-
-# Sitemap location
-Sitemap: https://luxuryabodellp.com/sitemap.xml
+# Sitemap
+Sitemap: https://www.yourwebsite.com/sitemap.xml

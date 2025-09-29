@@ -5,6 +5,7 @@ import Header from "./Header";
 import { FaFilter } from "react-icons/fa6";
 // import Loader from "./Loader";
 import CatalogMagic from "./ContentLoader";
+import Seo from "./Seo";
 
 const BASE_URL = process.env.REACT_APP_API_URL;
 
@@ -92,6 +93,12 @@ const ListedProjects = () => {
 
   return (
     <section className="listed_project_container">
+      <Seo
+      project = "The Luxury Abode"
+            desc = "The Luxury Abode is an independent real estate information and advisory platform. This website is not the official website of any developer. All project-related details."
+            img= "https://res.cloudinary.com/daa1hgr9j/image/upload/v1757927534/g62fxethsjgbay1shszv.jpg"
+            link= "/project"
+      />
       <a href="/" className="logo_position fixed">
         <img
           className="logo_box"

@@ -34,8 +34,6 @@ export default function Trump() {
         </span>
         <RegisterInterestForm closeForm={() => setShowForm(false)} />
       </div>
-
-      {/* Button to open popup */}
       <div
         className="enqurie_popup"
         onClick={() => setShowForm(true)}
