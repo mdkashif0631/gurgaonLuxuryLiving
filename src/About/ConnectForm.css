@@ -110,3 +110,10 @@
 .connect-form button:hover {
   background: #333;
 }
+
+@media screen and (max-width: 960px) {
+  
+.drawer {
+  width: 100%;
+}
+}

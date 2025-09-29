@@ -3,7 +3,6 @@ import { useLocation, useNavigate, Link } from "react-router-dom";
 import "./ListedProjects.css";
 import Header from "./Header";
 import { FaFilter } from "react-icons/fa6";
-// import Loader from "./Loader";
 import CatalogMagic from "./ContentLoader";
 import Seo from "./Seo";
 
@@ -16,7 +15,6 @@ const ListedProjects = () => {
   const [data, setData] = useState({});
   const [loading, setLoading] = useState(true);
 
-  // if category is passed → show that one, else default to "ALL"
   const selectedCategory = location.state?.category || "ALL";
 
   useEffect(() => {
@@ -94,10 +92,10 @@ const ListedProjects = () => {
   return (
     <section className="listed_project_container">
       <Seo
-      project = "The Luxury Abode"
-            desc = "The Luxury Abode is an independent real estate information and advisory platform. This website is not the official website of any developer. All project-related details."
+      project = "Residential Projects in Gurgaon | Apartments & Villas – The Luxury Abode"
+            desc = "Explore premium residential projects in Gurgaon with The Luxury Abode. Browse 1, 2, 3 & 4 BHK apartments, villas, and gated communities with modern amenities and prime locations."
             img= "https://res.cloudinary.com/daa1hgr9j/image/upload/v1757927534/g62fxethsjgbay1shszv.jpg"
-            link= "/project"
+            link= "project"
       />
       <a href="/" className="logo_position fixed">
         <img
@@ -108,11 +106,11 @@ const ListedProjects = () => {
       </a>
       <Header />
       <div className="listed_projects">
-        <h2>
+        <h1>
           {selectedCategory === "ALL"
             ? "All Projects"
             : `${selectedCategory} Projects`}
-        </h2>
+        </h1>
 
         {/* Navbar */}
         <nav className="listed_project_navbar">
