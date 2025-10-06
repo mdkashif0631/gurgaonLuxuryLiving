@@ -58,6 +58,7 @@ html,
 .trump_header {
   display: grid;
   grid-template-rows: auto;
+  padding: 0.5rem 0rem;
   width: 100%;
   box-shadow: 0 2px 8px rgba(10, 10, 10, 0.04);
   background-color: #020202;
@@ -88,7 +89,7 @@ html,
 
 .trump_logo {
   height: 40px;
-  width: 280px;
+  width: 240px;
 }
 
 .trump_logo img {
@@ -97,7 +98,7 @@ html,
 
 .gll_logo {
   text-align: right;
-  width: 280px;
+  width: 240px;
   height: 40px;
 }
 
@@ -148,7 +149,7 @@ html,
   }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1050px) {
   .trump_header {
     display: grid;
     grid-template-rows: auto 50px;
@@ -216,7 +217,7 @@ html,
   align-items: center;
   justify-content: center;
   position: relative;
-  color: #cfa66b;
+  /* color: #cfa66b; */
   text-align: center;
   font-family: 'Playfair Display', serif;
   animation: trum-fadeIn 1s ease-in-out;
@@ -502,7 +503,6 @@ html,
   justify-content: space-between;
   background: radial-gradient(circle at top left, #1a1a1a, #000);
   padding: 60px 4%;
-  color: #d4af37;
   font-family: 'Times New Roman', serif;
   gap: 40px;
   width: 84%;
@@ -515,6 +515,7 @@ html,
 }
 
 .project-description-title {
+  color: #d4af37;
   font-size: 2.8rem;
   margin-bottom: 20px;
   line-height: 1.2;
@@ -611,7 +612,7 @@ html,
   align-items: center;
   padding: 60px 8%;
   background: radial-gradient(circle at top left, #1a1a1a, #000);
-  color: #d4af37;
+  
   font-family: 'Times New Roman', serif;
   gap: 40px;
 }
@@ -622,6 +623,7 @@ html,
 }
 
 .highlights-title {
+  color: #d4af37;
   font-size: 2.8rem;
   margin-bottom: 25px;
   line-height: 1.2;
@@ -732,7 +734,10 @@ html,
 /* ================= Floor Plan ================ */
 
 .trump-floorplans-container {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding: 60px 20px;
   font-family: 'Times New Roman', serif;
   width: 100%;

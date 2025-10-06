@@ -1,12 +1,13 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./Connectivity.css";
+import Textbtn from "../../form/TextBtn";
 
 const Connectivity = () => {
   const sectionRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
 
 useEffect(() => {
-  const currentRef = sectionRef.current; // ✅ copy ref into a variable
+  const currentRef = sectionRef.current;
 
   const observer = new IntersectionObserver(
     (entries) => {
@@ -25,7 +26,7 @@ useEffect(() => {
   }
 
   return () => {
-    if (currentRef) observer.unobserve(currentRef); // ✅ cleanup uses stable ref
+    if (currentRef) observer.unobserve(currentRef); 
   };
 }, []);
 
@@ -40,11 +41,11 @@ useEffect(() => {
         <img src='https://res.cloudinary.com/dif213nbi/image/upload/v1755428303/map-crwn_-_sPwxJwvr7LcT_cp2nr1.jpg' alt="Connectivity Map" className="map_image" />
       </div>
 
-      <div className={`features ${isVisible ? "animate" : ""}`}>
-        <div className="feature">Prestigious International Schools</div>
-        <div className="feature">World Class Gourmet Dining</div>
-        <div className="feature">Haute Couture Boutiques</div>
-      </div>
+      {/* <div className={`features ${isVisible ? "animate" : ""}`}> */}
+        <Textbtn nameclass='feature' projectName='m3maltitude' btnText='Prestigious International Schools' />
+        <Textbtn nameclass='feature' projectName='m3maltitude' btnText='World Class Gourmet Dining' />
+        <Textbtn nameclass='feature' projectName='m3maltitude' btnText='Haute Couture Boutiques' />
+      {/* </div> */}
     </section>
   );
 };

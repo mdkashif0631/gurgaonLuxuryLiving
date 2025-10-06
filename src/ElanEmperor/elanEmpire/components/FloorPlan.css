@@ -1,6 +1,8 @@
 
 .elan-floorplans-container {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 60px 20px;
   font-family: 'Times New Roman', serif;
   width: 100%;
@@ -62,7 +64,7 @@
 
 .elan-floorplans-btn {
   background-color: #E8C182;
-  color: rgb(255, 255, 255);
+  color: rgb(1, 10, 51);
   border: none;
   padding: 12px 25px;
   font-size: clamp(8px, 4vw, 24px);

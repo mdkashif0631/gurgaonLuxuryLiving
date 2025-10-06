@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useCallback, useRef } from "react";
 import "./ProjectDescription.css";
+import Textbtn from "../../form/TextBtn";
 
 const images = [
   "https://res.cloudinary.com/dif213nbi/image/upload/v1755428326/Artboard_1-3_-_ETYKrMHhNWZl_mkthpx.jpg",
@@ -79,8 +80,10 @@ const ProjectDescription = () => {
 
         {/* Buttons */}
         <div className="altitude-buttons">
-          <button className="altitude-btn altitude-enquire">Enquire Now →</button>
-          <button className="altitude-btn altitude-brochure">Download Brochure →</button>
+          {/* <button className="altitude-btn altitude-enquire"></button> */}
+          <Textbtn nameclass='altitude-btn altitude-enquire' projectName='m3maltitude' btnText='Enquire Now →' />
+          <Textbtn nameclass='altitude-btn altitude-brochure' projectName='m3maltitude' btnText='Download Brochure →' />
+          {/* <button className="altitude-btn altitude-brochure"></button> */}
         </div>
       </div>
 

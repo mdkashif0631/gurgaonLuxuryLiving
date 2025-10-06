@@ -1,6 +1,7 @@
 import React from "react";
 
 import { FaFlag } from "react-icons/fa";
+import Textbtn from "../../form/TextBtn";
 
 export default function ProjectHighlights() {
   const highlights = [
@@ -31,7 +32,8 @@ export default function ProjectHighlights() {
             </li>
           ))}
         </ul>
-        <button className="highlights-btn">Enquire Now 📑</button>
+        {/* <button className="highlights-btn"></button> */}
+        <Textbtn nameclass='highlights-btn' projectName='trumptowers' btnText='Enquire Now 📑' />
       </div>
 
       <div className="highlights-image">

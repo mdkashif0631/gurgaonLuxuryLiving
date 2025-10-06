@@ -1,5 +1,7 @@
 import React, { useRef, useEffect, useState } from "react";
 import "./ProjectConfiguration.css";
+import Textbtn from "../../form/TextBtn";
+
 
 const ProjectConfiguration = () => {
   const sectionRef = useRef(null);
@@ -14,7 +16,7 @@ const ProjectConfiguration = () => {
           if (entry.isIntersecting) {
             setIsVisible(true);
           } else {
-            setIsVisible(false); // 👈 trigger animation again when leaving
+            setIsVisible(false); 
           }
         });
       },
@@ -42,12 +44,12 @@ const ProjectConfiguration = () => {
           <div key={index} className="project-card">
             <div className="floorplan_blur">
             <img src={img} alt={`Floor ${index + 1}`} />
-
+            
             </div>
-            <button className="view-btn">View Image</button>
           </div>
         ))}
       </div>
+      <Textbtn nameclass='view-btn' projectName='m3maltitude' btnText='Enquire Now →' />
     </section>
   );
 };

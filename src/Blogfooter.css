@@ -1,18 +1,14 @@
-/* ====== Container Layout ====== */
 .blogfooter_container {
   display: flex;
   gap: 2%;
   max-width: 100%;
-  /* border: 1px solid #c7c7c7; */
   padding: 1rem;
-box-shadow: 0 0 10px rgba(228, 228, 228, 0.3);
-border-radius: 12px;
+  box-shadow: 0 0 10px rgba(228, 228, 228, 0.3);
 }
 
-/* ====== Left Side: Titles List ====== */
 .blogfooter_list {
   width: 40%;
- 
+
 }
 
 .blogfooter_title_item {
@@ -24,10 +20,11 @@ border-radius: 12px;
   margin-bottom: 0px;
 
 }
-.blogfooter_title_item p{
-    font-size: clamp(12px, 1vw, 16px);
-    padding: 2px;
-    margin-bottom: 4px;
+
+.blogfooter_title_item p {
+  font-size: clamp(12px, 1vw, 16px);
+  padding: 2px;
+  margin-bottom: 4px;
 }
 
 .blogfooter_title_item.show {
@@ -41,26 +38,25 @@ border-radius: 12px;
   color: #EFD7A1;
 }
 
-/* ====== Right Side: Selected Blog Details ====== */
 .blogfooter_details {
   width: 58%;
   padding-left: 5px;
 }
 
 
-.blogfooter_details_thumbnail{
-    position: relative;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    
+.blogfooter_details_thumbnail {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+
 }
 
 .blogfooter_details_thumbnail img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    /* z-index: -1; */
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* z-index: -1; */
   width: 100%;
   height: 100%;
   /* max-height: 350px; */
@@ -68,13 +64,15 @@ border-radius: 12px;
   margin-bottom: 1.5rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
-.blogfoot_text{
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    padding: 1rem;
-    background-color: #00000061;
+
+.blogfoot_text {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 1rem;
+  background-color: #00000061;
 }
+
 .blogfooter_details_description {
   font-size: clamp(10px, 1vw, 14px);
   line-height: 1.6;
@@ -99,11 +97,11 @@ border-radius: 12px;
 
 /* ====== Responsive Layout ====== */
 @media (max-width: 960px) {
-    .blogfooter_container {
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-  max-width: 100%;
-}
+  .blogfooter_container {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    max-width: 100%;
+  }
 
   .blogfooter_list,
   .blogfooter_details {

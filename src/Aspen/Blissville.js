@@ -13,6 +13,7 @@ import Testimonials from "./Components/Testimonials";
 import Faqs from "./Components/Faqs";
 import ContactSection from "./Components/ContactSection";
 import Seo from "../Seo";
+import InterestPopup from "../form/InterestPopup";
 
 const Blissville = () => {
     const [project, setProject] = useState(null);
@@ -62,14 +63,16 @@ const Blissville = () => {
                 logo="https://res.cloudinary.com/daa1hgr9j/image/upload/v1758120523/bolwj9hyetcx5epmydja.svg"
                 heading="Bliss awaits you in your new abode!"
                 text="Whiteland Blissville has set a new standard for low-rise luxury floors. This Whiteland residential project is an ideal one to spend quality time with your family while enjoying the various spaces like the gymnasium, indoor badminton court, library, and more! The luxury low-rise floors at Blissville are homes that you have always aspired to live in."
+                form="aspen"
             />
-            <Amenities project="blissville" />
+            <Amenities project="blissville" form="aspen"/>
             <FloorPlans dataset="blissville" />
             <ProjectSlider project="blissville" />
             <ConstructionUpdate project="https://res.cloudinary.com/daa1hgr9j/video/upload/v1757991479/ljiemtwn3cjnxizdqbdr.mp4" />
             <Testimonials />
             <Faqs />
             <ContactSection />
+            <InterestPopup projectName='blissville'/>
         </div>
     )
 }

@@ -64,6 +64,7 @@
   background: #4cd137;
   color: white;
   padding: 1rem 1.5rem;
+  margin: 1rem;
   border-radius: 8px;
   box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
   transition: transform 0.3s;
@@ -73,7 +74,6 @@
   transform: scale(1.05);
 }
 
-/* Responsive */
 @media (max-width: 960px) {
   .connectivity_title {
     font-size: 2rem;

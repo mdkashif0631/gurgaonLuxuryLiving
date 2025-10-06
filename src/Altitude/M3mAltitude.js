@@ -7,20 +7,21 @@ import ImmersiveTour from './components/ImmersiveTour'
 import Premier from './components/Premier'
 import Connectivity from './components/Connectivity.js'
 import ProjectConfiguration from './components/ProjectConfiguration.js'
-// import Carousel from './components/Carousel'
-// import ImgCarousel from './components/Carousel'
+import InterestPopup from '../form/InterestPopup.js'
 
 const M3mAltitude = () => {
   return (
     <div>
-      <Header/>
-      <Hero/>
-      <ProjectDescription/>
-      <Glimpses/>
-      <ImmersiveTour/>
-      <Premier/>
-      <Connectivity/>
-      <ProjectConfiguration/>
+      <Header />
+      <Hero />
+      <ProjectDescription />
+      <Glimpses />
+      <ImmersiveTour />
+      <Premier />
+      <Connectivity />
+      <ProjectConfiguration />
+      <InterestPopup projectName='m3maltitude' />
+
     </div>
   )
 }

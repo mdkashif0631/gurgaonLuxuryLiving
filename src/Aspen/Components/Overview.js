@@ -1,7 +1,8 @@
 import React from "react";
 import "./Overview.css";
+import Textbtn from "../../form/TextBtn";
 
-const Overview = ({ leftImage, logo, heading, text }) => {
+const Overview = ({ leftImage, logo, heading, text, form }) => {
   return (
     <section id="overview" className="aspen-overview">
       <div className="aspen-overview-left">
@@ -19,12 +20,8 @@ const Overview = ({ leftImage, logo, heading, text }) => {
         <p className="aspen-overview-text">{text}</p>
 
         <div className="aspen-overview-buttons">
-          <a href="/" className="aspen-btn-outline">
-            DOWNLOAD BROCHURE ↓
-          </a>
-          <a href="/" className="aspen-btn-filled">
-            KNOW MORE →
-          </a>
+          <Textbtn nameclass='aspen-btn-outline' projectName={form} btnText='DOWNLOAD BROCHURE ↓' />
+          <Textbtn nameclass='aspen-btn-filled' projectName={form} btnText=' KNOW MORE →' />
         </div>
       </div>
     </section>

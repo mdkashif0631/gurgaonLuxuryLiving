@@ -29,7 +29,7 @@ export default function Header() {
 
           <a className={`trump_state ${selectedState === 'Description' ? 'active' : ''}`}
             onClick={() => setSelectedState('Description')}
-            href="#description">Over view</a>
+            href="#description">Overview</a>
           <a className={`trump_state ${selectedState === 'Configuration' ? 'active' : ''}`}
             onClick={() => setSelectedState('Configuration')}
             href="#floor">Configuration</a>

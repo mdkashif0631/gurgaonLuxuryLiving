@@ -1,3 +1,4 @@
+import InterestPopup from '../form/InterestPopup.js'
 import CloverdaleEcosystem from './Components/CloverdaleEcosystem.js'
 import CloverdaleMap from './Components/Cloverdalemap.js'
 import Cloverdalespr from './Components/Cloverdalespr.js'
@@ -20,6 +21,7 @@ const Cloverdale = () => {
       <CloverdaleEcosystem/>
       <Clovervideo/>
       <ContactSection/>
+      <InterestPopup projectName='cloverdale'/>
       
     </div>
   )

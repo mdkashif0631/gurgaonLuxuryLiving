@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./Amenities.css";
+import Textbtn from "../../form/TextBtn";
 
 // Dataset 1 (Aspen)
 const aspenAmenities = [
@@ -41,7 +42,7 @@ const westin = [
 
 
 
-const Amenities = ({ project }) => {
+const Amenities = ({ project, form }) => {
   // Decide which dataset to use
   const getAmenitiesByProject = () => {
     switch (project?.toLowerCase()) {
@@ -87,10 +88,7 @@ const Amenities = ({ project }) => {
             </li>
           ))}
         </ul>
-
-        <button className="aspen_amenities-explore-btn">
-          EXPLORE MORE →
-        </button>
+        <Textbtn nameclass='aspen_amenities-explore-btn' projectName={form} btnText='EXPLORE MORE →' />
       </div>
 
       <div className="aspen_amenities-right">

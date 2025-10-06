@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Textbtn from "../../form/TextBtn";
 // import Banner from "../img/building_banner.png"
 
 export default function Hero() {
@@ -41,11 +42,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <button className="trum-site-btn">
-        <a className={`trum-label_e ${selectedState === 'Enquire' ? 'active' : ''}`}
-            onClick={() => setSelectedState('Enquire')}
-            href="#enquire">Book Free Site Visit ↗</a>
-            </button>
+        <Textbtn nameclass='trum-site-btn' projectName='trumptowers' btnText='Book Free Site Visit ↗'/>
     </section>
 
   );

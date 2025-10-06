@@ -1,6 +1,6 @@
 import React from "react";
-import { FaArrowRight } from "react-icons/fa";
 import './FloorPlan.css';
+import Textbtn from "../../form/TextBtn";
 
 
 const plans = [
@@ -38,12 +38,10 @@ export default function FloorPlan() {
             />
             <h3 className="elan-floorplans-subtitle">{plan.title}</h3>
             <p className="elan-floorplans-size">{plan.size}</p>
-            <button className="elan-floorplans-btn">
-              Price Breakup <FaArrowRight />
-            </button>
           </div>
         ))}
       </div>
+      <Textbtn nameclass='elan-floorplans-btn' projectName='elanpresidential' btnText='Price Breakup' />
     </section>
   );
 }

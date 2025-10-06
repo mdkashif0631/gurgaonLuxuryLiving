@@ -1,4 +1,4 @@
-// import React, { useState } from 'react';
+// import { useState } from 'react';
 
 
 import Header from './elanEmpire/components/Header';
@@ -21,6 +21,7 @@ import EmperorRetreat from './elanEmpire/components/EmperorRetreat';
 import EmperorPartner from './elanEmpire/components/EmperorPartner';
 import FloorPlan from './elanEmpire/components/FloorPlan';
 import Seo from '../Seo';
+import InterestPopup from '../form/InterestPopup';
 
 
 function ElanEmperor() {
@@ -46,8 +47,9 @@ function ElanEmperor() {
       <EmperorVideo2 />
       <EmperorRetreat />
       <EmperorPartner />
-{/* 
-      <div className={`side-popup ${showForm ? "open" : ""}`}>
+      <InterestPopup projectName='elanemperor'/>
+
+      {/* <div className={`side-popup ${showForm ? "open" : ""}`}>
         <span className="popup-close" onClick={() => setShowForm(false)}>
           &times;
         </span>

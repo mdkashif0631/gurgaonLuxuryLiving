@@ -13,6 +13,7 @@ import Overview from "./Components/Overview";
 import Amenities from "./Components/Amenities";
 import FloorPlans from "./Components/FloorPlan";
 import Seo from "../Seo";
+import InterestPopup from "../form/InterestPopup";
 
 const Iconic = () => {
     const [project, setProject] = useState(null);
@@ -62,14 +63,17 @@ const Iconic = () => {
                 logo="https://res.cloudinary.com/daa1hgr9j/image/upload/v1758070137/c42n67ccxvqssalowfds.svg"
                 heading="The Tower of Power!"
                 text="When at The Aspen Iconic, you get to enjoy the uninterrupted high life to the fullest. A breathtaking 42-storeyed building, The Aspen Iconic is Whiteland’s residential project that invites you to taste the lavish lifestyle."
+                form="aspen"
+
             />
             <FloorPlans dataset="iconic"/>
-            <Amenities project = "iconic"/>
+            <Amenities project = "iconic" form="aspen"/>
             <ProjectSlider project = "iconic"/>
             <ConstructionUpdate project = "https://res.cloudinary.com/daa1hgr9j/video/upload/v1757991479/ljiemtwn3cjnxizdqbdr.mp4" />
             <Testimonials/>
             <Faqs/>
             <ContactSection/>
+            <InterestPopup projectName='iconic'/>
         </div>
     )
 }

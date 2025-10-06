@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import "./Trump.css";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
@@ -9,12 +8,10 @@ import ProjectDescription from "./components/ProjectDescription";
 import ProjectHighlights from "./components/ProjectHighlights";
 import InteriorsCarousel from "./components/InteriorsCarousel";
 import TrumpBookingForm from "./components/TrumpBookingForm";
-import { SlEnvolopeLetter } from "react-icons/sl";
-import RegisterInterestForm from "../ElanEmperor/elanEmpire/components/RegisterInterestForm";
 import Seo from "../Seo";
+import InterestPopup from "../form/InterestPopup";
 
 export default function Trump() {
-  const [showForm, setShowForm] = useState(false);
 
   return (
     <div className="site-root">
@@ -28,19 +25,8 @@ export default function Trump() {
       <Amenities />
       <InteriorsCarousel/>
       <TrumpBookingForm/>
-      <div className={`side-popup ${showForm ? "open" : ""}`}>
-        <span className="popup-close" onClick={() => setShowForm(false)}>
-          &times;
-        </span>
-        <RegisterInterestForm closeForm={() => setShowForm(false)} />
-      </div>
-      <div
-        className="enqurie_popup"
-        onClick={() => setShowForm(true)}
-        title="Register Your Interest"
-      >
-        <SlEnvolopeLetter />
-      </div>
+      <InterestPopup projectName='trumptowers'/>
+      
     </div>
   );
 }

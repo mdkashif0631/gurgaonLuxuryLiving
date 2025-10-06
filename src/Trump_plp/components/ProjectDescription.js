@@ -1,5 +1,5 @@
 import React from "react";
-import { FaExternalLinkAlt } from "react-icons/fa";
+import Textbtn from "../../form/TextBtn";
 
 export default function ProjectDescription() {
   return (
@@ -21,10 +21,9 @@ export default function ProjectDescription() {
         <p className="project-description-code">
           (RC/REP/HARERA/GGM/925/657/2025/28)
         </p>
+        <Textbtn nameclass='project-description-btn' projectName='trumptowers' btnText='Book Free Site Visit ↗' />
 
-        <button className="project-description-btn">
-          Book Free Site Visit <FaExternalLinkAlt />
-        </button>
+
       </div>
 
       <div className="project-description-map" id="location">

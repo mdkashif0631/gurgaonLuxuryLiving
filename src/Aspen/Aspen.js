@@ -13,6 +13,7 @@ import Testimonials from "./Components/Testimonials";
 import Faqs from "./Components/Faqs";
 import ContactSection from "./Components/ContactSection";
 import Seo from "../Seo";
+import InterestPopup from "../form/InterestPopup";
 
 const Aspen = () => {
   const [project, setProject] = useState(null);
@@ -67,14 +68,16 @@ const Aspen = () => {
           experience. Nestled in the most promising sector of Gurugram, Sector-76,
           Whiteland’s residential project offers a lifestyle that is unheard of & truly
           inspiring."
+          form="aspen"
             />
-      <Amenities project = "aspen"/>
+      <Amenities project = "aspen" form="aspen"/>
       <FloorPlans dataset="aspen"/>
       <ProjectSlider project = "aspen"/>
       <ConstructionUpdate project = "https://res.cloudinary.com/daa1hgr9j/video/upload/v1757991479/ljiemtwn3cjnxizdqbdr.mp4" />
       <Testimonials/>
       <Faqs/>
       <ContactSection/>
+      <InterestPopup projectName='aspen'/>
     </div>
   );
 };

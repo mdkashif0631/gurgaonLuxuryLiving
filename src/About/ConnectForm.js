@@ -24,12 +24,11 @@ const ConnectForm = ({ show, onClose }) => {
     try {
       const res = await axios.post(`${BASE_URL}/enquiries`, formData);
       alert(res.data.msg || "Message sent successfully!");
-
-
+      
       setFormData({
         Project_Name: "",
         fullName: "",
-        email_id: "",
+        email: "",
         phone_number: "",
         message: "",
       });
@@ -60,7 +59,7 @@ const ConnectForm = ({ show, onClose }) => {
         <form className="connect-form" onSubmit={handleSubmit}>
           <input type="text" name="Project_Name" placeholder="Project Name*" value={formData.Project_Name} onChange={handleChange} required />
           <input type="text" name="fullName" placeholder="Full Name*" value={formData.fullName} onChange={handleChange} required />
-          <input type="email" name="email_id" placeholder="Email*" value={formData.email} onChange={handleChange} required />
+          <input type="email" name="email" placeholder="Email*" value={formData.email} onChange={handleChange} required />
           <input type="tel" name="phone_number" placeholder="Mobile No*" value={formData.phone_number} onChange={handleChange} required />
           <textarea name="message" placeholder="Write Your Message*" value={formData.message} onChange={handleChange}></textarea>
           <button type="submit">SUBMIT</button>

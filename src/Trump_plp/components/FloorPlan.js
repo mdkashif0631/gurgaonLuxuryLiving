@@ -1,5 +1,5 @@
 import React from "react";
-import { FaArrowRight } from "react-icons/fa";
+import Textbtn from "../../form/TextBtn";
 
 
 const plans = [
@@ -37,12 +37,11 @@ export default function FloorPlan() {
             />
             <h3 className="trump-floorplans-subtitle">{plan.title}</h3>
             <p className="trump-floorplans-size">{plan.size}</p>
-            <button className="trump-floorplans-btn">
-              Price Breakup <FaArrowRight />
-            </button>
+            
           </div>
         ))}
       </div>
+        <Textbtn nameclass='trump-floorplans-btn' projectName='trumptowers' btnText='Price Breakup' />
     </section>
   );
 }

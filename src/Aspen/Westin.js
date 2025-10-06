@@ -12,6 +12,7 @@ import Testimonials from "./Components/Testimonials";
 import Faqs from "./Components/Faqs";
 import ContactSection from "./Components/ContactSection";
 import Seo from "../Seo";
+import InterestPopup from "../form/InterestPopup";
 
 const Westin = () => {
     const [project, setProject] = useState(null);
@@ -61,13 +62,15 @@ const Westin = () => {
                 logo="https://res.cloudinary.com/daa1hgr9j/image/upload/v1758152236/swxjl9to5iw7ga0wfop0.png"
                 heading="India’s Most Iconic Residences"
                 text="Whiteland Westin Residences Gurgaon is a prestigious residential project in Gurugram, India, developed by Whiteland Corporation in collaboration with Marriott International. It stands out as the largest branded residence and the first standalone residential property in India under the renowned Westin brand. The project offers an exceptional living experience, combining the best of both worlds - the tranquility of a residential space and the opulence of a five-star hotel."
+                form="aspen"
             />
             <FloorPlans dataset="westin" />
-            <Amenities project="westin" />
+            <Amenities project="westin" form="aspen"/>
             <ProjectSlider project="westin" />
             <Testimonials />
             <Faqs />
             <ContactSection />
+            <InterestPopup projectName='westin'/>
         </div>
     )
 }
