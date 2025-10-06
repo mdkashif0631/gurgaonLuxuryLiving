@@ -93,6 +93,7 @@ textarea {
 }
 
 textarea {
+  color: #000;
   resize: none;
   min-height: 100px;
 }
